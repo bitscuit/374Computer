@@ -6,3 +6,9 @@ Design, simulate, implement, and verify a simple RISC computer consisting of a s
 
 ## Development Environment
 Altera Quartus II
+
+## TODO
+Phase 1: ALU and test bench
+Phase 2: Not started
+Phase 3: Not started
+Phase 4: Not started
