@@ -1,0 +1,28 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity bux_mux32 is 
+port(
+	-- registers r0 to r15
+	bus_mux_in_r0 : in std_logic_vector (31 downto 0);
+	
+	bus_mux_in_r15 : in std_logic_vector (31 downto 0);
+	bus_mux_in_hi : in std_logic_vector (31 downto 0);
+	bus_mux_in_lo : in std_logic_vector (31 downto 0);
+	bus_mux_in_zhi : in std_logic_vector (31 downto 0);
+	bus_mux_in_zlo : in std_logic_vector (31 downto 0);
+	bus_mux_in_pc : in std_logic_vector (31 downto 0);
+	bus_mux_in_mdr : in std_logic_vector (31 downto 0);
+	bus_mux_in : in std_logic_vector (31 downto 0);
+	c_sign_extended : in std_logic_vector (31 downto 0);
+	
+	bus_mux_out : out std_logic_vector (31 downto 0)
+);
+end entity reg32;
+
+architecture behavioral of reg32 is
+begin
+
+
+
+end architecture behavioral;

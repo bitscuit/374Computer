@@ -1,0 +1,29 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity reg32 is 
+port(
+	bus_mux_in : in std_logic_vector (31 downto 0);
+	clk, enable, clear	: in std_logic;
+	bus_mux_out : out std_logic_vector (31 downto 0);
+);
+end entity reg32;
+
+architecture behavioral of reg32 is
+begin
+
+reg32_process : process (clear, clk) is 
+begin
+
+if (clear = '1') then
+	bus_mux_out <= "0000_0000_0000_0000_0000_0000_0000_0000";
+	elsif (rising_edge(clk) then
+		if (enable = '1') then
+			-- store bus data into register
+			bux_mux_out <= bux_mux_in;
+		end if;
+end if;
+
+end process reg32_process;
+
+end architecture behavioral;
