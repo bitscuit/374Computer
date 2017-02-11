@@ -1,0 +1,40 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Michael\Documents\GitHub\374Computer\Phase1\simulation\modelsim
+Ereg32
+Z1 w1486692377
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\Michael\Documents\GitHub\374Computer\Phase1\simulation\modelsim
+Z5 8C:/Users/Michael/Documents/GitHub/374Computer/Phase1/reg32.vhd
+Z6 FC:/Users/Michael/Documents/GitHub/374Computer/Phase1/reg32.vhd
+l0
+L4
+V2MO:5f2lKMQ[ZZ:hAf>m82
+!s100 14BFMj[_@zBTi]W2MXUeR3
+Z7 OV;C;10.1d;51
+31
+!i10b 1
+Z8 !s108 1486772746.880000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/Michael/Documents/GitHub/374Computer/Phase1/reg32.vhd|
+Z10 !s107 C:/Users/Michael/Documents/GitHub/374Computer/Phase1/reg32.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+Abehavioral
+R2
+R3
+DEx4 work 5 reg32 0 22 2MO:5f2lKMQ[ZZ:hAf>m82
+l16
+L15
+VRT;9Jc<CJH2So4g9d;i2I0
+!s100 cEchPkCzKDaAcYRhUboM>3
+R7
+31
+!i10b 1
+R8
+R9
+R10
+R11
+R12
