@@ -4,22 +4,22 @@ use IEEE.std_logic_1164.all;
 entity bus_mux32 is 
 port(
 	-- registers r0 to r15
-	bm_in_r0 : in std_logic_vector (31 downto 0);
-	bm_in_r1 : in std_logic_vector (31 downto 0);
-	bm_in_r2 : in std_logic_vector (31 downto 0);
-	bm_in_r3 : in std_logic_vector (31 downto 0);
-	bm_in_r4 : in std_logic_vector (31 downto 0);
-	bm_in_r5 : in std_logic_vector (31 downto 0);
-	bm_in_r6 : in std_logic_vector (31 downto 0);
-	bm_in_r7 : in std_logic_vector (31 downto 0);
-	bm_in_r8 : in std_logic_vector (31 downto 0);
-	bm_in_r9 : in std_logic_vector (31 downto 0);
-	bm_in_r10 : in std_logic_vector (31 downto 0);
-	bm_in_r11 : in std_logic_vector (31 downto 0);
-	bm_in_r12 : in std_logic_vector (31 downto 0);
-	bm_in_r13 : in std_logic_vector (31 downto 0);
-	bm_in_r14 : in std_logic_vector (31 downto 0);
-	bm_in_r15 : in std_logic_vector (31 downto 0);
+	r0_bm_in 	: in std_logic_vector (31 downto 0);
+	r1_bm_in 	: in std_logic_vector (31 downto 0);
+	r2_bm_in 	: in std_logic_vector (31 downto 0);
+	r3_bm_in 	: in std_logic_vector (31 downto 0);
+	r4_bm_in 	: in std_logic_vector (31 downto 0);
+	r5_bm_in 	: in std_logic_vector (31 downto 0);
+	r6_bm_in 	: in std_logic_vector (31 downto 0);
+	r7_bm_in 	: in std_logic_vector (31 downto 0);
+	r8_bm_in 	: in std_logic_vector (31 downto 0);
+	r9_bm_in 	: in std_logic_vector (31 downto 0);
+	r10_bm_in 	: in std_logic_vector (31 downto 0);
+	r11_bm_in 	: in std_logic_vector (31 downto 0);
+	r12_bm_in 	: in std_logic_vector (31 downto 0);
+	r13_bm_in 	: in std_logic_vector (31 downto 0);
+	r14_bm_in 	: in std_logic_vector (31 downto 0);
+	r15_bm_in 	: in std_logic_vector (31 downto 0);
 	
 	bm_hi : in std_logic_vector (31 downto 0);
 	bm_lo : in std_logic_vector (31 downto 0);
@@ -40,22 +40,22 @@ end entity bus_mux32;
 architecture behavioral of bus_mux32 is
 begin
 with sel select
-bus_mux_out <= bm_in_r0 when "00000",
-					bm_in_r1 when "00001",
-					bm_in_r2 when "00010",
-					bm_in_r3 when "00011",
-					bm_in_r4 when "00100",
-					bm_in_r5 when "00101",
-					bm_in_r6 when "00110",
-					bm_in_r7 when "00111",
-					bm_in_r8 when "01000",
-					bm_in_r9 when "01001",
-					bm_in_r10 when "01010",
-					bm_in_r11 when "01011",
-					bm_in_r12 when "01100",
-					bm_in_r13 when "01101",
-					bm_in_r14 when "01110",
-					bm_in_r15 when "01111",
+bus_mux_out <= r0_bm_in when "00000",
+					r1_bm_in when "00001",
+					r2_bm_in when "00010",
+					r3_bm_in when "00011",
+					r4_bm_in when "00100",
+					r5_bm_in when "00101",
+					r6_bm_in when "00110",
+					r7_bm_in when "00111",
+					r8_bm_in when "01000",
+					r9_bm_in when "01001",
+					r10_bm_in when "01010",
+					r11_bm_in when "01011",
+					r12_bm_in when "01100",
+					r13_bm_in when "01101",
+					r14_bm_in when "01110",
+					r15_bm_in when "01111",
 					
 					bm_hi 		 when "10000",
 					bm_lo 		 when "10001",

@@ -10,6 +10,13 @@
 # ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
+# vcom -93 -work work {C:/Users/Michael/Documents/GitHub/374Computer/Phase1/phase1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity phase1
+# -- Compiling architecture bdf_type of phase1
 # vcom -93 -work work {C:/Users/Michael/Documents/GitHub/374Computer/Phase1/reg32.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -17,5 +24,67 @@
 # -- Loading package std_logic_1164
 # -- Compiling entity reg32
 # -- Compiling architecture behavioral of reg32
+# vcom -93 -work work {C:/Users/Michael/Documents/GitHub/374Computer/Phase1/bus_mux32.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity bus_mux32
+# -- Compiling architecture behavioral of bus_mux32
+# vcom -93 -work work {C:/Users/Michael/Documents/GitHub/374Computer/Phase1/muxMDR.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity muxMDR
+# -- Compiling architecture behavioral of muxMDR
+# vcom -93 -work work {C:/Users/Michael/Documents/GitHub/374Computer/Phase1/encoder32.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity encoder32
+# -- Compiling architecture behavioral of encoder32
+# vcom -93 -work work {C:/Users/Michael/Documents/GitHub/374Computer/Phase1/alu.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package LPM_COMPONENTS
+# -- Compiling entity alu
+# -- Compiling architecture behavioral of alu
 # 
-# Load canceled
+# vcom -93 -work work {C:/Users/Michael/Documents/GitHub/374Computer/Phase1/simulation/modelsim/phase1.vht}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity phase1_vhd_tst
+# -- Compiling architecture phase1_arch of phase1_vhd_tst
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  phase1_vhd_tst
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps phase1_vhd_tst 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.phase1_vhd_tst(phase1_arch)
+# Loading work.phase1(bdf_type)
+# Loading work.reg32(behavioral)
+# Loading work.encoder32(behavioral)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.alu(behavioral)
+# Loading work.bus_mux32(behavioral)
+# Loading work.muxmdr(behavioral)
+# ** Warning: (vsim-8683) Uninitialized inout port /phase1_vhd_tst/i1/c_busmuxin(31 downto 0) has no driver.
+# 
+# This port will contribute value (UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU) to the signal network.
+# 
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 150 ns

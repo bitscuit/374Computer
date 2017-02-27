@@ -1,19 +1,36 @@
-library IEEE;
-use IEEE.numeric_std.all;
-use IEEE.std_logic_1164.all;
+library ieee;
+use ieee.numeric_std.all;
+use ieee.std_logic_1164.all;
+
+LIBRARY lpm;
+USE lpm.lpm_components.all;
 
 entity alu is
 port(
-	A : in signed(31 downto 0);
-	B : in signed(31 downto 0);
+	A : in std_logic_vector(31 downto 0);
+	B : in std_logic_vector(31 downto 0);
 	clk, clr, enable : in std_logic;
 	sel : in std_logic_vector(3 downto 0);
 	
-	Z : out signed(63 downto 0));
+	zlo : out std_logic_vector(31 downto 0);
+	zhi : out std_logic_vector(31 downto 0));
 end entity alu;
 
 architecture behavioral of alu is
+--component lpm_divide0
+--	port (
+--		denom		: IN SIGNED (31 DOWNTO 0);
+--		numer		: IN SIGNED (31 DOWNTO 0);
+--		quotient	: OUT SIGNED (31 DOWNTO 0);
+--		remain	: OUT SIGNED (31 DOWNTO 0));
+--end component;
+	
+signal Z : std_logic_vector(63 downto 0);
+
 begin
+
+--divide: lpm_divide0 port map (denom => B, numer => A, quotient => zlo, remain => zhi);
+
 alu_process : process (clk) is 
 	begin
 		if (rising_edge(clk)) then
@@ -21,41 +38,62 @@ alu_process : process (clk) is
 				case sel is
 					-- Addition
 					when "0000" =>
-						Z <= A + B;
+						zlo <= std_logic_vector(signed(A) + signed(B));
+						zhi <= x"00000000";
 					-- Subtraction
 					when "0001" =>
-						Z <= A - B;
+						zlo <= std_logic_vector(signed(A) - signed(B));
+						zhi <= x"00000000";
 					-- Multiplication
 					when "0010" =>
-						Z <= A * B;
+						Z <= std_logic_vector(signed(A) * signed(B));
+						zhi <= Z(63 downto 32);
+						zlo <= Z(31 downto 0);
 					-- Division
-					when "0011" =>
-						Z <= A / B;
-					-- Logical AND
+--					when "0011" =>
+--						Z(63 downto 32) <= remain;
+--						Z(31 downto 0) <= quotient;
+--						--Z <= A / B;
+--						zhi <= Z(63 downto 32);
+--						zlo <= Z(31 downto 0);
+						-- Logical AND
 					when "0100" =>
-						Z <= A AND B;
+						zlo <= A AND B;
+						zhi <= x"00000000";
 					-- Logical OR
 					when "0101" =>
-						Z <= A OR B;
+						zlo <= A OR B;
+						zhi <= x"00000000";
 					-- Logical NOT
 					when "0110" =>
-						Z <= NOT A;
+						zlo <= std_logic_vector(NOT signed(A));
+						zhi <= x"00000000";
 					-- Shift right
 					when "0111" =>
-						Z <= A srl 1;
+						zlo <= std_logic_vector(signed(A) srl 1);
+						zhi <= x"00000000";
 					-- Shift left
 					when "1000" =>
-						Z <= A sll 1;
+						zlo <= std_logic_vector(signed(A) sll 1);
+						zhi <= x"00000000";
 					-- Rotate right
 					when "1001" =>
-						Z <= A ror 1;
+						zlo <= std_logic_vector(signed(A) ror 1);
+						zhi <= x"00000000";
 					-- Rotate left
 					when "1010" =>
-						Z <= A rol 1;
+						zlo <= std_logic_vector(signed(A) rol 1);
+						zhi <= x"00000000";
 					-- Negate
 					when "1011" =>
-						Z <= NOT A + 1;
-					
+						zlo <= std_logic_vector(NOT signed(A) + 1);
+						zhi <= x"00000000";
+					-- Carry look-ahead adder
+					when "1100" =>
+						zhi <= x"00000000";
+					when others =>
+						zhi <= x"00000000";
+						zlo <= x"00000000";
 				end case;
 			end if;
 		end if;

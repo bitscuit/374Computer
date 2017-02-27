@@ -5,6 +5,7 @@ source_file = 1, C:/Users/Michael/Documents/GitHub/374Computer/Phase1/muxMDR.vhd
 source_file = 1, C:/Users/Michael/Documents/GitHub/374Computer/Phase1/encoder32.vhd
 source_file = 1, C:/Users/Michael/Documents/GitHub/374Computer/Phase1/phase1.bdf
 source_file = 1, C:/Users/Michael/Documents/GitHub/374Computer/Phase1/alu.vhd
+source_file = 1, C:/Users/Michael/Documents/GitHub/374Computer/Phase1/booth.vhd
 source_file = 1, C:/Users/Michael/Documents/GitHub/374Computer/Phase1/db/reg32.cbx.xml
 source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
