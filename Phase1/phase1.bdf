@@ -821,7 +821,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 784 -16 960 0)
+	(rect 784 -24 960 -8)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "sel" (rect 9 0 23 12)(font "Arial" ))
 	(pt 176 8)
@@ -871,7 +871,7 @@ applicable agreement for further details.
 	(input)
 	(rect 1032 896 1200 912)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "zhi_out_sel" (rect 5 0 60 12)(font "Arial" ))
+	(text "zhi_out_sel" (rect 5 0 59 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -887,7 +887,7 @@ applicable agreement for further details.
 	(input)
 	(rect 1032 912 1200 928)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "zlo_out_sel" (rect 5 0 60 12)(font "Arial" ))
+	(text "zlo_out_sel" (rect 5 0 59 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -1258,23 +1258,6 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 528 2688 704 2704)
-	(text "BIDIR" (rect 1 0 25 10)(font "Arial" (font_size 6)))
-	(text "c_busmuxin[31..0]" (rect 90 0 180 12)(font "Arial" ))
-	(pt 0 8)
-	(drawing
-		(line (pt 56 4)(pt 78 4))
-		(line (pt 0 8)(pt 52 8))
-		(line (pt 56 12)(pt 78 12))
-		(line (pt 78 4)(pt 82 8))
-		(line (pt 78 12)(pt 82 8))
-		(line (pt 56 4)(pt 52 8))
-		(line (pt 52 8)(pt 56 12))
-	)
-	(text "VCC" (rect 4 7 24 17)(font "Arial" (font_size 6)))
-)
-(pin
-	(bidir)
 	(rect 1936 -56 2112 -40)
 	(text "BIDIR" (rect 1 0 25 10)(font "Arial" (font_size 6)))
 	(text "mdr_busmuxin[31..0]" (rect 90 0 193 12)(font "Arial" ))
@@ -1380,6 +1363,40 @@ applicable agreement for further details.
 	(rect 2904 488 3080 504)
 	(text "BIDIR" (rect 1 0 25 10)(font "Arial" (font_size 6)))
 	(text "zlo_busmuxin[31..0]" (rect 90 0 187 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 56 4)(pt 78 4))
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 56 12)(pt 78 12))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 78 12)(pt 82 8))
+		(line (pt 56 4)(pt 52 8))
+		(line (pt 52 8)(pt 56 12))
+	)
+	(text "VCC" (rect 4 7 24 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(bidir)
+	(rect 1336 -104 1512 -88)
+	(text "BIDIR" (rect 1 0 25 10)(font "Arial" (font_size 6)))
+	(text "mdr_data[31..0]" (rect 90 0 167 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 56 4)(pt 78 4))
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 56 12)(pt 78 12))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 78 12)(pt 82 8))
+		(line (pt 56 4)(pt 52 8))
+		(line (pt 52 8)(pt 56 12))
+	)
+	(text "VCC" (rect 4 7 24 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(bidir)
+	(rect 528 2688 791 2704)
+	(text "BIDIR" (rect 1 0 25 10)(font "Arial" (font_size 6)))
+	(text "c_sign_extended_busmuxin[31..0]" (rect 90 0 257 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 56 4)(pt 78 4))
@@ -2296,7 +2313,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 960 -72 1232 40)
+	(rect 960 -80 1232 32)
 	(text "muxMDR" (rect 5 0 51 12)(font "Arial" ))
 	(text "muxMDR" (rect 8 96 54 108)(font "Arial" ))
 	(port
@@ -3639,18 +3656,6 @@ applicable agreement for further details.
 	(pt 1560 -16)
 )
 (connector
-	(text "busmuxout[31..0]" (rect 816 -48 902 -36)(font "Arial" ))
-	(pt 896 -40)
-	(pt 960 -40)
-	(bus)
-)
-(connector
-	(text "m_data_in[31..0]" (rect 816 -32 898 -20)(font "Arial" ))
-	(pt 960 -24)
-	(pt 896 -24)
-	(bus)
-)
-(connector
 	(text "clear" (rect 1530 -48 1553 -36)(font "Arial" ))
 	(pt 1520 -32)
 	(pt 1560 -32)
@@ -3734,11 +3739,6 @@ applicable agreement for further details.
 	(text "to_A_in[31..0]" (rect 2014 200 2082 212)(font "Arial" ))
 	(pt 1992 216)
 	(pt 2064 216)
-	(bus)
-)
-(connector
-	(pt 1392 616)
-	(pt 1384 616)
 	(bus)
 )
 (connector
@@ -3857,20 +3857,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1560 -48)
-	(pt 1232 -48)
-	(bus)
-)
-(connector
-	(pt 1232 -48)
-	(pt 1232 -40)
-	(bus)
-)
-(connector
-	(pt 1488 0)
-	(pt 1496 0)
-)
-(connector
 	(text "mdr_in" (rect 1514 -16 1547 -4)(font "Arial" ))
 	(pt 1496 0)
 	(pt 1560 0)
@@ -3937,4 +3923,32 @@ applicable agreement for further details.
 	(pt 1200 904)
 	(pt 1232 904)
 )
-(junction (pt 1496 0))
+(connector
+	(text "busmuxout[31..0]" (rect 816 -56 902 -44)(font "Arial" ))
+	(pt 896 -48)
+	(pt 960 -48)
+	(bus)
+)
+(connector
+	(text "m_data_in[31..0]" (rect 816 -40 898 -28)(font "Arial" ))
+	(pt 960 -32)
+	(pt 896 -32)
+	(bus)
+)
+(connector
+	(text "mdr_data[31..0]" (rect 1232 -64 1309 -52)(font "Arial" ))
+	(pt 1232 -48)
+	(pt 1288 -48)
+	(bus)
+)
+(connector
+	(text "mdr_data[31..0]" (rect 1488 -64 1565 -52)(font "Arial" ))
+	(pt 1560 -48)
+	(pt 1504 -48)
+	(bus)
+)
+(connector
+	(pt 1384 616)
+	(pt 1392 616)
+	(bus)
+)

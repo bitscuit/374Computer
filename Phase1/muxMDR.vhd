@@ -16,6 +16,7 @@ architecture behavioral of muxMDR is
 begin
 with sel select
 muxmdr_output <= 	from_bm_out when '0',
+						m_data_in when '1',
 						m_data_in when others;
 end architecture behavioral;
 						

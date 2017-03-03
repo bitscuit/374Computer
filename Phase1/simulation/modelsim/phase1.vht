@@ -34,7 +34,7 @@ ARCHITECTURE phase1_arch OF phase1_vhd_tst IS
 -- signals                                                   
 SIGNAL alu_in : STD_LOGIC;
 SIGNAL busmuxout : STD_LOGIC_VECTOR(31 DOWNTO 0);
-SIGNAL c_busmuxin : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL c_sign_extended_busmuxin : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL c_in : STD_LOGIC;
 SIGNAL c_out : STD_LOGIC;
 SIGNAL clear : STD_LOGIC;
@@ -52,6 +52,7 @@ SIGNAL m_data_in : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL mdr_busmuxin : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL mdr_in : STD_LOGIC;
 SIGNAL mdr_out : STD_LOGIC;
+SIGNAL mdr_data : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL pc_busmuxin : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL pc_in : STD_LOGIC;
 SIGNAL pc_out : STD_LOGIC;
@@ -116,11 +117,15 @@ SIGNAL zlo_busmuxin : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL zlo_in : STD_LOGIC;
 SIGNAL zlo_out : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL zlo_out_sel : STD_LOGIC;
+
+TYPE State is (default, reg1, reg2, reg3, T0, T1, T2, T3, T4, T5);
+SIGNAL Present_State: State := default;
+
 COMPONENT phase1
 	PORT (
 	alu_in : IN STD_LOGIC;
 	busmuxout : INOUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-	c_busmuxin : INOUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	c_sign_extended_busmuxin : INOUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 	c_in : IN STD_LOGIC;
 	c_out : IN STD_LOGIC;
 	clear : IN STD_LOGIC;
@@ -138,6 +143,7 @@ COMPONENT phase1
 	mdr_busmuxin : INOUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 	mdr_in : IN STD_LOGIC;
 	mdr_out : IN STD_LOGIC;
+	mdr_data : INOUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 	pc_busmuxin : INOUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 	pc_in : IN STD_LOGIC;
 	pc_out : IN STD_LOGIC;
@@ -210,7 +216,7 @@ BEGIN
 -- list connections between master ports and signals
 	alu_in => alu_in,
 	busmuxout => busmuxout,
-	c_busmuxin => c_busmuxin,
+	c_sign_extended_busmuxin => c_sign_extended_busmuxin,
 	c_in => c_in,
 	c_out => c_out,
 	clear => clear,
@@ -228,6 +234,7 @@ BEGIN
 	mdr_busmuxin => mdr_busmuxin,
 	mdr_in => mdr_in,
 	mdr_out => mdr_out,
+	mdr_data => mdr_data,
 	pc_busmuxin => pc_busmuxin,
 	pc_in => pc_in,
 	pc_out => pc_out,
@@ -303,16 +310,108 @@ END PROCESS init;
 --processes
 clk_process : process
 begin
-	clock <= '0', '1' after 5 ns;
-	Wait for 10 ns;
+	clock <= '0', '1' after 10 ns;
+	Wait for 20 ns;
 end process clk_process;                                        
 
-always : PROCESS                                              
--- optional sensitivity list                                  
--- (        )                                                 
--- variable declarations                                      
-BEGIN                                                         
-        -- code executes for every event on sensitivity list  
-WAIT;                                                        
-END PROCESS always;                                          
+process(clock)
+begin
+	if (clock'EVENT AND clock = '1') THEN
+		case present_state is
+			when default =>
+				present_state <= reg1;
+			when reg1 =>
+				present_state <= reg2;
+			when reg2 =>
+				present_state <= reg3;
+			when reg3 =>
+				present_state <= T0;
+			when T0 =>
+				present_state <= T1;
+			when T1 =>
+				present_state <= T2;
+			when T2 =>
+				present_state <= T3;
+			when T3 =>
+				present_state <= T4;
+			when T4 =>
+				present_state <= T5;
+			when OTHERS =>
+		end case;
+	end if;
+end process;
+
+process(present_state)
+begin
+	case present_state is
+		when default =>
+			r0_out <= '0';			r0in 			<= '0';
+			r1_out <= '0';			r1in 			<= '0';
+			r2_out <= '0'; 		r2in 			<= '0';
+			r3_out <= '0';			r3in 			<= '0';
+			r4_out <= '0';			r4in 			<= '0';
+			r5_out <= '0';			r5in 			<= '0';
+			r6_out <= '0';			r6in 			<= '0';
+			r7_out <= '0';			r7in 			<= '0';
+			r8_out <= '0';			r8in 			<= '0';
+			r9_out <= '0';			r9in 			<= '0';
+			r10_out <= '0';		r10in 		<= '0';
+			r11_out <= '0';		r11in 		<= '0';
+			r12_out <= '0';		r12in 		<= '0';
+			r13_out <= '0';		r13in 		<= '0';
+			r14_out <= '0';		r14in 		<= '0';
+			r15_out <= '0';		r15in 		<= '0';
+			hi_out <= '0';			hi_in 		<= '0';
+			lo_out <= '0';			lo_in 		<= '0';
+			zhi_out_sel <= '0';	zhi_in 		<= '0';
+			zlo_out_sel <= '0';	zlo_in 		<= '0';
+			pc_out <= '0';			pc_in 		<= '0';
+			mdr_out <= '0';		mdr_in 		<= '0';
+			inport_out <= '0';	inport_in 	<= '0';
+			c_out <= '0';			c_in 			<= '0';
+			Yin <= '0';
+			clear <= '1', '0' after 5 ns;
+			sel <= '0';
+		when reg1 =>
+			m_data_in <= x"00000000";
+			sel 		<= '1', '0' after 10 ns;
+			mdr_in 	<= '1', '0' after 10 ns;
+			mdr_out 	<= '1', '0' after 10 ns;
+			r1in 		<= '1';
+		when reg2 =>
+			m_data_in <= x"00000002";
+			sel 		<= '1', '0' after 10 ns;
+			mdr_in 	<= '1', '0' after 10 ns;
+			mdr_out 	<= '1', '0' after 10 ns;
+			r2in 		<= '1';
+		when reg3 =>
+			m_data_in <= x"00000003";
+			sel 		<= '1', '0' after 10 ns;
+			mdr_in 	<= '1', '0' after 10 ns;
+			mdr_out 	<= '1', '0' after 10 ns;
+			r3in 		<= '1';
+		when T0 =>
+			zhi_in <= '1';
+			zlo_in <= '1';
+		when T1 =>
+			--sel_alu <= "0000";
+			sel <= '1';
+			mdr_in <= '1';
+		when T2 =>
+			--mdr_out <= '1';
+		when T3 =>
+			r2_out <= '1';
+			Yin <= '1';
+		when T4 =>
+			r3_out <= '1';
+			sel_alu <= "0000";
+			zhi_in <= '1';
+			zlo_in <= '1';
+		when T5 =>
+			zhi_out_sel <= '1';
+			zlo_out_sel <= '1';
+			r1in <= '1';
+		when others =>
+	end case;
+end process;                                        
 END phase1_arch;

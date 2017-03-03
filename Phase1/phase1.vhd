@@ -78,7 +78,7 @@ ENTITY phase1 IS
 		zhi_out_sel :  IN  STD_LOGIC;
 		zlo_out_sel :  IN  STD_LOGIC;
 		busmuxout :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
-		c_busmuxin :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
+		c_sign_extended_busmuxin :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		hi_busmuxin :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		inport_busmuxin :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		lo_busmuxin :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -101,6 +101,7 @@ ENTITY phase1 IS
 		r7_busmuxin :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		r8_busmuxin :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		r9_busmuxin :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
+		mdr_data : INOUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 		sel_alu :  IN  STD_LOGIC_VECTOR(3 DOWNTO 0);
 		select_bus :  INOUT  STD_LOGIC_VECTOR(4 DOWNTO 0);
 		to_A_in :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -201,13 +202,10 @@ COMPONENT muxmdr
 	);
 END COMPONENT;
 
-SIGNAL	c_sign_extended_busmuxin :  STD_LOGIC_VECTOR(31 DOWNTO 0);
-SIGNAL	SYNTHESIZED_WIRE_0 :  STD_LOGIC_VECTOR(31 DOWNTO 0);
-
+--SIGNAL	c_sign_extended_busmuxin :  STD_LOGIC_VECTOR(31 DOWNTO 0);
+--SIGNAL	SYNTHESIZED_WIRE_0 :  STD_LOGIC_VECTOR(31 DOWNTO 0);
 
 BEGIN 
-
-
 
 b2v_c_sign_extended : reg32
 PORT MAP(clr => clear,
@@ -313,7 +311,7 @@ b2v_mdr : reg32
 PORT MAP(clr => clear,
 		 clk => clock,
 		 enable => mdr_in,
-		 from_bm_out => SYNTHESIZED_WIRE_0,
+		 from_bm_out => mdr_data,
 		 to_bm_in => mdr_busmuxin);
 
 
@@ -321,7 +319,7 @@ b2v_muxMDR : muxmdr
 PORT MAP(sel => sel,
 		 from_bm_out => busmuxout,
 		 m_data_in => m_data_in,
-		 muxmdr_output => SYNTHESIZED_WIRE_0);
+		 muxmdr_output => mdr_data);
 
 
 b2v_pc : reg32

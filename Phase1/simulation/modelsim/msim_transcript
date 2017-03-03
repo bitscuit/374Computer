@@ -77,10 +77,6 @@
 # Loading work.alu(behavioral)
 # Loading work.bus_mux32(behavioral)
 # Loading work.muxmdr(behavioral)
-# ** Warning: (vsim-8683) Uninitialized inout port /phase1_vhd_tst/i1/c_busmuxin(31 downto 0) has no driver.
-# 
-# This port will contribute value (UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU) to the signal network.
-# 
 # 
 # add wave *
 # view structure
