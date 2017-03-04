@@ -18,7 +18,7 @@ begin
 	begin
 		if (clr = '1') then
 			to_bm_in <= x"00000000";
-		elsif (clk'EVENT AND clk = '1') then
+		elsif ( clk = '1') then
 			if (enable = '1') then
 				-- store bus data into register
 				to_bm_in <= from_bm_out;

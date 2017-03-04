@@ -4,7 +4,7 @@ K3
 cModel Technology
 Z0 dC:\Users\Michael\Documents\GitHub\374Computer\Phase1\simulation\modelsim
 Ealu
-Z1 w1488168488
+Z1 w1488662827
 Z2 DPx3 lpm 14 lpm_components 0 22 aHRA3clF>2DcWDhgFTAbM3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
 Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
@@ -17,7 +17,7 @@ L8
 VDd[3=@l4NOjhiU^[5QKDG0
 Z9 OV;C;10.1d;51
 31
-Z10 !s108 1488211303.138000
+Z10 !s108 1488663047.534000
 Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/Michael/Documents/GitHub/374Computer/Phase1/alu.vhd|
 Z12 !s107 C:/Users/Michael/Documents/GitHub/374Computer/Phase1/alu.vhd|
 Z13 o-93 -work work -O0
@@ -30,9 +30,9 @@ R3
 R4
 R5
 DEx4 work 3 alu 0 22 Dd[3=@l4NOjhiU^[5QKDG0
-l30
+l32
 L19
-VGObo:DIUTflim29ndREUG2
+VdTTN`C`_oCoi?QLA=GkKm1
 R9
 31
 R10
@@ -40,7 +40,7 @@ R11
 R12
 R13
 R14
-!s100 ozHAeJ7IlkL1URbY[IY`_1
+!s100 E]co180lK;7TT]CR[cTmZ0
 !i10b 1
 Ebus_mux32
 Z15 w1488176117
@@ -54,7 +54,7 @@ L4
 V2W50mUlc[ajPP<=7OZL?V3
 R9
 31
-Z18 !s108 1488211301.962000
+Z18 !s108 1488663046.008000
 Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/Michael/Documents/GitHub/374Computer/Phase1/bus_mux32.vhd|
 Z20 !s107 C:/Users/Michael/Documents/GitHub/374Computer/Phase1/bus_mux32.vhd|
 R13
@@ -89,7 +89,7 @@ L4
 VlHf8J^8K]O]j^XeiG2X6i1
 R9
 31
-Z24 !s108 1488211302.756000
+Z24 !s108 1488663047.073000
 Z25 !s90 -reportprogress|300|-93|-work|work|C:/Users/Michael/Documents/GitHub/374Computer/Phase1/encoder32.vhd|
 Z26 !s107 C:/Users/Michael/Documents/GitHub/374Computer/Phase1/encoder32.vhd|
 R13
@@ -124,7 +124,7 @@ L4
 VCDHaNBB_4<kY4o4In9neI1
 R9
 31
-Z30 !s108 1488211302.360000
+Z30 !s108 1488663046.456000
 Z31 !s90 -reportprogress|300|-93|-work|work|C:/Users/Michael/Documents/GitHub/374Computer/Phase1/muxMDR.vhd|
 Z32 !s107 C:/Users/Michael/Documents/GitHub/374Computer/Phase1/muxMDR.vhd|
 R13
@@ -159,7 +159,7 @@ L24
 V8_>NiMJD`Vo0e9L4B:SoC1
 R9
 31
-Z36 !s108 1488211301.138000
+Z36 !s108 1488663044.707000
 Z37 !s90 -reportprogress|300|-93|-work|work|C:/Users/Michael/Documents/GitHub/374Computer/Phase1/phase1.vhd|
 Z38 !s107 C:/Users/Michael/Documents/GitHub/374Computer/Phase1/phase1.vhd|
 R13
@@ -183,7 +183,7 @@ R14
 !s100 <]?h[]Rf?dLm4cDWW^`_32
 !i10b 1
 Ephase1_vhd_tst
-Z39 w1488211291
+Z39 w1488663033
 R4
 R3
 R6
@@ -196,7 +196,7 @@ VW:4=?n`oK3SfeZa]O@Q9W1
 R9
 31
 !i10b 1
-Z42 !s108 1488211303.425000
+Z42 !s108 1488663047.982000
 Z43 !s90 -reportprogress|300|-93|-work|work|C:/Users/Michael/Documents/GitHub/374Computer/Phase1/simulation/modelsim/phase1.vht|
 Z44 !s107 C:/Users/Michael/Documents/GitHub/374Computer/Phase1/simulation/modelsim/phase1.vht|
 R13
@@ -207,8 +207,8 @@ R3
 DEx4 work 14 phase1_vhd_tst 0 22 W:4=?n`oK3SfeZa]O@Q9W1
 l213
 L32
-VBaV?4[<Mkl@G2HGV^lU>o3
-!s100 ZdZ6<mo_DSKK=]2fDRR8@0
+Vk>Fb<DIGV7E`SSCYS]K_?0
+!s100 MRElEFJM=ME`2zPm:E=n02
 R9
 31
 !i10b 1
@@ -218,7 +218,7 @@ R44
 R13
 R14
 Ereg32
-Z45 w1488210770
+Z45 w1488647243
 R4
 R3
 R6
@@ -229,7 +229,7 @@ L4
 V2MO:5f2lKMQ[ZZ:hAf>m82
 R9
 31
-Z48 !s108 1488211301.484000
+Z48 !s108 1488663045.181000
 Z49 !s90 -reportprogress|300|-93|-work|work|C:/Users/Michael/Documents/GitHub/374Computer/Phase1/reg32.vhd|
 Z50 !s107 C:/Users/Michael/Documents/GitHub/374Computer/Phase1/reg32.vhd|
 R13
@@ -242,7 +242,7 @@ R3
 DEx4 work 5 reg32 0 22 2MO:5f2lKMQ[ZZ:hAf>m82
 l16
 L15
-VZ_cz]n`9<c4PcoR<=BJTN1
+V[_Ia6Vfe;2[LMAWHR1b:M0
 R9
 31
 R48
@@ -250,5 +250,5 @@ R49
 R50
 R13
 R14
-!s100 0eY@HHMa9=B54jd>;03HV3
+!s100 KMCg6Lh?^[9o1Wg5<mdOn2
 !i10b 1
