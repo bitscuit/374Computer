@@ -1,5 +1,5 @@
 Analysis & Synthesis report for reg32
-Sat Mar 04 16:27:43 2017
+Sun Mar 05 00:25:20 2017
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -20,10 +20,9 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  12. Parameter Settings for Inferred Entity Instance: alu:b2v_inst|lpm_divide:Mod0
  13. Parameter Settings for Inferred Entity Instance: alu:b2v_inst|lpm_mult:Mult0
  14. Parameter Settings for Inferred Entity Instance: alu:b2v_inst|lpm_divide:Div0
- 15. Parameter Settings for Inferred Entity Instance: alu:b2v_inst|lpm_add_sub:Add0
- 16. lpm_mult Parameter Settings by Entity Instance
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
+ 15. lpm_mult Parameter Settings by Entity Instance
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -49,13 +48,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Mar 04 16:27:42 2017           ;
+; Analysis & Synthesis Status        ; Successful - Sun Mar 05 00:25:19 2017           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; reg32                                           ;
 ; Top-level Entity Name              ; phase1                                          ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 12,129                                          ;
-;     Total combinational functions  ; 12,129                                          ;
+; Total logic elements               ; 12,588                                          ;
+;     Total combinational functions  ; 12,588                                          ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
 ; Total pins                         ; 1,022                                           ;
@@ -164,40 +163,35 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                    ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                ; Library ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
-; phase1.vhd                       ; yes             ; User VHDL File               ; C:/Users/Michael/Documents/GitHub/374Computer/Phase1/phase1.vhd             ;         ;
-; reg32.vhd                        ; yes             ; User VHDL File               ; C:/Users/Michael/Documents/GitHub/374Computer/Phase1/reg32.vhd              ;         ;
-; bus_mux32.vhd                    ; yes             ; User VHDL File               ; C:/Users/Michael/Documents/GitHub/374Computer/Phase1/bus_mux32.vhd          ;         ;
-; muxMDR.vhd                       ; yes             ; User VHDL File               ; C:/Users/Michael/Documents/GitHub/374Computer/Phase1/muxMDR.vhd             ;         ;
-; encoder32.vhd                    ; yes             ; User VHDL File               ; C:/Users/Michael/Documents/GitHub/374Computer/Phase1/encoder32.vhd          ;         ;
-; alu.vhd                          ; yes             ; Auto-Found VHDL File         ; C:/Users/Michael/Documents/GitHub/374Computer/Phase1/alu.vhd                ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_divide.tdf            ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/abs_divider.inc           ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sign_div_unsign.inc       ;         ;
-; aglobal130.inc                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc            ;         ;
-; db/lpm_divide_3po.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Michael/Documents/GitHub/374Computer/Phase1/db/lpm_divide_3po.tdf  ;         ;
-; db/abs_divider_4dg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Michael/Documents/GitHub/374Computer/Phase1/db/abs_divider_4dg.tdf ;         ;
-; db/alt_u_div_t8f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Michael/Documents/GitHub/374Computer/Phase1/db/alt_u_div_t8f.tdf   ;         ;
-; db/add_sub_unc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Michael/Documents/GitHub/374Computer/Phase1/db/add_sub_unc.tdf     ;         ;
-; db/add_sub_vnc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Michael/Documents/GitHub/374Computer/Phase1/db/add_sub_vnc.tdf     ;         ;
-; db/lpm_abs_9v9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Michael/Documents/GitHub/374Computer/Phase1/db/lpm_abs_9v9.tdf     ;         ;
-; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mult.tdf              ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.inc           ;         ;
-; multcore.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/multcore.inc              ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc              ;         ;
-; altshift.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc              ;         ;
-; db/mult_r4t.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Michael/Documents/GitHub/374Computer/Phase1/db/mult_r4t.tdf        ;         ;
-; db/lpm_divide_01p.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Michael/Documents/GitHub/374Computer/Phase1/db/lpm_divide_01p.tdf  ;         ;
-; lpm_add_sub.tdf                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.tdf           ;         ;
-; addcore.inc                      ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/addcore.inc               ;         ;
-; look_add.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/look_add.inc              ;         ;
-; alt_stratix_add_sub.inc          ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc   ;         ;
-; db/add_sub_gui.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Michael/Documents/GitHub/374Computer/Phase1/db/add_sub_gui.tdf     ;         ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                              ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                          ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
+; phase1.vhd                       ; yes             ; User VHDL File               ; C:/Users/Henry/Desktop/374Computer/Phase1/phase1.vhd                  ;         ;
+; alu.vhd                          ; yes             ; User VHDL File               ; C:/Users/Henry/Desktop/374Computer/Phase1/alu.vhd                     ;         ;
+; reg32.vhd                        ; yes             ; User VHDL File               ; C:/Users/Henry/Desktop/374Computer/Phase1/reg32.vhd                   ;         ;
+; bus_mux32.vhd                    ; yes             ; User VHDL File               ; C:/Users/Henry/Desktop/374Computer/Phase1/bus_mux32.vhd               ;         ;
+; muxMDR.vhd                       ; yes             ; User VHDL File               ; C:/Users/Henry/Desktop/374Computer/Phase1/muxMDR.vhd                  ;         ;
+; encoder32.vhd                    ; yes             ; User VHDL File               ; C:/Users/Henry/Desktop/374Computer/Phase1/encoder32.vhd               ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc      ;         ;
+; db/lpm_divide_3po.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Henry/Desktop/374Computer/Phase1/db/lpm_divide_3po.tdf       ;         ;
+; db/abs_divider_4dg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Henry/Desktop/374Computer/Phase1/db/abs_divider_4dg.tdf      ;         ;
+; db/alt_u_div_t8f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Henry/Desktop/374Computer/Phase1/db/alt_u_div_t8f.tdf        ;         ;
+; db/add_sub_unc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Henry/Desktop/374Computer/Phase1/db/add_sub_unc.tdf          ;         ;
+; db/add_sub_vnc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Henry/Desktop/374Computer/Phase1/db/add_sub_vnc.tdf          ;         ;
+; db/lpm_abs_9v9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Henry/Desktop/374Computer/Phase1/db/lpm_abs_9v9.tdf          ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mult.tdf        ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.inc     ;         ;
+; multcore.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/multcore.inc        ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc        ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc        ;         ;
+; db/mult_r4t.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Henry/Desktop/374Computer/Phase1/db/mult_r4t.tdf             ;         ;
+; db/lpm_divide_01p.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Henry/Desktop/374Computer/Phase1/db/lpm_divide_01p.tdf       ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -205,17 +199,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 12,129      ;
+; Estimated Total logic elements              ; 12,588      ;
 ;                                             ;             ;
-; Total combinational functions               ; 12129       ;
+; Total combinational functions               ; 12588       ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 5544        ;
-;     -- 3 input functions                    ; 6184        ;
-;     -- <=2 input functions                  ; 401         ;
+;     -- 4 input functions                    ; 5788        ;
+;     -- 3 input functions                    ; 6407        ;
+;     -- <=2 input functions                  ; 393         ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 6989        ;
-;     -- arithmetic mode                      ; 5140        ;
+;     -- normal mode                          ; 7418        ;
+;     -- arithmetic mode                      ; 5170        ;
 ;                                             ;             ;
 ; Total registers                             ; 0           ;
 ;     -- Dedicated logic registers            ; 0           ;
@@ -225,8 +219,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 8           ;
 ; Maximum fan-out node                        ; clear~input ;
 ; Maximum fan-out                             ; 800         ;
-; Total fan-out                               ; 44331       ;
-; Average fan-out                             ; 2.93        ;
+; Total fan-out                               ; 45960       ;
+; Average fan-out                             ; 2.95        ;
 +---------------------------------------------+-------------+
 
 
@@ -235,13 +229,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                    ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |phase1                                   ; 12129 (0)         ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 1022 ; 0            ; |phase1                                                                                                                                ; work         ;
-;    |alu:b2v_inst|                         ; 10720 (8158)      ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |phase1|alu:b2v_inst                                                                                                                   ; work         ;
-;       |lpm_add_sub:Add0|                  ; 65 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase1|alu:b2v_inst|lpm_add_sub:Add0                                                                                                  ; work         ;
-;          |add_sub_gui:auto_generated|     ; 65 (65)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase1|alu:b2v_inst|lpm_add_sub:Add0|add_sub_gui:auto_generated                                                                       ; work         ;
-;       |lpm_divide:Div0|                   ; 1081 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase1|alu:b2v_inst|lpm_divide:Div0                                                                                                   ; work         ;
-;          |lpm_divide_01p:auto_generated|  ; 1081 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase1|alu:b2v_inst|lpm_divide:Div0|lpm_divide_01p:auto_generated                                                                     ; work         ;
-;             |abs_divider_4dg:divider|     ; 1081 (32)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase1|alu:b2v_inst|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider                                             ; work         ;
+; |phase1                                   ; 12588 (0)         ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 1022 ; 0            ; |phase1                                                                                                                                ; work         ;
+;    |alu:b2v_inst|                         ; 11179 (8651)      ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |phase1|alu:b2v_inst                                                                                                                   ; work         ;
+;       |lpm_divide:Div0|                   ; 1112 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase1|alu:b2v_inst|lpm_divide:Div0                                                                                                   ; work         ;
+;          |lpm_divide_01p:auto_generated|  ; 1112 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase1|alu:b2v_inst|lpm_divide:Div0|lpm_divide_01p:auto_generated                                                                     ; work         ;
+;             |abs_divider_4dg:divider|     ; 1112 (63)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase1|alu:b2v_inst|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider                                             ; work         ;
 ;                |alt_u_div_t8f:divider|    ; 1048 (1048)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase1|alu:b2v_inst|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider                       ; work         ;
 ;                |lpm_abs_9v9:my_abs_den|   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase1|alu:b2v_inst|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|lpm_abs_9v9:my_abs_den                      ; work         ;
 ;       |lpm_divide:Mod0|                   ; 1324 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase1|alu:b2v_inst|lpm_divide:Mod0                                                                                                   ; work         ;
@@ -493,10 +485,10 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |phase1|alu:b2v_inst|P               ;
 ; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |phase1|alu:b2v_inst|P               ;
 ; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |phase1|alu:b2v_inst|P               ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 512 LEs              ; 160 LEs                ; No         ; |phase1|bus_mux32:b2v_inst1|Mux11    ;
-; 26:1               ; 2 bits    ; 34 LEs        ; 16 LEs               ; 18 LEs                 ; No         ; |phase1|alu:b2v_inst|Mux34           ;
-; 26:1               ; 28 bits   ; 476 LEs       ; 224 LEs              ; 252 LEs                ; No         ; |phase1|alu:b2v_inst|Mux41           ;
-; 16:1               ; 2 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; No         ; |phase1|encoder32:b2v_encoder32|s[3] ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 512 LEs              ; 160 LEs                ; No         ; |phase1|bus_mux32:b2v_inst1|Mux13    ;
+; 26:1               ; 2 bits    ; 34 LEs        ; 16 LEs               ; 18 LEs                 ; No         ; |phase1|alu:b2v_inst|Mux35           ;
+; 26:1               ; 28 bits   ; 476 LEs       ; 224 LEs              ; 252 LEs                ; No         ; |phase1|alu:b2v_inst|Mux45           ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; No         ; |phase1|encoder32:b2v_encoder32|s[4] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
 
 
@@ -581,34 +573,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: alu:b2v_inst|lpm_add_sub:Add0 ;
-+------------------------+-------------+-----------------------------------------+
-; Parameter Name         ; Value       ; Type                                    ;
-+------------------------+-------------+-----------------------------------------+
-; LPM_WIDTH              ; 32          ; Untyped                                 ;
-; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                 ;
-; LPM_DIRECTION          ; DEFAULT     ; Untyped                                 ;
-; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                 ;
-; LPM_PIPELINE           ; 0           ; Untyped                                 ;
-; MAXIMIZE_SPEED         ; 5           ; Untyped                                 ;
-; REGISTERED_AT_END      ; 0           ; Untyped                                 ;
-; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                 ;
-; USE_CS_BUFFERS         ; 1           ; Untyped                                 ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                                 ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                      ;
-; DEVICE_FAMILY          ; Cyclone III ; Untyped                                 ;
-; USE_WYS                ; OFF         ; Untyped                                 ;
-; STYLE                  ; FAST        ; Untyped                                 ;
-; CBXI_PARAMETER         ; add_sub_gui ; Untyped                                 ;
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                              ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                            ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                            ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                          ;
-+------------------------+-------------+-----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +---------------------------------------------------------------------+
 ; lpm_mult Parameter Settings by Entity Instance                      ;
 +---------------------------------------+-----------------------------+
@@ -634,7 +598,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:26     ;
+; Top            ; 00:00:37     ;
 +----------------+--------------+
 
 
@@ -644,12 +608,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Mar 04 16:27:11 2017
+    Info: Processing started: Sun Mar 05 00:24:35 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c reg32
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file phase1.vhd
     Info (12022): Found design unit 1: phase1-bdf_type
     Info (12023): Found entity 1: phase1
+Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
+    Info (12022): Found design unit 1: alu-behavioral
+    Info (12023): Found entity 1: alu
 Info (12021): Found 2 design units, including 1 entities, in source file reg32.vhd
     Info (12022): Found design unit 1: reg32-behavioral
     Info (12023): Found entity 1: reg32
@@ -662,129 +629,120 @@ Info (12021): Found 2 design units, including 1 entities, in source file muxmdr.
 Info (12021): Found 2 design units, including 1 entities, in source file encoder32.vhd
     Info (12022): Found design unit 1: encoder32-behavioral
     Info (12023): Found entity 1: encoder32
-Info (12021): Found 2 design units, including 1 entities, in source file lpm_divide0.vhd
-    Info (12022): Found design unit 1: lpm_divide0-SYN
-    Info (12023): Found entity 1: lpm_divide0
 Info (12127): Elaborating entity "phase1" for the top level hierarchy
 Info (12128): Elaborating entity "reg32" for hierarchy "reg32:b2v_c_sign_extended"
-Warning (10631): VHDL Process Statement warning at reg32.vhd(17): inferring latch(es) for signal or variable "to_bm_in", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "to_bm_in[0]" at reg32.vhd(17)
-Info (10041): Inferred latch for "to_bm_in[1]" at reg32.vhd(17)
-Info (10041): Inferred latch for "to_bm_in[2]" at reg32.vhd(17)
-Info (10041): Inferred latch for "to_bm_in[3]" at reg32.vhd(17)
-Info (10041): Inferred latch for "to_bm_in[4]" at reg32.vhd(17)
-Info (10041): Inferred latch for "to_bm_in[5]" at reg32.vhd(17)
-Info (10041): Inferred latch for "to_bm_in[6]" at reg32.vhd(17)
-Info (10041): Inferred latch for "to_bm_in[7]" at reg32.vhd(17)
-Info (10041): Inferred latch for "to_bm_in[8]" at reg32.vhd(17)
-Info (10041): Inferred latch for "to_bm_in[9]" at reg32.vhd(17)
-Info (10041): Inferred latch for "to_bm_in[10]" at reg32.vhd(17)
-Info (10041): Inferred latch for "to_bm_in[11]" at reg32.vhd(17)
-Info (10041): Inferred latch for "to_bm_in[12]" at reg32.vhd(17)
-Info (10041): Inferred latch for "to_bm_in[13]" at reg32.vhd(17)
-Info (10041): Inferred latch for "to_bm_in[14]" at reg32.vhd(17)
-Info (10041): Inferred latch for "to_bm_in[15]" at reg32.vhd(17)
-Info (10041): Inferred latch for "to_bm_in[16]" at reg32.vhd(17)
-Info (10041): Inferred latch for "to_bm_in[17]" at reg32.vhd(17)
-Info (10041): Inferred latch for "to_bm_in[18]" at reg32.vhd(17)
-Info (10041): Inferred latch for "to_bm_in[19]" at reg32.vhd(17)
-Info (10041): Inferred latch for "to_bm_in[20]" at reg32.vhd(17)
-Info (10041): Inferred latch for "to_bm_in[21]" at reg32.vhd(17)
-Info (10041): Inferred latch for "to_bm_in[22]" at reg32.vhd(17)
-Info (10041): Inferred latch for "to_bm_in[23]" at reg32.vhd(17)
-Info (10041): Inferred latch for "to_bm_in[24]" at reg32.vhd(17)
-Info (10041): Inferred latch for "to_bm_in[25]" at reg32.vhd(17)
-Info (10041): Inferred latch for "to_bm_in[26]" at reg32.vhd(17)
-Info (10041): Inferred latch for "to_bm_in[27]" at reg32.vhd(17)
-Info (10041): Inferred latch for "to_bm_in[28]" at reg32.vhd(17)
-Info (10041): Inferred latch for "to_bm_in[29]" at reg32.vhd(17)
-Info (10041): Inferred latch for "to_bm_in[30]" at reg32.vhd(17)
-Info (10041): Inferred latch for "to_bm_in[31]" at reg32.vhd(17)
+Warning (10631): VHDL Process Statement warning at reg32.vhd(19): inferring latch(es) for signal or variable "to_bm_in", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "to_bm_in[0]" at reg32.vhd(19)
+Info (10041): Inferred latch for "to_bm_in[1]" at reg32.vhd(19)
+Info (10041): Inferred latch for "to_bm_in[2]" at reg32.vhd(19)
+Info (10041): Inferred latch for "to_bm_in[3]" at reg32.vhd(19)
+Info (10041): Inferred latch for "to_bm_in[4]" at reg32.vhd(19)
+Info (10041): Inferred latch for "to_bm_in[5]" at reg32.vhd(19)
+Info (10041): Inferred latch for "to_bm_in[6]" at reg32.vhd(19)
+Info (10041): Inferred latch for "to_bm_in[7]" at reg32.vhd(19)
+Info (10041): Inferred latch for "to_bm_in[8]" at reg32.vhd(19)
+Info (10041): Inferred latch for "to_bm_in[9]" at reg32.vhd(19)
+Info (10041): Inferred latch for "to_bm_in[10]" at reg32.vhd(19)
+Info (10041): Inferred latch for "to_bm_in[11]" at reg32.vhd(19)
+Info (10041): Inferred latch for "to_bm_in[12]" at reg32.vhd(19)
+Info (10041): Inferred latch for "to_bm_in[13]" at reg32.vhd(19)
+Info (10041): Inferred latch for "to_bm_in[14]" at reg32.vhd(19)
+Info (10041): Inferred latch for "to_bm_in[15]" at reg32.vhd(19)
+Info (10041): Inferred latch for "to_bm_in[16]" at reg32.vhd(19)
+Info (10041): Inferred latch for "to_bm_in[17]" at reg32.vhd(19)
+Info (10041): Inferred latch for "to_bm_in[18]" at reg32.vhd(19)
+Info (10041): Inferred latch for "to_bm_in[19]" at reg32.vhd(19)
+Info (10041): Inferred latch for "to_bm_in[20]" at reg32.vhd(19)
+Info (10041): Inferred latch for "to_bm_in[21]" at reg32.vhd(19)
+Info (10041): Inferred latch for "to_bm_in[22]" at reg32.vhd(19)
+Info (10041): Inferred latch for "to_bm_in[23]" at reg32.vhd(19)
+Info (10041): Inferred latch for "to_bm_in[24]" at reg32.vhd(19)
+Info (10041): Inferred latch for "to_bm_in[25]" at reg32.vhd(19)
+Info (10041): Inferred latch for "to_bm_in[26]" at reg32.vhd(19)
+Info (10041): Inferred latch for "to_bm_in[27]" at reg32.vhd(19)
+Info (10041): Inferred latch for "to_bm_in[28]" at reg32.vhd(19)
+Info (10041): Inferred latch for "to_bm_in[29]" at reg32.vhd(19)
+Info (10041): Inferred latch for "to_bm_in[30]" at reg32.vhd(19)
+Info (10041): Inferred latch for "to_bm_in[31]" at reg32.vhd(19)
 Info (12128): Elaborating entity "encoder32" for hierarchy "encoder32:b2v_encoder32"
-Info (10041): Inferred latch for "s[0]" at encoder32.vhd(40)
-Info (10041): Inferred latch for "s[1]" at encoder32.vhd(40)
-Info (10041): Inferred latch for "s[2]" at encoder32.vhd(40)
-Info (10041): Inferred latch for "s[3]" at encoder32.vhd(40)
-Info (10041): Inferred latch for "s[4]" at encoder32.vhd(40)
-Warning (12125): Using design file alu.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: alu-behavioral
-    Info (12023): Found entity 1: alu
-Warning (12300): Found the following files while searching for definition of entity "alu", but did not use these files because already using a different file containing the entity definition
-    Warning (12126): File: alu.bdf
+Info (10041): Inferred latch for "s[0]" at encoder32.vhd(52)
+Info (10041): Inferred latch for "s[1]" at encoder32.vhd(52)
+Info (10041): Inferred latch for "s[2]" at encoder32.vhd(52)
+Info (10041): Inferred latch for "s[3]" at encoder32.vhd(52)
+Info (10041): Inferred latch for "s[4]" at encoder32.vhd(52)
 Info (12128): Elaborating entity "alu" for hierarchy "alu:b2v_inst"
-Warning (10631): VHDL Process Statement warning at alu.vhd(36): inferring latch(es) for signal or variable "zhi", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at alu.vhd(36): inferring latch(es) for signal or variable "zlo", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "zlo[0]" at alu.vhd(36)
-Info (10041): Inferred latch for "zlo[1]" at alu.vhd(36)
-Info (10041): Inferred latch for "zlo[2]" at alu.vhd(36)
-Info (10041): Inferred latch for "zlo[3]" at alu.vhd(36)
-Info (10041): Inferred latch for "zlo[4]" at alu.vhd(36)
-Info (10041): Inferred latch for "zlo[5]" at alu.vhd(36)
-Info (10041): Inferred latch for "zlo[6]" at alu.vhd(36)
-Info (10041): Inferred latch for "zlo[7]" at alu.vhd(36)
-Info (10041): Inferred latch for "zlo[8]" at alu.vhd(36)
-Info (10041): Inferred latch for "zlo[9]" at alu.vhd(36)
-Info (10041): Inferred latch for "zlo[10]" at alu.vhd(36)
-Info (10041): Inferred latch for "zlo[11]" at alu.vhd(36)
-Info (10041): Inferred latch for "zlo[12]" at alu.vhd(36)
-Info (10041): Inferred latch for "zlo[13]" at alu.vhd(36)
-Info (10041): Inferred latch for "zlo[14]" at alu.vhd(36)
-Info (10041): Inferred latch for "zlo[15]" at alu.vhd(36)
-Info (10041): Inferred latch for "zlo[16]" at alu.vhd(36)
-Info (10041): Inferred latch for "zlo[17]" at alu.vhd(36)
-Info (10041): Inferred latch for "zlo[18]" at alu.vhd(36)
-Info (10041): Inferred latch for "zlo[19]" at alu.vhd(36)
-Info (10041): Inferred latch for "zlo[20]" at alu.vhd(36)
-Info (10041): Inferred latch for "zlo[21]" at alu.vhd(36)
-Info (10041): Inferred latch for "zlo[22]" at alu.vhd(36)
-Info (10041): Inferred latch for "zlo[23]" at alu.vhd(36)
-Info (10041): Inferred latch for "zlo[24]" at alu.vhd(36)
-Info (10041): Inferred latch for "zlo[25]" at alu.vhd(36)
-Info (10041): Inferred latch for "zlo[26]" at alu.vhd(36)
-Info (10041): Inferred latch for "zlo[27]" at alu.vhd(36)
-Info (10041): Inferred latch for "zlo[28]" at alu.vhd(36)
-Info (10041): Inferred latch for "zlo[29]" at alu.vhd(36)
-Info (10041): Inferred latch for "zlo[30]" at alu.vhd(36)
-Info (10041): Inferred latch for "zlo[31]" at alu.vhd(36)
-Info (10041): Inferred latch for "zhi[0]" at alu.vhd(36)
-Info (10041): Inferred latch for "zhi[1]" at alu.vhd(36)
-Info (10041): Inferred latch for "zhi[2]" at alu.vhd(36)
-Info (10041): Inferred latch for "zhi[3]" at alu.vhd(36)
-Info (10041): Inferred latch for "zhi[4]" at alu.vhd(36)
-Info (10041): Inferred latch for "zhi[5]" at alu.vhd(36)
-Info (10041): Inferred latch for "zhi[6]" at alu.vhd(36)
-Info (10041): Inferred latch for "zhi[7]" at alu.vhd(36)
-Info (10041): Inferred latch for "zhi[8]" at alu.vhd(36)
-Info (10041): Inferred latch for "zhi[9]" at alu.vhd(36)
-Info (10041): Inferred latch for "zhi[10]" at alu.vhd(36)
-Info (10041): Inferred latch for "zhi[11]" at alu.vhd(36)
-Info (10041): Inferred latch for "zhi[12]" at alu.vhd(36)
-Info (10041): Inferred latch for "zhi[13]" at alu.vhd(36)
-Info (10041): Inferred latch for "zhi[14]" at alu.vhd(36)
-Info (10041): Inferred latch for "zhi[15]" at alu.vhd(36)
-Info (10041): Inferred latch for "zhi[16]" at alu.vhd(36)
-Info (10041): Inferred latch for "zhi[17]" at alu.vhd(36)
-Info (10041): Inferred latch for "zhi[18]" at alu.vhd(36)
-Info (10041): Inferred latch for "zhi[19]" at alu.vhd(36)
-Info (10041): Inferred latch for "zhi[20]" at alu.vhd(36)
-Info (10041): Inferred latch for "zhi[21]" at alu.vhd(36)
-Info (10041): Inferred latch for "zhi[22]" at alu.vhd(36)
-Info (10041): Inferred latch for "zhi[23]" at alu.vhd(36)
-Info (10041): Inferred latch for "zhi[24]" at alu.vhd(36)
-Info (10041): Inferred latch for "zhi[25]" at alu.vhd(36)
-Info (10041): Inferred latch for "zhi[26]" at alu.vhd(36)
-Info (10041): Inferred latch for "zhi[27]" at alu.vhd(36)
-Info (10041): Inferred latch for "zhi[28]" at alu.vhd(36)
-Info (10041): Inferred latch for "zhi[29]" at alu.vhd(36)
-Info (10041): Inferred latch for "zhi[30]" at alu.vhd(36)
-Info (10041): Inferred latch for "zhi[31]" at alu.vhd(36)
+Warning (10631): VHDL Process Statement warning at alu.vhd(27): inferring latch(es) for signal or variable "zhi", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at alu.vhd(27): inferring latch(es) for signal or variable "zlo", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "zlo[0]" at alu.vhd(27)
+Info (10041): Inferred latch for "zlo[1]" at alu.vhd(27)
+Info (10041): Inferred latch for "zlo[2]" at alu.vhd(27)
+Info (10041): Inferred latch for "zlo[3]" at alu.vhd(27)
+Info (10041): Inferred latch for "zlo[4]" at alu.vhd(27)
+Info (10041): Inferred latch for "zlo[5]" at alu.vhd(27)
+Info (10041): Inferred latch for "zlo[6]" at alu.vhd(27)
+Info (10041): Inferred latch for "zlo[7]" at alu.vhd(27)
+Info (10041): Inferred latch for "zlo[8]" at alu.vhd(27)
+Info (10041): Inferred latch for "zlo[9]" at alu.vhd(27)
+Info (10041): Inferred latch for "zlo[10]" at alu.vhd(27)
+Info (10041): Inferred latch for "zlo[11]" at alu.vhd(27)
+Info (10041): Inferred latch for "zlo[12]" at alu.vhd(27)
+Info (10041): Inferred latch for "zlo[13]" at alu.vhd(27)
+Info (10041): Inferred latch for "zlo[14]" at alu.vhd(27)
+Info (10041): Inferred latch for "zlo[15]" at alu.vhd(27)
+Info (10041): Inferred latch for "zlo[16]" at alu.vhd(27)
+Info (10041): Inferred latch for "zlo[17]" at alu.vhd(27)
+Info (10041): Inferred latch for "zlo[18]" at alu.vhd(27)
+Info (10041): Inferred latch for "zlo[19]" at alu.vhd(27)
+Info (10041): Inferred latch for "zlo[20]" at alu.vhd(27)
+Info (10041): Inferred latch for "zlo[21]" at alu.vhd(27)
+Info (10041): Inferred latch for "zlo[22]" at alu.vhd(27)
+Info (10041): Inferred latch for "zlo[23]" at alu.vhd(27)
+Info (10041): Inferred latch for "zlo[24]" at alu.vhd(27)
+Info (10041): Inferred latch for "zlo[25]" at alu.vhd(27)
+Info (10041): Inferred latch for "zlo[26]" at alu.vhd(27)
+Info (10041): Inferred latch for "zlo[27]" at alu.vhd(27)
+Info (10041): Inferred latch for "zlo[28]" at alu.vhd(27)
+Info (10041): Inferred latch for "zlo[29]" at alu.vhd(27)
+Info (10041): Inferred latch for "zlo[30]" at alu.vhd(27)
+Info (10041): Inferred latch for "zlo[31]" at alu.vhd(27)
+Info (10041): Inferred latch for "zhi[0]" at alu.vhd(27)
+Info (10041): Inferred latch for "zhi[1]" at alu.vhd(27)
+Info (10041): Inferred latch for "zhi[2]" at alu.vhd(27)
+Info (10041): Inferred latch for "zhi[3]" at alu.vhd(27)
+Info (10041): Inferred latch for "zhi[4]" at alu.vhd(27)
+Info (10041): Inferred latch for "zhi[5]" at alu.vhd(27)
+Info (10041): Inferred latch for "zhi[6]" at alu.vhd(27)
+Info (10041): Inferred latch for "zhi[7]" at alu.vhd(27)
+Info (10041): Inferred latch for "zhi[8]" at alu.vhd(27)
+Info (10041): Inferred latch for "zhi[9]" at alu.vhd(27)
+Info (10041): Inferred latch for "zhi[10]" at alu.vhd(27)
+Info (10041): Inferred latch for "zhi[11]" at alu.vhd(27)
+Info (10041): Inferred latch for "zhi[12]" at alu.vhd(27)
+Info (10041): Inferred latch for "zhi[13]" at alu.vhd(27)
+Info (10041): Inferred latch for "zhi[14]" at alu.vhd(27)
+Info (10041): Inferred latch for "zhi[15]" at alu.vhd(27)
+Info (10041): Inferred latch for "zhi[16]" at alu.vhd(27)
+Info (10041): Inferred latch for "zhi[17]" at alu.vhd(27)
+Info (10041): Inferred latch for "zhi[18]" at alu.vhd(27)
+Info (10041): Inferred latch for "zhi[19]" at alu.vhd(27)
+Info (10041): Inferred latch for "zhi[20]" at alu.vhd(27)
+Info (10041): Inferred latch for "zhi[21]" at alu.vhd(27)
+Info (10041): Inferred latch for "zhi[22]" at alu.vhd(27)
+Info (10041): Inferred latch for "zhi[23]" at alu.vhd(27)
+Info (10041): Inferred latch for "zhi[24]" at alu.vhd(27)
+Info (10041): Inferred latch for "zhi[25]" at alu.vhd(27)
+Info (10041): Inferred latch for "zhi[26]" at alu.vhd(27)
+Info (10041): Inferred latch for "zhi[27]" at alu.vhd(27)
+Info (10041): Inferred latch for "zhi[28]" at alu.vhd(27)
+Info (10041): Inferred latch for "zhi[29]" at alu.vhd(27)
+Info (10041): Inferred latch for "zhi[30]" at alu.vhd(27)
+Info (10041): Inferred latch for "zhi[31]" at alu.vhd(27)
 Info (12128): Elaborating entity "bus_mux32" for hierarchy "bus_mux32:b2v_inst1"
 Info (12128): Elaborating entity "muxMDR" for hierarchy "muxMDR:b2v_muxMDR"
-Info (278001): Inferred 4 megafunctions from design logic
+Info (278001): Inferred 3 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "alu:b2v_inst|Mod0"
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "alu:b2v_inst|Mult0"
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "alu:b2v_inst|Div0"
-    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "alu:b2v_inst|Add0"
 Info (12130): Elaborated megafunction instantiation "alu:b2v_inst|lpm_divide:Mod0"
 Info (12133): Instantiated megafunction "alu:b2v_inst|lpm_divide:Mod0" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHN" = "32"
@@ -826,14 +784,6 @@ Info (12133): Instantiated megafunction "alu:b2v_inst|lpm_divide:Div0" with the 
     Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_01p.tdf
     Info (12023): Found entity 1: lpm_divide_01p
-Info (12130): Elaborated megafunction instantiation "alu:b2v_inst|lpm_add_sub:Add0"
-Info (12133): Instantiated megafunction "alu:b2v_inst|lpm_add_sub:Add0" with the following parameter:
-    Info (12134): Parameter "LPM_WIDTH" = "32"
-    Info (12134): Parameter "LPM_DIRECTION" = "DEFAULT"
-    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "ONE_INPUT_IS_CONSTANT" = "NO"
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_gui.tdf
-    Info (12023): Found entity 1: add_sub_gui
 Info (13014): Ignored 372 buffer(s)
     Info (13016): Ignored 124 CARRY_SUM buffer(s)
     Info (13019): Ignored 248 SOFT buffer(s)
@@ -3642,16 +3592,16 @@ Warning (13009): TRI or OPNDRN buffers permanently enabled
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 13159 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 13618 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 89 input pins
     Info (21059): Implemented 0 output pins
     Info (21060): Implemented 933 bidirectional pins
-    Info (21061): Implemented 12129 logic cells
+    Info (21061): Implemented 12588 logic cells
     Info (21062): Implemented 8 DSP elements
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 1875 warnings
-    Info: Peak virtual memory: 447 megabytes
-    Info: Processing ended: Sat Mar 04 16:27:43 2017
-    Info: Elapsed time: 00:00:32
-    Info: Total CPU time (on all processors): 00:00:31
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 1872 warnings
+    Info: Peak virtual memory: 442 megabytes
+    Info: Processing ended: Sun Mar 05 00:25:20 2017
+    Info: Elapsed time: 00:00:45
+    Info: Total CPU time (on all processors): 00:00:44
 
 

@@ -5,6 +5,8 @@ use ieee.std_logic_1164.all;
 LIBRARY lpm;
 USE lpm.lpm_components.all;
 
+-- Arithmetic Logic Unit for the computer
+
 entity alu is
 port(
 	A : in std_logic_vector(31 downto 0);
@@ -17,23 +19,13 @@ port(
 end entity alu;
 
 architecture behavioral of alu is
---component lpm_divide0
---	PORT
---	(
---		denom		: IN STD_LOGIC_VECTOR (31 DOWNTO 0);
---		numer		: IN STD_LOGIC_VECTOR (31 DOWNTO 0);
---		quotient		: OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
---		remain		: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
---	);
---end component;
-	
 signal Z : std_logic_vector(63 downto 0);
 signal divideResult : std_logic_vector(63 downto 0);
+
 begin
 
---divide: lpm_divide0 port map (denom => B, numer => A, quotient => divideResult(31 downto 0), remain => divideResult(63 downto 32));
-
-alu_process : process (clk,enable,A,B,sel) is 
+alu_process : process (clk, enable , A, B, sel) is 
+	-- variables for booth multiplier
 	variable multResult : std_logic_vector(63 downto 0);
 	variable M : std_logic_vector(64 downto 0);
 	variable S : std_logic_vector(64 downto 0);
@@ -70,40 +62,43 @@ alu_process : process (clk,enable,A,B,sel) is
 						zlo <= std_logic_vector(NOT signed(A));
 					-- Shift right
 					when "0111" =>
-						zlo <= std_logic_vector(signed(A) srl 1);
+						zlo <= std_logic_vector(signed(A) srl to_integer(unsigned(B)));
 					-- Shift left
 					when "1000" =>
-						zlo <= std_logic_vector(signed(A) sll 1);
+						zlo <= std_logic_vector(signed(A) sll to_integer(unsigned(B)));
 					-- Rotate right
 					when "1001" =>
-						zlo <= std_logic_vector(signed(A) ror 1);
+						zlo <= std_logic_vector(signed(A) ror to_integer(unsigned(B)));
 					-- Rotate left
 					when "1010" =>
-						zlo <= std_logic_vector(signed(A) rol 1);
+						zlo <= std_logic_vector(signed(A) rol to_integer(unsigned(B)));
 					-- Negate
 					when "1011" =>
 						zlo <= std_logic_vector(NOT signed(A) + 1);
 					-- Booth Multiplier
 					when "1100" =>
+						-- Input A is in most significant bits of M
 						M(64 downto 33) := A(31 downto 0);
 						M(32 downto 0) := B"00000000_00000000_00000000_00000000_0";
-						S(64 downto 33) := std_logic_vector(NOT unsigned(A) + 1);
+						-- -Input A is in most significant bits of S
+						S(64 downto 33) := std_logic_vector(NOT signed(A) + 1);
 						S(32 downto 0) := B"00000000_00000000_00000000_00000000_0";
+						-- P contains the product
 						P(64 downto 33) := B"00000000_00000000_00000000_00000000";
 						P(32 downto 1) := B(31 downto 0);
 						P(0 downto 0) := "0";
-						
+						-- check the last two bits and perform appropriate operation and shift
 						for i in 0 to 31 loop
 							if P(1 downto 0) = "01" then
-								P := std_logic_vector(unsigned(P) + unsigned(M));
+								P := std_logic_vector(signed(P) + signed(M));
 							elsif P(1 downto 0) = "10" then
-								P := std_logic_vector(unsigned(P) + unsigned(S));
+								P := std_logic_vector(signed(P) + signed(S));
 							end if;
-							P := std_logic_vector(unsigned(P) srl 1);
+							P := std_logic_vector(signed(P) srl 1);
 						end loop;
 						zhi <= P(64 downto 33);
 						zlo <= P(32 downto 1);
-					-- Bit-pair Multiplier
+					-- Booth Bit-pair Recoding Multiplier
 					when "1101" =>
 						M(64 downto 33) := A(31 downto 0);
 						M(32 downto 0) := B"00000000_00000000_00000000_00000000_0";

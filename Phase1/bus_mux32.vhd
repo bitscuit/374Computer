@@ -1,9 +1,12 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
+-- 32-to-1 multiplexer to choose what data goes onto the bus
+-- also the bus itself
+
 entity bus_mux32 is 
 port(
-	-- registers r0 to r15
+	-- 16 general purpose 32 bit registers
 	r0_bm_in 	: in std_logic_vector (31 downto 0);
 	r1_bm_in 	: in std_logic_vector (31 downto 0);
 	r2_bm_in 	: in std_logic_vector (31 downto 0);
@@ -21,18 +24,27 @@ port(
 	r14_bm_in 	: in std_logic_vector (31 downto 0);
 	r15_bm_in 	: in std_logic_vector (31 downto 0);
 	
+	-- 32 bit registers to hold result of multiplication or division	
 	bm_hi : in std_logic_vector (31 downto 0);
 	bm_lo : in std_logic_vector (31 downto 0);
 	bm_zhi : in std_logic_vector (31 downto 0);
 	bm_zlo : in std_logic_vector (31 downto 0);
+	
+	-- 32 bit PC register
 	bm_pc : in std_logic_vector (31 downto 0);
+	
+	-- 32 bit memory data register
 	bm_mdr : in std_logic_vector (31 downto 0);
+	
+	-- 32 bit input port register
 	bm_inport : in std_logic_vector (31 downto 0);
+	
 	c_sign_extended : in std_logic_vector (31 downto 0);
 	
-	-- 32 - to - 5 encoder as the Select
+	-- select to choose which input goes onto bus
 	sel : in std_logic_vector (4 downto 0);
 	
+	-- output
 	bus_mux_out : out std_logic_vector (31 downto 0)
 );
 end entity bus_mux32;
@@ -66,5 +78,4 @@ bus_mux_out <= r0_bm_in 	when "00000",
 					bm_inport  	when "10110",
 					c_sign_extended when "10111",
 					"11111111111111111111111111111111" when others;
-
 end architecture behavioral;

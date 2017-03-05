@@ -1,6 +1,9 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
+-- 2-to-1 multiplexer for the memory data register
+-- to choose between input from memory or the bus
+
 entity muxMDR is
 port(
 	-- input

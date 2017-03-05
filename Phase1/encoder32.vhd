@@ -1,9 +1,12 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
+-- 32-to-5 encoder for the bus multiplexer to decide 
+-- what data should go onto the bus
+
 entity encoder32 is
 port(
-	-- input registers r0 to r15
+	-- 16 general purpose 32 bit registers
 	r0 : in std_logic;
 	r1 : in std_logic;
 	r2 : in std_logic;
@@ -21,17 +24,26 @@ port(
 	r14 : in std_logic;
 	r15 : in std_logic;
 	
-	-- rest of input registers
+	-- 32 bit registers to hold result of multiplication or division
 	hi : in std_logic;
 	lo : in std_logic;
 	zhi : in std_logic;
 	zlo : in std_logic;
+	
+	-- 32 bit PC register
 	pc : in std_logic;
+	
+	-- 32 bit memory data register
 	mdr : in std_logic;
+	
+	-- 32 bit input port register
 	inport : in std_logic;
+	
 	c : in std_logic;
 
-	-- output registers
+	-- output of decoder
+	-- i.e. select vector feeding into bus mux to determine 
+	-- what goes onto the bus
 	s : out std_logic_vector (4 downto 0));
 	end entity encoder32;
 

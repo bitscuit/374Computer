@@ -1,6 +1,8 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
+-- 32 bit register
+
 entity reg32 is 
 port(
 	-- input

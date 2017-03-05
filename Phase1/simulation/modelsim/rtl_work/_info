@@ -2,27 +2,27 @@ m255
 K3
 13
 cModel Technology
-Z0 dC:\Users\Michael\Documents\GitHub\374Computer\Phase1\simulation\modelsim
+Z0 dC:\Users\Henry\Desktop\374Computer\Phase1\simulation\modelsim
 Ealu
-Z1 w1488662827
+Z1 w1488691471
 Z2 DPx3 lpm 14 lpm_components 0 22 aHRA3clF>2DcWDhgFTAbM3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
 Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z5 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
-Z6 dC:\Users\Michael\Documents\GitHub\374Computer\Phase1\simulation\modelsim
-Z7 8C:/Users/Michael/Documents/GitHub/374Computer/Phase1/alu.vhd
-Z8 FC:/Users/Michael/Documents/GitHub/374Computer/Phase1/alu.vhd
+Z6 dC:\Users\Henry\Desktop\374Computer\Phase1\simulation\modelsim
+Z7 8C:/Users/Henry/Desktop/374Computer/Phase1/alu.vhd
+Z8 FC:/Users/Henry/Desktop/374Computer/Phase1/alu.vhd
 l0
-L8
+L10
 VDd[3=@l4NOjhiU^[5QKDG0
 Z9 OV;C;10.1d;51
 31
-Z10 !s108 1488663047.534000
-Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/Michael/Documents/GitHub/374Computer/Phase1/alu.vhd|
-Z12 !s107 C:/Users/Michael/Documents/GitHub/374Computer/Phase1/alu.vhd|
+Z10 !s108 1488691537.939000
+Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/Henry/Desktop/374Computer/Phase1/alu.vhd|
+Z12 !s107 C:/Users/Henry/Desktop/374Computer/Phase1/alu.vhd|
 Z13 o-93 -work work -O0
 Z14 tExplicit 1
-!s100 BO?7^YS8Y3PNJCiRYZ]AM1
+!s100 Z>4;1AZ[2O<JMMTQYiG5T2
 !i10b 1
 Abehavioral
 R2
@@ -30,9 +30,9 @@ R3
 R4
 R5
 DEx4 work 3 alu 0 22 Dd[3=@l4NOjhiU^[5QKDG0
-l32
-L19
-VdTTN`C`_oCoi?QLA=GkKm1
+l25
+L21
+VQKdcOA9Q1EVXT5lT@eJF90
 R9
 31
 R10
@@ -40,33 +40,33 @@ R11
 R12
 R13
 R14
-!s100 E]co180lK;7TT]CR[cTmZ0
+!s100 RQMGlLS1<1NP0?VESk]cM1
 !i10b 1
 Ebus_mux32
-Z15 w1488176117
+Z15 w1488672645
 R4
 R3
 R6
-Z16 8C:/Users/Michael/Documents/GitHub/374Computer/Phase1/bus_mux32.vhd
-Z17 FC:/Users/Michael/Documents/GitHub/374Computer/Phase1/bus_mux32.vhd
+Z16 8C:/Users/Henry/Desktop/374Computer/Phase1/bus_mux32.vhd
+Z17 FC:/Users/Henry/Desktop/374Computer/Phase1/bus_mux32.vhd
 l0
-L4
+L7
 V2W50mUlc[ajPP<=7OZL?V3
 R9
 31
-Z18 !s108 1488663046.008000
-Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/Michael/Documents/GitHub/374Computer/Phase1/bus_mux32.vhd|
-Z20 !s107 C:/Users/Michael/Documents/GitHub/374Computer/Phase1/bus_mux32.vhd|
+Z18 !s108 1488691538.255000
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/Henry/Desktop/374Computer/Phase1/bus_mux32.vhd|
+Z20 !s107 C:/Users/Henry/Desktop/374Computer/Phase1/bus_mux32.vhd|
 R13
 R14
-!s100 [__;S=TH=[cbHY6OcPa^`1
+!s100 _O[Vm5L]fC_e4nY42VbV20
 !i10b 1
 Abehavioral
 R4
 R3
 DEx4 work 9 bus_mux32 0 22 2W50mUlc[ajPP<=7OZL?V3
-l41
-L40
+l53
+L52
 V`JIh<gm<2e[8di>>NXMi[2
 R9
 31
@@ -75,33 +75,33 @@ R19
 R20
 R13
 R14
-!s100 i2C>E1d?cBTF54W:DE?Ol0
+!s100 eUjI8Y4^3L>>EFW4eo4Po2
 !i10b 1
 Eencoder32
-Z21 w1488176133
+Z21 w1488672237
 R4
 R3
 R6
-Z22 8C:/Users/Michael/Documents/GitHub/374Computer/Phase1/encoder32.vhd
-Z23 FC:/Users/Michael/Documents/GitHub/374Computer/Phase1/encoder32.vhd
+Z22 8C:/Users/Henry/Desktop/374Computer/Phase1/encoder32.vhd
+Z23 FC:/Users/Henry/Desktop/374Computer/Phase1/encoder32.vhd
 l0
-L4
+L7
 VlHf8J^8K]O]j^XeiG2X6i1
 R9
 31
-Z24 !s108 1488663047.073000
-Z25 !s90 -reportprogress|300|-93|-work|work|C:/Users/Michael/Documents/GitHub/374Computer/Phase1/encoder32.vhd|
-Z26 !s107 C:/Users/Michael/Documents/GitHub/374Computer/Phase1/encoder32.vhd|
+Z24 !s108 1488691538.555000
+Z25 !s90 -reportprogress|300|-93|-work|work|C:/Users/Henry/Desktop/374Computer/Phase1/encoder32.vhd|
+Z26 !s107 C:/Users/Henry/Desktop/374Computer/Phase1/encoder32.vhd|
 R13
 R14
-!s100 TUd=c:]O:aX4h:^VX_0[F1
+!s100 5Qd5_]9c0M_c@WP]oaeTL1
 !i10b 1
 Abehavioral
 R4
 R3
 DEx4 work 9 encoder32 0 22 lHf8J^8K]O]j^XeiG2X6i1
-l39
-L38
+l51
+L50
 VI6B2d_3InHcOl[:ORfJZj3
 R9
 31
@@ -110,33 +110,33 @@ R25
 R26
 R13
 R14
-!s100 Z4<6n>]S1<A;i@6lHj:me2
+!s100 ?a3OmPYXiA76FV14k:_OW0
 !i10b 1
 Emuxmdr
-Z27 w1488176714
+Z27 w1488672346
 R4
 R3
 R6
-Z28 8C:/Users/Michael/Documents/GitHub/374Computer/Phase1/muxMDR.vhd
-Z29 FC:/Users/Michael/Documents/GitHub/374Computer/Phase1/muxMDR.vhd
+Z28 8C:/Users/Henry/Desktop/374Computer/Phase1/muxMDR.vhd
+Z29 FC:/Users/Henry/Desktop/374Computer/Phase1/muxMDR.vhd
 l0
-L4
+L7
 VCDHaNBB_4<kY4o4In9neI1
 R9
 31
-Z30 !s108 1488663046.456000
-Z31 !s90 -reportprogress|300|-93|-work|work|C:/Users/Michael/Documents/GitHub/374Computer/Phase1/muxMDR.vhd|
-Z32 !s107 C:/Users/Michael/Documents/GitHub/374Computer/Phase1/muxMDR.vhd|
+Z30 !s108 1488691538.395000
+Z31 !s90 -reportprogress|300|-93|-work|work|C:/Users/Henry/Desktop/374Computer/Phase1/muxMDR.vhd|
+Z32 !s107 C:/Users/Henry/Desktop/374Computer/Phase1/muxMDR.vhd|
 R13
 R14
-!s100 YJ?M1920XKkN7HSSNo]k>2
+!s100 ?HfDPjm:MK_C=<K2_ZLeG0
 !i10b 1
 Abehavioral
 R4
 R3
 DEx4 work 6 muxmdr 0 22 CDHaNBB_4<kY4o4In9neI1
-l16
-L15
+l19
+L18
 V2]>H?O>nYbKLG^Imd6`5@1
 R9
 31
@@ -145,23 +145,23 @@ R31
 R32
 R13
 R14
-!s100 kfMZFzYe34NkcDl4`PU7c3
+!s100 Kofc3@BZm7H^W<PeD[k?83
 !i10b 1
 Ephase1
-Z33 w1488210087
+Z33 w1488647277
 R4
 R3
 R6
-Z34 8C:/Users/Michael/Documents/GitHub/374Computer/Phase1/phase1.vhd
-Z35 FC:/Users/Michael/Documents/GitHub/374Computer/Phase1/phase1.vhd
+Z34 8C:/Users/Henry/Desktop/374Computer/Phase1/phase1.vhd
+Z35 FC:/Users/Henry/Desktop/374Computer/Phase1/phase1.vhd
 l0
 L24
 V8_>NiMJD`Vo0e9L4B:SoC1
 R9
 31
-Z36 !s108 1488663044.707000
-Z37 !s90 -reportprogress|300|-93|-work|work|C:/Users/Michael/Documents/GitHub/374Computer/Phase1/phase1.vhd|
-Z38 !s107 C:/Users/Michael/Documents/GitHub/374Computer/Phase1/phase1.vhd|
+Z36 !s108 1488691537.794000
+Z37 !s90 -reportprogress|300|-93|-work|work|C:/Users/Henry/Desktop/374Computer/Phase1/phase1.vhd|
+Z38 !s107 C:/Users/Henry/Desktop/374Computer/Phase1/phase1.vhd|
 R13
 R14
 !s100 N;E^bIl15<Eb1ZHT4Icgo3
@@ -183,12 +183,12 @@ R14
 !s100 <]?h[]Rf?dLm4cDWW^`_32
 !i10b 1
 Ephase1_vhd_tst
-Z39 w1488663033
+Z39 w1488691138
 R4
 R3
 R6
-Z40 8C:/Users/Michael/Documents/GitHub/374Computer/Phase1/simulation/modelsim/phase1.vht
-Z41 FC:/Users/Michael/Documents/GitHub/374Computer/Phase1/simulation/modelsim/phase1.vht
+Z40 8C:/Users/Henry/Desktop/374Computer/Phase1/simulation/modelsim/phase1.vht
+Z41 FC:/Users/Henry/Desktop/374Computer/Phase1/simulation/modelsim/phase1.vht
 l0
 L30
 VW:4=?n`oK3SfeZa]O@Q9W1
@@ -196,19 +196,19 @@ VW:4=?n`oK3SfeZa]O@Q9W1
 R9
 31
 !i10b 1
-Z42 !s108 1488663047.982000
-Z43 !s90 -reportprogress|300|-93|-work|work|C:/Users/Michael/Documents/GitHub/374Computer/Phase1/simulation/modelsim/phase1.vht|
-Z44 !s107 C:/Users/Michael/Documents/GitHub/374Computer/Phase1/simulation/modelsim/phase1.vht|
+Z42 !s108 1488691538.739000
+Z43 !s90 -reportprogress|300|-93|-work|work|C:/Users/Henry/Desktop/374Computer/Phase1/simulation/modelsim/phase1.vht|
+Z44 !s107 C:/Users/Henry/Desktop/374Computer/Phase1/simulation/modelsim/phase1.vht|
 R13
 R14
 Aphase1_arch
 R4
 R3
 DEx4 work 14 phase1_vhd_tst 0 22 W:4=?n`oK3SfeZa]O@Q9W1
-l213
+l227
 L32
-Vk>Fb<DIGV7E`SSCYS]K_?0
-!s100 MRElEFJM=ME`2zPm:E=n02
+V52N5:Po4X41za27k5NAKO0
+!s100 1@;T?lHSXnf:N9><fLcEb1
 R9
 31
 !i10b 1
@@ -218,30 +218,30 @@ R44
 R13
 R14
 Ereg32
-Z45 w1488647243
+Z45 w1488672725
 R4
 R3
 R6
-Z46 8C:/Users/Michael/Documents/GitHub/374Computer/Phase1/reg32.vhd
-Z47 FC:/Users/Michael/Documents/GitHub/374Computer/Phase1/reg32.vhd
+Z46 8C:/Users/Henry/Desktop/374Computer/Phase1/reg32.vhd
+Z47 FC:/Users/Henry/Desktop/374Computer/Phase1/reg32.vhd
 l0
-L4
+L6
 V2MO:5f2lKMQ[ZZ:hAf>m82
 R9
 31
-Z48 !s108 1488663045.181000
-Z49 !s90 -reportprogress|300|-93|-work|work|C:/Users/Michael/Documents/GitHub/374Computer/Phase1/reg32.vhd|
-Z50 !s107 C:/Users/Michael/Documents/GitHub/374Computer/Phase1/reg32.vhd|
+Z48 !s108 1488691538.102000
+Z49 !s90 -reportprogress|300|-93|-work|work|C:/Users/Henry/Desktop/374Computer/Phase1/reg32.vhd|
+Z50 !s107 C:/Users/Henry/Desktop/374Computer/Phase1/reg32.vhd|
 R13
 R14
-!s100 14BFMj[_@zBTi]W2MXUeR3
+!s100 Gn<:NU0jI]QP^ke5B9_001
 !i10b 1
 Abehavioral
 R4
 R3
 DEx4 work 5 reg32 0 22 2MO:5f2lKMQ[ZZ:hAf>m82
-l16
-L15
+l18
+L17
 V[_Ia6Vfe;2[LMAWHR1b:M0
 R9
 31
@@ -250,5 +250,5 @@ R49
 R50
 R13
 R14
-!s100 KMCg6Lh?^[9o1Wg5<mdOn2
+!s100 R0@gB1HO><J`W7Z:OznGg2
 !i10b 1
