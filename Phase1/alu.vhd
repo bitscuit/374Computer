@@ -21,10 +21,18 @@ end entity alu;
 architecture behavioral of alu is
 signal Z : std_logic_vector(63 downto 0);
 signal divideResult : std_logic_vector(63 downto 0);
+signal multiplierRes : std_logic_vector(63 downto 0);
 
+component mult32 port (
+dataa : in std_logic_vector(31 downto 0);
+datab : in std_Logic_vector(31 downto 0);
+result : out std_Logic_vector(63 DOWNTO 0)
+);
+end component;
 begin
 
-alu_process : process (clk, enable , A, B, sel) is 
+multiplier : mult32 port map (A,B,multiplierRes);
+alu_process : process (clk, enable , A, B, sel,multiplierRes) is 
 	-- variables for booth multiplier
 	variable multResult : std_logic_vector(63 downto 0);
 	variable M : std_logic_vector(64 downto 0);
@@ -44,9 +52,9 @@ alu_process : process (clk, enable , A, B, sel) is
 						zlo <= std_logic_vector(signed(A) - signed(B));
 					-- Multiplication
 					when "0010" =>
-						multResult := std_logic_vector(signed(A) * signed(B));
-						zhi <= multResult(63 downto 32);
-						zlo <= multResult(31 downto 0);
+						--multResult := std_logic_vector(signed(A) * signed(B));
+						zhi <= multiplierRes(63 downto 32);
+						zlo <= multiplierRes(31 downto 0);
 					-- Division
 					when "0011" =>
 						zlo <= std_logic_vector(signed(A) / signed(B));
@@ -86,13 +94,13 @@ alu_process : process (clk, enable , A, B, sel) is
 						-- P contains the product
 						P(64 downto 33) := B"00000000_00000000_00000000_00000000";
 						P(32 downto 1) := B(31 downto 0);
-						P(0 downto 0) := "0";
+						P(0) := '0';
 						-- check the last two bits and perform appropriate operation and shift
 						for i in 0 to 31 loop
 							if P(1 downto 0) = "01" then
-								P := std_logic_vector(signed(P) + signed(M));
+								P(64 downto 0) := std_logic_vector(signed(P) + signed(M));
 							elsif P(1 downto 0) = "10" then
-								P := std_logic_vector(signed(P) + signed(S));
+								P(64 downto 0) := std_logic_vector(signed(P) + signed(S));
 							end if;
 							P := std_logic_vector(signed(P) srl 1);
 						end loop;
@@ -102,7 +110,7 @@ alu_process : process (clk, enable , A, B, sel) is
 					when "1101" =>
 						M(64 downto 33) := A(31 downto 0);
 						M(32 downto 0) := B"00000000_00000000_00000000_00000000_0";
-						S(64 downto 33) := std_logic_vector(NOT unsigned(A) + 1);
+						S(64 downto 33) := std_logic_vector(NOT signed(A) + 1);
 						S(32 downto 0) := B"00000000_00000000_00000000_00000000_0";
 						P(64 downto 33) := B"00000000_00000000_00000000_00000000";
 						P(32 downto 1) := B(31 downto 0);
@@ -110,19 +118,19 @@ alu_process : process (clk, enable , A, B, sel) is
 						
 						for i in 0 to 15 loop
 							if P(2 downto 0) = "001" then
-								P := std_logic_vector(unsigned(P) + unsigned(M));
+								P := std_logic_vector(signed(P) + signed(M));
 							elsif P(2 downto 0) = "010" then
-								P := std_logic_vector(unsigned(P) + unsigned(M));
+								P := std_logic_vector(signed(P) + signed(M));
 							elsif P(2 downto 0) = "011" then
-								P := std_logic_vector(unsigned(P) + unsigned(M) + unsigned(M));
+								P := std_logic_vector(signed(P) + signed(M) + signed(M));
 							elsif P(2 downto 0) = "100" then
-								P := std_logic_vector(unsigned(P) + unsigned(S) + unsigned (S));
+								P := std_logic_vector(signed(P) + signed(S) + signed (S));
 							elsif P(2 downto 0) = "101" then
-								P := std_logic_vector(unsigned(P) + unsigned(S));
+								P := std_logic_vector(signed(P) + signed(S));
 							elsif P(2 downto 0) = "110" then
-								P := std_logic_vector(unsigned(P) + unsigned(S));
+								P := std_logic_vector(signed(P) + signed(S));
 							end if;
-							P := std_logic_vector(unsigned(P) srl 2);
+							P := std_logic_vector(signed(P) srl 2);
 						end loop;
 						zhi <= P(64 downto 33);
 						zlo <= P(32 downto 1);

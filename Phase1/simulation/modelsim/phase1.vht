@@ -595,19 +595,19 @@ begin
 			mdr_out 	<= '1', '0' after 10 ns;
 			r4in 		<= '1', '0' after 10 ns;
 		when reg5 =>
-			m_data_in <= x"00000025";
+			m_data_in <= x"10000005";
 			sel 		<= '1', '0' after 10 ns;
 			mdr_in 	<= '1', '0' after 10 ns;
 			mdr_out 	<= '1', '0' after 10 ns;
 			r5in 		<= '1', '0' after 10 ns;
 		when reg6 =>
-			m_data_in <= x"00000134";
+			m_data_in <= x"10000003";
 			sel 		<= '1', '0' after 10 ns;
 			mdr_in 	<= '1', '0' after 10 ns;
 			mdr_out 	<= '1', '0' after 10 ns;
 			r6in 		<= '1', '0' after 10 ns;
 		when reg7 =>
-			m_data_in <= x"00000812";
+			m_data_in <= x"01000013";
 			sel 		<= '1', '0' after 10 ns;
 			mdr_in 	<= '1', '0' after 10 ns;
 			mdr_out 	<= '1', '0' after 10 ns;
@@ -998,17 +998,15 @@ begin
 		
 		when T72 =>
 			-- overwriting r3
-			m_data_in <= x"00000134";
+			m_data_in <= x"00000004";
 			sel 		<= '1', '0' after 10 ns;
 			mdr_in 	<= '1', '0' after 10 ns;
 			mdr_out 	<= '1', '0' after 10 ns;
 			r3in 		<= '1', '0' after 10 ns;
 			
-			zhi_in <= '1', '0' after 10 ns;
-			zlo_in <= '1', '0' after 10 ns;
 		when T73 =>
 			-- overwriting r1
-			m_data_in <= x"000000A5";
+			m_data_in <= x"00000005";
 			sel 		<= '1', '0' after 10 ns;
 			mdr_in 	<= '1', '0' after 10 ns;
 			mdr_out 	<= '1', '0' after 10 ns;
