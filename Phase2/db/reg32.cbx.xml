@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="reg32">
+		<CBX_INST_ENTRY INSTANCE_NAME="|phase1|alu:b2v_inst|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_01p.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|phase1|alu:b2v_inst|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_3po.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|phase1|alu:b2v_inst|mult32:multiplier|lpm_mult:lpm_mult_component" CBX_FILE_NAME="mult_gen.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
