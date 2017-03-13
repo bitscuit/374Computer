@@ -14,7 +14,7 @@
 
 -- PROGRAM		"Quartus II 32-bit"
 -- VERSION		"Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
--- CREATED		"Sat Mar 11 15:40:14 2017"
+-- CREATED		"Mon Mar 13 11:20:47 2017"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
@@ -53,6 +53,8 @@ ENTITY phase1 IS
 		Grb :  IN  STD_LOGIC;
 		Gra :  IN  STD_LOGIC;
 		IRenable :  IN  STD_LOGIC;
+		conin :  IN  STD_LOGIC;
+		outport_in :  IN  STD_LOGIC;
 		r1in :  INOUT  STD_LOGIC;
 		r0in :  INOUT  STD_LOGIC;
 		r3in :  INOUT  STD_LOGIC;
@@ -87,7 +89,8 @@ ENTITY phase1 IS
 		r2in :  INOUT  STD_LOGIC;
 		address :  INOUT  STD_LOGIC_VECTOR(8 DOWNTO 0);
 		busmuxout :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
-		c_sign_extended_busmuxin :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
+		c_sign_extended :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
+		from_input :  IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		hi_busmuxin :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		inport_busmuxin :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		IRout :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -95,7 +98,7 @@ ENTITY phase1 IS
 		mdr_busmuxin :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		mdr_data :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		pc_busmuxin :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
-		r0_busmuxin :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
+		r0val :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		r10_busmuxin :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		r11_busmuxin :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		r12_busmuxin :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -117,7 +120,9 @@ ENTITY phase1 IS
 		zhi_busmuxin :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		zhi_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		zlo_busmuxin :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
-		zlo_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0)
+		zlo_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
+		conff_out :  OUT  STD_LOGIC;
+		to_output :  OUT  STD_LOGIC_VECTOR(31 DOWNTO 0)
 	);
 END phase1;
 
@@ -132,6 +137,13 @@ COMPONENT alu
 		 sel : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 		 zhi : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 		 zlo : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+	);
+END COMPONENT;
+
+COMPONENT and32
+	PORT(BAout : IN STD_LOGIC;
+		 r0val : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		 to_bm_in : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
 	);
 END COMPONENT;
 
@@ -162,6 +174,13 @@ COMPONENT bus_mux32
 		 r9_bm_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
 		 sel : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
 		 bus_mux_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+	);
+END COMPONENT;
+
+COMPONENT confflogic
+	PORT(busmuxout : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		 IRin : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		 conff_out : OUT STD_LOGIC
 	);
 END COMPONENT;
 
@@ -274,6 +293,8 @@ COMPONENT selencodelogic
 	);
 END COMPONENT;
 
+SIGNAL	or_out :  STD_LOGIC;
+SIGNAL	r0_busmuxin :  STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL	ram_out :  STD_LOGIC_VECTOR(31 DOWNTO 0);
 
 
@@ -292,6 +313,15 @@ PORT MAP(clk => clock,
 		 zlo => zlo_out);
 
 
+conff_out <= or_out AND conin;
+
+
+b2v_and32 : and32
+PORT MAP(BAout => BAout,
+		 r0val => r0val,
+		 to_bm_in => r0_busmuxin);
+
+
 b2v_bus : bus_mux32
 PORT MAP(bm_hi => hi_busmuxin,
 		 bm_inport => inport_busmuxin,
@@ -300,7 +330,7 @@ PORT MAP(bm_hi => hi_busmuxin,
 		 bm_pc => pc_busmuxin,
 		 bm_zhi => zhi_busmuxin,
 		 bm_zlo => zlo_busmuxin,
-		 c_sign_extended => c_sign_extended_busmuxin,
+		 c_sign_extended => c_sign_extended,
 		 r0_bm_in => r0_busmuxin,
 		 r10_bm_in => r10_busmuxin,
 		 r11_bm_in => r11_busmuxin,
@@ -319,6 +349,12 @@ PORT MAP(bm_hi => hi_busmuxin,
 		 r9_bm_in => r9_busmuxin,
 		 sel => select_bus,
 		 bus_mux_out => busmuxout);
+
+
+b2v_confflogic : confflogic
+PORT MAP(busmuxout => busmuxout,
+		 IRin => IRout,
+		 conff_out => or_out);
 
 
 b2v_encoder32 : encoder32
@@ -361,8 +397,16 @@ b2v_inport : reg32
 PORT MAP(clr => clear,
 		 clk => clock,
 		 enable => inport_in,
-		 from_bm_out => busmuxout,
+		 from_bm_out => from_input,
 		 to_bm_in => inport_busmuxin);
+
+
+b2v_inport3 : reg32
+PORT MAP(clr => clear,
+		 clk => clock,
+		 enable => outport_in,
+		 from_bm_out => busmuxout,
+		 to_bm_in => to_output);
 
 
 b2v_IR : reg32
@@ -417,7 +461,7 @@ PORT MAP(clr => clear,
 		 clk => clock,
 		 enable => r0in,
 		 from_bm_out => busmuxout,
-		 to_bm_in => r0_busmuxin);
+		 to_bm_in => r0val);
 
 
 b2v_r1 : reg32
@@ -589,7 +633,7 @@ PORT MAP(Gra => Gra,
 		 r13out => r13_out,
 		 r14out => r14_out,
 		 r15out => r15_out,
-		 c_sign_extended => c_sign_extended_busmuxin);
+		 c_sign_extended => c_sign_extended);
 
 
 b2v_Y : reg32

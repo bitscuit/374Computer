@@ -1,5 +1,5 @@
 v1
-DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,alu:ALU|mult32:multiplier|lpm_mult:lpm_mult_component|mult_gen:auto_generated|mac_out8,
-DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,alu:ALU|mult32:multiplier|lpm_mult:lpm_mult_component|mult_gen:auto_generated|mac_out6,
-DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,alu:ALU|mult32:multiplier|lpm_mult:lpm_mult_component|mult_gen:auto_generated|mac_out4,
-DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,alu:ALU|mult32:multiplier|lpm_mult:lpm_mult_component|mult_gen:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,alu:b2v_ALU|mult32:multiplier|lpm_mult:lpm_mult_component|mult_gen:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,alu:b2v_ALU|mult32:multiplier|lpm_mult:lpm_mult_component|mult_gen:auto_generated|mac_out6,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,alu:b2v_ALU|mult32:multiplier|lpm_mult:lpm_mult_component|mult_gen:auto_generated|mac_out4,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,alu:b2v_ALU|mult32:multiplier|lpm_mult:lpm_mult_component|mult_gen:auto_generated|mac_out8,
