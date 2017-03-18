@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="reg32">
-		<CBX_INST_ENTRY INSTANCE_NAME="|phase1|RAM:b2v_RAM|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_gpg1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|phase1|alu:b2v_ALU|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_01p.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|phase1|alu:b2v_ALU|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_3po.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|phase1|alu:b2v_ALU|mult32:multiplier|lpm_mult:lpm_mult_component" CBX_FILE_NAME="mult_gen.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|phase1|ram:b2v_RAM|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_6mi1.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

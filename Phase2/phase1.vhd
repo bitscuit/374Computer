@@ -14,7 +14,7 @@
 
 -- PROGRAM		"Quartus II 32-bit"
 -- VERSION		"Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
--- CREATED		"Mon Mar 13 11:20:47 2017"
+-- CREATED		"Thu Mar 16 14:20:35 2017"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
@@ -401,14 +401,6 @@ PORT MAP(clr => clear,
 		 to_bm_in => inport_busmuxin);
 
 
-b2v_inport3 : reg32
-PORT MAP(clr => clear,
-		 clk => clock,
-		 enable => outport_in,
-		 from_bm_out => busmuxout,
-		 to_bm_in => to_output);
-
-
 b2v_IR : reg32
 PORT MAP(clr => clear,
 		 clk => clock,
@@ -446,6 +438,14 @@ PORT MAP(sel => mem_read,
 		 from_bm_out => busmuxout,
 		 m_data_in => ram_out,
 		 muxmdr_output => mdr_data);
+
+
+b2v_outport : reg32
+PORT MAP(clr => clear,
+		 clk => clock,
+		 enable => outport_in,
+		 from_bm_out => busmuxout,
+		 to_bm_in => to_output);
 
 
 b2v_pc : reg32

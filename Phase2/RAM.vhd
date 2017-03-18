@@ -4,7 +4,7 @@
 -- MODULE: altsyncram 
 
 -- ============================================================
--- File Name: RAM.vhd
+-- File Name: ram.vhd
 -- Megafunction Name(s):
 -- 			altsyncram
 --
@@ -39,7 +39,7 @@ USE ieee.std_logic_1164.all;
 LIBRARY altera_mf;
 USE altera_mf.all;
 
-ENTITY RAM IS
+ENTITY ram IS
 	PORT
 	(
 		address		: IN STD_LOGIC_VECTOR (8 DOWNTO 0);
@@ -49,7 +49,7 @@ ENTITY RAM IS
 		wren		: IN STD_LOGIC ;
 		q		: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
 	);
-END RAM;
+END ram;
 
 
 ARCHITECTURE SYN OF ram IS
@@ -62,6 +62,7 @@ ARCHITECTURE SYN OF ram IS
 	GENERIC (
 		clock_enable_input_a		: STRING;
 		clock_enable_output_a		: STRING;
+		init_file		: STRING;
 		intended_device_family		: STRING;
 		lpm_hint		: STRING;
 		lpm_type		: STRING;
@@ -92,13 +93,14 @@ BEGIN
 	GENERIC MAP (
 		clock_enable_input_a => "BYPASS",
 		clock_enable_output_a => "BYPASS",
+		init_file => "memcontents.mif",
 		intended_device_family => "Cyclone III",
 		lpm_hint => "ENABLE_RUNTIME_MOD=NO",
 		lpm_type => "altsyncram",
 		numwords_a => 512,
 		operation_mode => "SINGLE_PORT",
 		outdata_aclr_a => "NONE",
-		outdata_reg_a => "UNREGISTERED",
+		outdata_reg_a => "CLOCK0",
 		power_up_uninitialized => "FALSE",
 		read_during_write_mode_port_a => "NEW_DATA_NO_NBE_READ",
 		widthad_a => 9,
@@ -128,7 +130,7 @@ END SYN;
 -- Retrieval info: PRIVATE: AclrOutput NUMERIC "0"
 -- Retrieval info: PRIVATE: BYTE_ENABLE NUMERIC "0"
 -- Retrieval info: PRIVATE: BYTE_SIZE NUMERIC "8"
--- Retrieval info: PRIVATE: BlankMemory NUMERIC "1"
+-- Retrieval info: PRIVATE: BlankMemory NUMERIC "0"
 -- Retrieval info: PRIVATE: CLOCK_ENABLE_INPUT_A NUMERIC "0"
 -- Retrieval info: PRIVATE: CLOCK_ENABLE_OUTPUT_A NUMERIC "0"
 -- Retrieval info: PRIVATE: Clken NUMERIC "0"
@@ -140,13 +142,13 @@ END SYN;
 -- Retrieval info: PRIVATE: JTAG_ENABLED NUMERIC "0"
 -- Retrieval info: PRIVATE: JTAG_ID STRING "NONE"
 -- Retrieval info: PRIVATE: MAXIMUM_DEPTH NUMERIC "0"
--- Retrieval info: PRIVATE: MIFfilename STRING ""
+-- Retrieval info: PRIVATE: MIFfilename STRING "memcontents.mif"
 -- Retrieval info: PRIVATE: NUMWORDS_A NUMERIC "512"
 -- Retrieval info: PRIVATE: RAM_BLOCK_TYPE NUMERIC "0"
 -- Retrieval info: PRIVATE: READ_DURING_WRITE_MODE_PORT_A NUMERIC "3"
 -- Retrieval info: PRIVATE: RegAddr NUMERIC "1"
 -- Retrieval info: PRIVATE: RegData NUMERIC "1"
--- Retrieval info: PRIVATE: RegOutput NUMERIC "0"
+-- Retrieval info: PRIVATE: RegOutput NUMERIC "1"
 -- Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
 -- Retrieval info: PRIVATE: SingleClock NUMERIC "1"
 -- Retrieval info: PRIVATE: UseDQRAM NUMERIC "1"
@@ -157,13 +159,14 @@ END SYN;
 -- Retrieval info: LIBRARY: altera_mf altera_mf.altera_mf_components.all
 -- Retrieval info: CONSTANT: CLOCK_ENABLE_INPUT_A STRING "BYPASS"
 -- Retrieval info: CONSTANT: CLOCK_ENABLE_OUTPUT_A STRING "BYPASS"
+-- Retrieval info: CONSTANT: INIT_FILE STRING "memcontents.mif"
 -- Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "Cyclone III"
 -- Retrieval info: CONSTANT: LPM_HINT STRING "ENABLE_RUNTIME_MOD=NO"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "altsyncram"
 -- Retrieval info: CONSTANT: NUMWORDS_A NUMERIC "512"
 -- Retrieval info: CONSTANT: OPERATION_MODE STRING "SINGLE_PORT"
 -- Retrieval info: CONSTANT: OUTDATA_ACLR_A STRING "NONE"
--- Retrieval info: CONSTANT: OUTDATA_REG_A STRING "UNREGISTERED"
+-- Retrieval info: CONSTANT: OUTDATA_REG_A STRING "CLOCK0"
 -- Retrieval info: CONSTANT: POWER_UP_UNINITIALIZED STRING "FALSE"
 -- Retrieval info: CONSTANT: READ_DURING_WRITE_MODE_PORT_A STRING "NEW_DATA_NO_NBE_READ"
 -- Retrieval info: CONSTANT: WIDTHAD_A NUMERIC "9"
@@ -181,9 +184,9 @@ END SYN;
 -- Retrieval info: CONNECT: @rden_a 0 0 0 0 rden 0 0 0 0
 -- Retrieval info: CONNECT: @wren_a 0 0 0 0 wren 0 0 0 0
 -- Retrieval info: CONNECT: q 0 0 32 0 @q_a 0 0 32 0
--- Retrieval info: GEN_FILE: TYPE_NORMAL RAM.vhd TRUE
--- Retrieval info: GEN_FILE: TYPE_NORMAL RAM.inc FALSE
--- Retrieval info: GEN_FILE: TYPE_NORMAL RAM.cmp TRUE
--- Retrieval info: GEN_FILE: TYPE_NORMAL RAM.bsf FALSE
--- Retrieval info: GEN_FILE: TYPE_NORMAL RAM_inst.vhd TRUE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL ram.vhd TRUE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL ram.inc FALSE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL ram.cmp TRUE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL ram.bsf TRUE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL ram_inst.vhd FALSE
 -- Retrieval info: LIB_FILE: altera_mf

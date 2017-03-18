@@ -159,6 +159,7 @@ begin
 					r15in <= '1';
 				end if;
 				r15out <= Rout or BAout;
+			when others =>
 		end case;
 	end process;
 	

@@ -519,7 +519,7 @@ applicable agreement for further details.
 	(input)
 	(rect -160 2216 24 2232)
 	(text "INPUT" (rect 141 0 169 10)(font "Arial" (font_size 6)))
-	(text "from_input[31..0]" (rect 5 0 90 12)(font "Arial" ))
+	(text "from_input[31..0]" (rect 5 0 89 12)(font "Arial" ))
 	(pt 184 8)
 	(drawing
 		(line (pt 100 12)(pt 125 12))
@@ -535,7 +535,7 @@ applicable agreement for further details.
 	(input)
 	(rect -144 2376 24 2392)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "outport_in" (rect 5 0 54 12)(font "Arial" ))
+	(text "outport_in" (rect 5 0 53 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -3689,7 +3689,7 @@ applicable agreement for further details.
 (symbol
 	(rect 136 2312 376 2424)
 	(text "reg32" (rect 5 0 32 12)(font "Arial" ))
-	(text "inport3" (rect 8 96 41 108)(font "Arial" ))
+	(text "outport" (rect 8 96 42 108)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
