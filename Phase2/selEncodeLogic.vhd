@@ -16,34 +16,36 @@ port(
 end entity selEncodeLogic;
 
 architecture behavioral of selEncodeLogic is
-	signal Ra, Rb, Rc, A1, A2, A3, O1 : std_logic_vector(3 downto 0);
 begin
-	Ra <= IRin(26 downto 23);
-	Rb <= IRin(22 downto 19);
-	Rc <= IRin(18 downto 15);
+	
+	
+	decoder_process : process(IRin, Gra, Grb, Grc, Rin, Rout, BAout) is 
+		variable Ra, Rb, Rc, A1, A2, A3, O1 : std_logic_vector(3 downto 0);
+
+	begin
+				Ra := IRin(26 downto 23);
+	Rb := IRin(22 downto 19);
+	Rc := IRin(18 downto 15);
 	
 	-- First level of AND gates
 	-- AND 1
-	A1(3) <= Ra(3) and Gra;
-	A1(2) <= Ra(2) and Gra;
-	A1(1) <= Ra(1) and Gra;
-	A1(0) <= Ra(0) and Gra;
+	A1(3) := Ra(3) and Gra;
+	A1(2) := Ra(2) and Gra;
+	A1(1) := Ra(1) and Gra;
+	A1(0) := Ra(0) and Gra;
 	-- AND 2
-	A2(3) <= Rb(3) and Grb;
-	A2(2) <= Rb(2) and Grb;
-	A2(1) <= Rb(1) and Grb;
-	A2(0) <= Rb(0) and Grb;
+	A2(3) := Rb(3) and Grb;
+	A2(2) := Rb(2) and Grb;
+	A2(1) := Rb(1) and Grb;
+	A2(0) := Rb(0) and Grb;
 	-- AND 3
-	A3(3) <= Rc(3) and Grc;
-	A3(2) <= Rc(2) and Grc;
-	A3(1) <= Rc(1) and Grc;
-	A3(0) <= Rc(0) and Grc;
+	A3(3) := Rc(3) and Grc;
+	A3(2) := Rc(2) and Grc;
+	A3(1) := Rc(1) and Grc;
+	A3(0) := Rc(0) and Grc;
 	
 	-- OR gate
-	O1 <= A1 or A2 or A3;
-	
-	decoder_process : process(IRin, Gra, Grb, Grc, Rin, Rout, BAout, O1) is 
-	begin
+	O1 := A1 or A2 or A3;
 		r0in 		<=  '0';
 		r1in 		<=  '0';
 		r2in 		<=  '0';
