@@ -134,6 +134,8 @@ alu_process : process (clk, enable , A, B, sel,multiplierRes) is
 						end loop;
 						zhi <= P(64 downto 33);
 						zlo <= P(32 downto 1);
+					when "1110" =>
+						zlo <= std_logic_vector(signed(B) + 1);
 					when others =>
 						zhi <= x"00000000";
 						zlo <= x"00000000";

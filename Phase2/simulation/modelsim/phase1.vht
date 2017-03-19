@@ -67,6 +67,7 @@ SIGNAL outport_in : STD_LOGIC;
 SIGNAL pc_busmuxin : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL pc_in : STD_LOGIC;
 SIGNAL pc_out : STD_LOGIC;
+SIGNAL r0_busmuxin : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL r0_out : STD_LOGIC;
 SIGNAL r0in : STD_LOGIC;
 SIGNAL r0val : STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -133,7 +134,17 @@ SIGNAL zlo_out : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL zlo_out_sel : STD_LOGIC;
 
 TYPE State is (default, reg1, reg2, reg3, reg0, reg4, reg5, reg6, reg7,
-					T0, T1, T2, T3, T4, T5,	T6, T7, T8, T9, T10, T11);
+					T0, 	T1, 	T2, 	T3, 	T4, 	T5, 	T6, 	T7, 	T8, 	T9, T10, T11,
+					T12, T13, 	T14, T15, 	T16, T17, 	T18, T19, 	T20, T21, T22, T23,
+					T24, T25, 	T26, T27, 	T28, T29, 	T30, T31,
+					T32, T33, T34, T35, T36, T37, T38, T39,
+					T40, T41, T42, T43, T44, T45, T46, T47, T48, T49,
+					T50, T51, T52, T53, T54, T55,
+					T56, T57, T58, T59, T60, T61,
+					T62, T63, T64, T65, T66,
+					T67, T68, T69, T70, T71,
+					T72, T73, T74, T75, T76, T77, T78,
+					T79, T80, T81, T82, T83, T84, T85);
 SIGNAL Present_State: State := default;
 
 COMPONENT phase1
@@ -173,6 +184,7 @@ COMPONENT phase1
 	pc_busmuxin : INOUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 	pc_in : IN STD_LOGIC;
 	pc_out : IN STD_LOGIC;
+	r0_busmuxin : INOUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 	r0_out : INOUT STD_LOGIC;
 	r0in : INOUT STD_LOGIC;
 	r0val : INOUT STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -278,6 +290,7 @@ BEGIN
 	pc_busmuxin => pc_busmuxin,
 	pc_in => pc_in,
 	pc_out => pc_out,
+	r0_busmuxin => r0_busmuxin,
 	r0_out => r0_out,
 	r0in => r0in,
 	r0val => r0val,
@@ -387,6 +400,154 @@ begin
 				present_state <= T10;
 			when T10 =>
 				present_state <= T11;
+			when T11 =>
+				present_state <= T12;
+			when T12 =>
+				present_state <= T13;
+			when T13 =>
+				present_state <= T14;
+			when T14 =>
+				present_state <= T15;
+			when T15 =>
+				present_state <= T16;
+			when T16 =>
+				present_state <= T17;
+			when T17 =>
+				present_state <= T18;
+			when T18 =>
+				present_state <= T19;
+			when T19 =>
+				present_state <= T20;
+			when T20 =>
+				present_state <= T21;
+			when T21 =>
+				present_state <= T22;
+			when T22 =>
+				present_state <= T23;
+			when T23 =>
+				present_state <= T24;
+			when T24 =>
+				present_state <= T25;
+			when T25 =>
+				present_state <= T26;
+			when T26 =>
+				present_state <= T27;
+			when T27 =>
+				present_state <= T28;
+			when T28 =>
+				present_state <= T29;
+			when T29 =>
+				present_state <= T30;
+			when T30 =>
+				present_state <= T31;
+			when T31 =>
+				present_state <= T32;
+			when T32 =>
+				present_state <= T33;
+			when T33 =>
+				present_state <= T34;
+			when T34 =>
+				present_state <= T35;
+			when T35 =>
+				present_state <= T36;
+			when T36 =>
+				present_state <= T37;
+			when T37 =>
+				present_state <= T38;
+			when T38 =>
+				present_state <= T39;
+			when T39 =>
+				present_state <= T40;
+			when T40 =>
+				present_state <= T41;
+			when T41 =>
+				present_state <= T42;
+			when T42 =>
+				present_state <= T43;
+			when T43 =>
+				present_state <= T44;
+			when T44 =>
+				present_state <= T45;
+			when T45 =>
+				present_state <= T46;
+			when T46 =>
+				present_state <= T47;
+			when T47 =>
+				present_state <= T48;
+			when T48 =>
+				present_state <= T49;
+			when T49 =>
+				present_state <= T50;
+			when T50 =>
+				present_state <= T51;
+			when T51 =>
+				present_state <= T52;
+			when T52 =>
+				present_state <= T53;
+			when T53 =>
+				present_state <= T54;
+			when T54 =>
+				present_state <= T55;
+			when T55 =>
+				present_state <= T56;
+			when T56 =>
+				present_state <= T57;
+			when T57 =>
+				present_state <= T58;
+			when T58 =>
+				present_state <= T59;
+			when T59 =>
+				present_state <= T60;
+			when T60 =>
+				present_state <= T61;
+			when T61 =>
+				present_state <= T62;
+			when T62 =>
+				present_state <= T63;
+			when T63 =>
+				present_state <= T64;
+			when T64 =>
+				present_state <= T65;
+			when T65 =>
+				present_state <= T66;
+			when T66 =>
+				present_state <= T67;
+			when T67 =>
+				present_state <= T68;
+			when T68 =>
+				present_state <= T69;
+			when T69 =>
+				present_state <= T70;
+			when T70 =>
+				present_state <= T71;
+			when T71 =>
+				present_state <= T72;
+			when T72 =>
+				present_state <= T73;
+			when T73 =>
+				present_state <= T74;
+			when T74 =>
+				present_state <= T75;
+			when T75 =>
+				present_state <= T76;
+			when T76 =>
+				present_state <= T77;
+			when T77 =>
+				present_state <= T78;
+			when T78 =>
+				present_state <= T79;
+			when T79 =>
+				present_state <= T80;
+			when T80 =>
+				present_state <= T81;
+			when T81 =>
+				present_state <= T82;
+			when T82 =>
+				present_state <= T83;
+			when T83 =>
+				present_state <= T84;
+			when T84 =>
+				present_state <= T85;
 			when OTHERS =>
 		end case;
 	end if;
@@ -427,17 +588,20 @@ begin
 			conin			<= '0';
 			wen			<= '0';
 			IRenable 	<= '0';
-			
+		
+		-- ld R1, $65
 		when T0 =>
 			pc_out 	<= '1', '0' after 10 ns;
 			marin 	<= '1', '0' after 10 ns;
+			sel_alu 	<= "1110";
+			alu_in 	<= '1', '0' after 10 ns;	
 			zhi_in 	<= '1', '0' after 10 ns;
-			zlo_in 	<= '1', '0' after 10 ns;
+			zlo_in 	<= '1', '0' after 10 ns;	
 		when T1 =>
 			zlo_out_sel	<= '1', '0' after 10 ns;
-			pc_in 	<= '1', '0' after 10 ns;
-			mem_read <= '1';
-			mdr_in	<= '1';
+			pc_in 		<= '1', '0' after 10 ns;
+			mem_read 	<= '1';
+			mdr_in		<= '1';
 		when T2 =>
 			mem_read <= '1';
 			mdr_in	<= '1';
@@ -473,6 +637,219 @@ begin
 			mdr_out 	<= '1', '0' after 10 ns;
 			gra		<= '1', '0' after 10 ns;
 			Rin 		<= '1', '0' after 10 ns;
+		
+		-- ld r0, $55(r1)
+		when T12 =>
+			pc_out 	<= '1', '0' after 10 ns;
+			marin 	<= '1', '0' after 10 ns;
+			sel_alu 	<= "1110";
+			alu_in 	<= '1', '0' after 10 ns;
+			zhi_in 	<= '1', '0' after 10 ns;
+			zlo_in 	<= '1', '0' after 10 ns;
+		when T13 =>
+			zlo_out_sel	<= '1', '0' after 10 ns;
+			pc_in 	<= '1', '0' after 10 ns;
+			mem_read <= '1';
+			mdr_in	<= '1';
+		when T14 =>
+			mem_read <= '1';
+			mdr_in	<= '1';
+		when T15 =>
+			mem_read <= '1', '0' after 10 ns;
+			mdr_in 	<= '1', '0' after 10 ns;
+		when T16 =>
+			mdr_out 	<= '1', '0' after 10 ns;
+			irenable <= '1', '0' after 10 ns;
+		when T17 =>
+			grb 		<= '1', '0' after 10 ns;
+			baout 	<= '1', '0' after 10 ns;
+			Yin 		<= '1', '0' after 10 ns;
+		when T18 =>
+			c_out		<= '1', '0' after 10 ns;
+			sel_alu 	<= "0000";
+			alu_in 	<= '1', '0' after 10 ns;
+			zhi_in 	<= '1', '0' after 10 ns;
+			zlo_in 	<= '1', '0' after 10 ns;
+		when T19 =>
+			zlo_out_sel <= '1', '0' after 10 ns;
+			marin		<= '1', '0' after 10 ns;		
+		when T20 =>
+			mem_read <= '1';
+			mdr_in 	<= '1';
+		when T21 =>
+			mem_read <= '1';
+			mdr_in 	<= '1';
+		when T22 =>
+			mem_read <= '1', '0' after 10 ns;
+			mdr_in	<= '1', '0' after 10 ns;
+		when T23 =>
+			mdr_out 	<= '1', '0' after 10 ns;
+			gra		<= '1', '0' after 10 ns;
+			Rin 		<= '1', '0' after 10 ns;
+		
+		-- ldi r1, $65
+		when T24 =>
+			pc_out 	<= '1', '0' after 10 ns;
+			marin 	<= '1', '0' after 10 ns;
+			sel_alu 	<= "1110";
+			alu_in 	<= '1', '0' after 10 ns;
+			zhi_in 	<= '1', '0' after 10 ns;
+			zlo_in 	<= '1', '0' after 10 ns;
+		when T25 =>
+			zlo_out_sel	<= '1', '0' after 10 ns;
+			pc_in 	<= '1', '0' after 10 ns;
+			mem_read <= '1';
+			mdr_in	<= '1';
+		when T26 =>
+			mem_read <= '1';
+			mdr_in	<= '1';
+		when T27 =>
+			mem_read <= '1', '0' after 10 ns;
+			mdr_in 	<= '1', '0' after 10 ns;
+		when T28 =>
+			mdr_out 	<= '1', '0' after 10 ns;
+			irenable <= '1', '0' after 10 ns;
+		when T29 =>
+			grb 		<= '1', '0' after 10 ns;
+			baout 	<= '1', '0' after 10 ns;
+			Yin 		<= '1', '0' after 10 ns;
+		when T30 =>
+			c_out		<= '1', '0' after 10 ns;
+			sel_alu 	<= "0000";
+			alu_in 	<= '1', '0' after 10 ns;
+			zhi_in 	<= '1', '0' after 10 ns;
+			zlo_in 	<= '1', '0' after 10 ns;
+		when T31 =>
+			zlo_out_sel <= '1', '0' after 10 ns;
+			gra 			<= '1', '0' after 10 ns;
+			Rin			<= '1', '0' after 10 ns;
+		
+		-- ldi r1, $55(r1)
+		when T32 =>
+			pc_out 	<= '1', '0' after 10 ns;
+			marin 	<= '1', '0' after 10 ns;
+			sel_alu 	<= "1110";
+			alu_in 	<= '1', '0' after 10 ns;
+			zhi_in 	<= '1', '0' after 10 ns;
+			zlo_in 	<= '1', '0' after 10 ns;
+		when T33 =>
+			zlo_out_sel	<= '1', '0' after 10 ns;
+			pc_in 	<= '1', '0' after 10 ns;
+			mem_read <= '1';
+			mdr_in	<= '1';
+		when T34 =>
+			mem_read <= '1';
+			mdr_in	<= '1';
+		when T35 =>
+			mem_read <= '1', '0' after 10 ns;
+			mdr_in 	<= '1', '0' after 10 ns;
+		when T36 =>
+			mdr_out 	<= '1', '0' after 10 ns;
+			irenable <= '1', '0' after 10 ns;
+		when T37 =>
+			grb 		<= '1', '0' after 10 ns;
+			baout 	<= '1', '0' after 10 ns;
+			Yin 		<= '1', '0' after 10 ns;
+		when T38 =>
+			c_out		<= '1', '0' after 10 ns;
+			sel_alu 	<= "0000";
+			alu_in 	<= '1', '0' after 10 ns;
+			zhi_in 	<= '1', '0' after 10 ns;
+			zlo_in 	<= '1', '0' after 10 ns;
+		when T39 =>
+			zlo_out_sel <= '1', '0' after 10 ns;
+			gra 			<= '1', '0' after 10 ns;
+			Rin			<= '1', '0' after 10 ns;
+		
+		-- ldr r0, $65
+		when T40 =>
+			pc_out 	<= '1', '0' after 10 ns;
+			marin 	<= '1', '0' after 10 ns;
+			sel_alu 	<= "1110";
+			alu_in 	<= '1', '0' after 10 ns;
+			zhi_in 	<= '1', '0' after 10 ns;
+			zlo_in 	<= '1', '0' after 10 ns;
+		when T41 =>
+			zlo_out_sel	<= '1', '0' after 10 ns;
+			pc_in 	<= '1', '0' after 10 ns;
+			Yin		<= '1', '0' after 10 ns;
+			mem_read <= '1';
+			mdr_in	<= '1';
+		when T42 =>
+			mem_read <= '1';
+			mdr_in	<= '1';
+		when T43	=>
+			mem_read <= '1', '0' after 10 ns;
+			mdr_in 	<= '1', '0' after 10 ns;
+		when T44 =>
+			mdr_out 	<= '1', '0' after 10 ns;
+			irenable <= '1', '0' after 10 ns;
+		when T45 =>
+			c_out		<= '1', '0' after 10 ns;
+			sel_alu 	<= "0000";
+			alu_in 	<= '1', '0' after 10 ns;
+			zhi_in 	<= '1', '0' after 10 ns;
+			zlo_in 	<= '1', '0' after 10 ns;
+		when T46 =>
+			zlo_out_sel <= '1', '0' after 10 ns;
+			marin			<= '1', '0' after 10 ns;
+		when T47 =>
+			mem_read		<= '1';
+			mdr_in		<= '1';
+		when T48 =>
+			mem_read		<= '1';
+			mdr_in		<= '1';
+		when T49 =>
+			mem_read 	<= '1', '0' after 10 ns;
+			mdr_in 		<= '1', '0' after 10 ns;
+			mdr_out		<= '1', '0' after 10 ns;
+			gra			<= '1', '0' after 10 ns;
+			Rin			<= '1', '0' after 10 ns;
+			
+		-- st $90, r4
+		when T50 =>
+			pc_out 	<= '1', '0' after 10 ns;
+			marin 	<= '1', '0' after 10 ns;
+			sel_alu 	<= "1110";
+			alu_in 	<= '1', '0' after 10 ns;	
+			zhi_in 	<= '1', '0' after 10 ns;
+			zlo_in 	<= '1', '0' after 10 ns;	
+		when T51 =>
+			zlo_out_sel	<= '1', '0' after 10 ns;
+			pc_in 		<= '1', '0' after 10 ns;
+			mem_read 	<= '1';
+			mdr_in		<= '1';
+		when T52 =>
+			mem_read <= '1';
+			mdr_in	<= '1';
+		when T53 =>
+			mem_read <= '1', '0' after 10 ns;
+			mdr_in 	<= '1', '0' after 10 ns;
+		when T54 =>
+			mdr_out 	<= '1', '0' after 10 ns;
+			irenable <= '1', '0' after 10 ns;
+		when T55 =>
+			grb 		<= '1', '0' after 10 ns;
+			baout 	<= '1', '0' after 10 ns;
+			Yin 		<= '1', '0' after 10 ns;
+		when T56 =>
+			c_out		<= '1', '0' after 10 ns;
+			sel_alu 	<= "0000";
+			alu_in 	<= '1', '0' after 10 ns;
+			zhi_in 	<= '1', '0' after 10 ns;
+			zlo_in 	<= '1', '0' after 10 ns;
+		when T57 =>
+			zlo_out_sel <= '1', '0' after 10 ns;
+			marin		<= '1', '0' after 10 ns;		
+		when T58 =>
+			mdr_in 	<= '1';
+			wen 		<= '1';
+		when T59 =>
+			mdr_in 	<= '1';
+			wen 		<= '1';
+		when T60 =>
+			mdr_in	<= '1', '0' after 10 ns;
+			wen 		<= '1', '0' after 10 ns;
 		when others =>
 	end case;
 end process;    

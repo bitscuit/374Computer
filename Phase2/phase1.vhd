@@ -14,7 +14,7 @@
 
 -- PROGRAM		"Quartus II 32-bit"
 -- VERSION		"Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
--- CREATED		"Thu Mar 16 14:20:35 2017"
+-- CREATED		"Sat Mar 18 22:47:24 2017"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
@@ -98,6 +98,7 @@ ENTITY phase1 IS
 		mdr_busmuxin :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		mdr_data :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		pc_busmuxin :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
+		r0_busmuxin :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		r0val :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		r10_busmuxin :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		r11_busmuxin :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -294,7 +295,6 @@ COMPONENT selencodelogic
 END COMPONENT;
 
 SIGNAL	or_out :  STD_LOGIC;
-SIGNAL	r0_busmuxin :  STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL	ram_out :  STD_LOGIC_VECTOR(31 DOWNTO 0);
 
 

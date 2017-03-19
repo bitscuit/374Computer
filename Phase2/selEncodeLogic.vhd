@@ -44,39 +44,39 @@ begin
 	
 	decoder_process : process(IRin, Gra, Grb, Grc, Rin, Rout, BAout, O1) is 
 	begin
-		r0in <=  '0';
-		r1in <=  '0';
-		r2in <=  '0';
-		r3in <=  '0';
-		r4in <=  '0';
-		r5in <=  '0';
-		r6in <=  '0';
-		r7in <=  '0';
-		r8in <=  '0';
-		r9in <=  '0';
-		r10in <=  '0';
-		r11in <=  '0';
-		r12in <=  '0';
-		r13in <=  '0';
-		r14in <=  '0';
-		r15in <=  '0';
-		
-		r0out <=  '0';
-		r1out <=  '0';
-		r2out <=  '0';
-		r3out <=  '0';
-		r4out <=  '0';
-		r5out <=  '0';
-		r6out <=  '0';
-		r7out <=  '0';
-		r8out <=  '0';
-		r9out <=  '0';
-		r10out <=  '0';
-		r11out <=  '0';
-		r12out <=  '0';
-		r13out <=  '0';
-		r14out <=  '0';
-		r15out <=  '0';
+		r0in 		<=  '0';
+		r1in 		<=  '0';
+		r2in 		<=  '0';
+		r3in 		<=  '0';
+		r4in 		<=  '0';
+		r5in 		<=  '0';
+		r6in 		<=  '0';
+		r7in 		<=  '0';
+		r8in 		<=  '0';
+		r9in 		<=  '0';
+		r10in 	<=  '0';
+		r11in 	<=  '0';
+		r12in 	<=  '0';
+		r13in 	<=  '0';
+		r14in 	<=  '0';
+		r15in 	<=  '0';
+			
+		r0out 	<=  '0';
+		r1out 	<=  '0';
+		r2out 	<=  '0';
+		r3out 	<=  '0';
+		r4out 	<=  '0';
+		r5out 	<=  '0';
+		r6out 	<=  '0';
+		r7out 	<=  '0';
+		r8out 	<=  '0';
+		r9out 	<=  '0';
+		r10out 	<=  '0';
+		r11out 	<=  '0';
+		r12out 	<=  '0';
+		r13out 	<=  '0';
+		r14out 	<=  '0';
+		r15out 	<=  '0';
 		
 		case O1 is
 			when "0000" =>

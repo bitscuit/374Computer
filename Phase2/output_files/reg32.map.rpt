@@ -1,5 +1,5 @@
 Analysis & Synthesis report for reg32
-Sat Mar 18 18:37:33 2017
+Sat Mar 18 22:51:25 2017
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -53,16 +53,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Mar 18 18:37:32 2017           ;
+; Analysis & Synthesis Status        ; Successful - Sat Mar 18 22:51:25 2017           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; reg32                                           ;
 ; Top-level Entity Name              ; phase1                                          ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 12,717                                          ;
-;     Total combinational functions  ; 12,717                                          ;
+; Total logic elements               ; 12,819                                          ;
+;     Total combinational functions  ; 12,819                                          ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 1,106                                           ;
+; Total pins                         ; 1,138                                           ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 16,384                                          ;
 ; Embedded Multiplier 9-bit elements ; 8                                               ;
@@ -173,7 +173,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+----------------------------------+-----------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                                ; Library ;
 +----------------------------------+-----------------+----------------------------------+-----------------------------------------------------------------------------+---------+
-; phase1.vhd                       ; yes             ; User VHDL File                   ; C:/Users/Michael/Documents/GitHub/374Computer/Phase2/phase1.vhd             ;         ;
 ; alu.vhd                          ; yes             ; User VHDL File                   ; C:/Users/Michael/Documents/GitHub/374Computer/Phase2/alu.vhd                ;         ;
 ; reg32.vhd                        ; yes             ; User VHDL File                   ; C:/Users/Michael/Documents/GitHub/374Computer/Phase2/reg32.vhd              ;         ;
 ; bus_mux32.vhd                    ; yes             ; User VHDL File                   ; C:/Users/Michael/Documents/GitHub/374Computer/Phase2/bus_mux32.vhd          ;         ;
@@ -186,6 +185,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; confflogic.vhd                   ; yes             ; User VHDL File                   ; C:/Users/Michael/Documents/GitHub/374Computer/Phase2/confflogic.vhd         ;         ;
 ; memcontents.mif                  ; yes             ; User Memory Initialization File  ; C:/Users/Michael/Documents/GitHub/374Computer/Phase2/memcontents.mif        ;         ;
 ; ram.vhd                          ; yes             ; User Wizard-Generated File       ; C:/Users/Michael/Documents/GitHub/374Computer/Phase2/ram.vhd                ;         ;
+; phase1.vhd                       ; yes             ; User VHDL File                   ; C:/Users/Michael/Documents/GitHub/374Computer/Phase2/phase1.vhd             ;         ;
 ; lpm_mult.tdf                     ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mult.tdf              ;         ;
 ; aglobal130.inc                   ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc            ;         ;
 ; lpm_add_sub.inc                  ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.inc           ;         ;
@@ -220,29 +220,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 12,717      ;
+; Estimated Total logic elements              ; 12,819      ;
 ;                                             ;             ;
-; Total combinational functions               ; 12717       ;
+; Total combinational functions               ; 12819       ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 5842        ;
-;     -- 3 input functions                    ; 6466        ;
-;     -- <=2 input functions                  ; 409         ;
+;     -- 4 input functions                    ; 5899        ;
+;     -- 3 input functions                    ; 6474        ;
+;     -- <=2 input functions                  ; 446         ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 7560        ;
-;     -- arithmetic mode                      ; 5157        ;
+;     -- normal mode                          ; 7631        ;
+;     -- arithmetic mode                      ; 5188        ;
 ;                                             ;             ;
 ; Total registers                             ; 0           ;
 ;     -- Dedicated logic registers            ; 0           ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
-; I/O pins                                    ; 1106        ;
+; I/O pins                                    ; 1138        ;
 ; Total memory bits                           ; 16384       ;
 ; Embedded Multiplier 9-bit elements          ; 8           ;
 ; Maximum fan-out node                        ; clear~input ;
 ; Maximum fan-out                             ; 841         ;
-; Total fan-out                               ; 47062       ;
-; Average fan-out                             ; 2.95        ;
+; Total fan-out                               ; 47483       ;
+; Average fan-out                             ; 2.94        ;
 +---------------------------------------------+-------------+
 
 
@@ -251,11 +251,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                   ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |phase1                                   ; 12717 (0)         ; 0 (0)        ; 16384       ; 8            ; 0       ; 4         ; 1106 ; 0            ; |phase1                                                                                                                               ; work         ;
-;    |alu:b2v_ALU|                          ; 11175 (8663)      ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |phase1|alu:b2v_ALU                                                                                                                   ; work         ;
-;       |lpm_divide:Div0|                   ; 1110 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase1|alu:b2v_ALU|lpm_divide:Div0                                                                                                   ; work         ;
-;          |lpm_divide_01p:auto_generated|  ; 1110 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase1|alu:b2v_ALU|lpm_divide:Div0|lpm_divide_01p:auto_generated                                                                     ; work         ;
-;             |abs_divider_4dg:divider|     ; 1110 (61)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase1|alu:b2v_ALU|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider                                             ; work         ;
+; |phase1                                   ; 12819 (0)         ; 0 (0)        ; 16384       ; 8            ; 0       ; 4         ; 1138 ; 0            ; |phase1                                                                                                                               ; work         ;
+;    |alu:b2v_ALU|                          ; 11277 (8781)      ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |phase1|alu:b2v_ALU                                                                                                                   ; work         ;
+;       |lpm_divide:Div0|                   ; 1094 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase1|alu:b2v_ALU|lpm_divide:Div0                                                                                                   ; work         ;
+;          |lpm_divide_01p:auto_generated|  ; 1094 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase1|alu:b2v_ALU|lpm_divide:Div0|lpm_divide_01p:auto_generated                                                                     ; work         ;
+;             |abs_divider_4dg:divider|     ; 1094 (45)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase1|alu:b2v_ALU|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider                                             ; work         ;
 ;                |alt_u_div_t8f:divider|    ; 1048 (1048)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase1|alu:b2v_ALU|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider                       ; work         ;
 ;                |lpm_abs_9v9:my_abs_den|   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase1|alu:b2v_ALU|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|lpm_abs_9v9:my_abs_den                      ; work         ;
 ;       |lpm_divide:Mod0|                   ; 1323 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase1|alu:b2v_ALU|lpm_divide:Mod0                                                                                                   ; work         ;
@@ -737,7 +737,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:34     ;
+; Top            ; 00:00:48     ;
 +----------------+--------------+
 
 
@@ -747,12 +747,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Mar 18 18:36:54 2017
+    Info: Processing started: Sat Mar 18 22:50:30 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c reg32
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 2 design units, including 1 entities, in source file phase1.vhd
-    Info (12022): Found design unit 1: phase1-bdf_type
-    Info (12023): Found entity 1: phase1
 Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
     Info (12022): Found design unit 1: alu-behavioral
     Info (12023): Found entity 1: alu
@@ -786,6 +783,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file confflo
 Info (12021): Found 2 design units, including 1 entities, in source file ram.vhd
     Info (12022): Found design unit 1: ram-SYN
     Info (12023): Found entity 1: ram
+Info (12021): Found 2 design units, including 1 entities, in source file phase1.vhd
+    Info (12022): Found design unit 1: phase1-bdf_type
+    Info (12023): Found entity 1: phase1
 Info (12127): Elaborating entity "phase1" for the top level hierarchy
 Info (12128): Elaborating entity "alu" for hierarchy "alu:b2v_ALU"
 Warning (10631): VHDL Process Statement warning at alu.vhd(35): inferring latch(es) for signal or variable "zhi", which holds its previous value in one or more paths through the process
@@ -1322,6 +1322,38 @@ Warning (13034): The following nodes have both tri-state and non-tri-state drive
     Warning (13035): Inserted always-enabled tri-state buffer between "pc_busmuxin[29]" and its non-tri-state driver.
     Warning (13035): Inserted always-enabled tri-state buffer between "pc_busmuxin[30]" and its non-tri-state driver.
     Warning (13035): Inserted always-enabled tri-state buffer between "pc_busmuxin[31]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "r0_busmuxin[0]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "r0_busmuxin[1]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "r0_busmuxin[2]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "r0_busmuxin[3]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "r0_busmuxin[4]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "r0_busmuxin[5]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "r0_busmuxin[6]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "r0_busmuxin[7]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "r0_busmuxin[8]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "r0_busmuxin[9]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "r0_busmuxin[10]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "r0_busmuxin[11]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "r0_busmuxin[12]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "r0_busmuxin[13]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "r0_busmuxin[14]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "r0_busmuxin[15]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "r0_busmuxin[16]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "r0_busmuxin[17]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "r0_busmuxin[18]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "r0_busmuxin[19]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "r0_busmuxin[20]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "r0_busmuxin[21]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "r0_busmuxin[22]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "r0_busmuxin[23]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "r0_busmuxin[24]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "r0_busmuxin[25]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "r0_busmuxin[26]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "r0_busmuxin[27]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "r0_busmuxin[28]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "r0_busmuxin[29]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "r0_busmuxin[30]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "r0_busmuxin[31]" and its non-tri-state driver.
     Warning (13035): Inserted always-enabled tri-state buffer between "r0val[0]" and its non-tri-state driver.
     Warning (13035): Inserted always-enabled tri-state buffer between "r0val[1]" and its non-tri-state driver.
     Warning (13035): Inserted always-enabled tri-state buffer between "r0val[2]" and its non-tri-state driver.
@@ -2324,6 +2356,38 @@ Info (13060): One or more bidirs are fed by always enabled tri-state buffers
     Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "pc_busmuxin[29]" is moved to its source
     Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "pc_busmuxin[30]" is moved to its source
     Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "pc_busmuxin[31]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0_busmuxin[0]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0_busmuxin[1]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0_busmuxin[2]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0_busmuxin[3]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0_busmuxin[4]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0_busmuxin[5]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0_busmuxin[6]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0_busmuxin[7]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0_busmuxin[8]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0_busmuxin[9]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0_busmuxin[10]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0_busmuxin[11]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0_busmuxin[12]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0_busmuxin[13]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0_busmuxin[14]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0_busmuxin[15]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0_busmuxin[16]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0_busmuxin[17]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0_busmuxin[18]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0_busmuxin[19]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0_busmuxin[20]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0_busmuxin[21]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0_busmuxin[22]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0_busmuxin[23]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0_busmuxin[24]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0_busmuxin[25]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0_busmuxin[26]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0_busmuxin[27]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0_busmuxin[28]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0_busmuxin[29]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0_busmuxin[30]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0_busmuxin[31]" is moved to its source
     Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0val[0]" is moved to its source
     Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0val[1]" is moved to its source
     Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "r0val[2]" is moved to its source
@@ -3875,6 +3939,38 @@ Warning (13009): TRI or OPNDRN buffers permanently enabled
     Warning (13010): Node "pc_busmuxin[29]~synth"
     Warning (13010): Node "pc_busmuxin[30]~synth"
     Warning (13010): Node "pc_busmuxin[31]~synth"
+    Warning (13010): Node "r0_busmuxin[0]~synth"
+    Warning (13010): Node "r0_busmuxin[1]~synth"
+    Warning (13010): Node "r0_busmuxin[2]~synth"
+    Warning (13010): Node "r0_busmuxin[3]~synth"
+    Warning (13010): Node "r0_busmuxin[4]~synth"
+    Warning (13010): Node "r0_busmuxin[5]~synth"
+    Warning (13010): Node "r0_busmuxin[6]~synth"
+    Warning (13010): Node "r0_busmuxin[7]~synth"
+    Warning (13010): Node "r0_busmuxin[8]~synth"
+    Warning (13010): Node "r0_busmuxin[9]~synth"
+    Warning (13010): Node "r0_busmuxin[10]~synth"
+    Warning (13010): Node "r0_busmuxin[11]~synth"
+    Warning (13010): Node "r0_busmuxin[12]~synth"
+    Warning (13010): Node "r0_busmuxin[13]~synth"
+    Warning (13010): Node "r0_busmuxin[14]~synth"
+    Warning (13010): Node "r0_busmuxin[15]~synth"
+    Warning (13010): Node "r0_busmuxin[16]~synth"
+    Warning (13010): Node "r0_busmuxin[17]~synth"
+    Warning (13010): Node "r0_busmuxin[18]~synth"
+    Warning (13010): Node "r0_busmuxin[19]~synth"
+    Warning (13010): Node "r0_busmuxin[20]~synth"
+    Warning (13010): Node "r0_busmuxin[21]~synth"
+    Warning (13010): Node "r0_busmuxin[22]~synth"
+    Warning (13010): Node "r0_busmuxin[23]~synth"
+    Warning (13010): Node "r0_busmuxin[24]~synth"
+    Warning (13010): Node "r0_busmuxin[25]~synth"
+    Warning (13010): Node "r0_busmuxin[26]~synth"
+    Warning (13010): Node "r0_busmuxin[27]~synth"
+    Warning (13010): Node "r0_busmuxin[28]~synth"
+    Warning (13010): Node "r0_busmuxin[29]~synth"
+    Warning (13010): Node "r0_busmuxin[30]~synth"
+    Warning (13010): Node "r0_busmuxin[31]~synth"
     Warning (13010): Node "r0val[0]~synth"
     Warning (13010): Node "r0val[1]~synth"
     Warning (13010): Node "r0val[2]~synth"
@@ -4559,17 +4655,17 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "conin"
-Info (21057): Implemented 13863 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 13997 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 67 input pins
     Info (21059): Implemented 33 output pins
-    Info (21060): Implemented 1006 bidirectional pins
-    Info (21061): Implemented 12717 logic cells
+    Info (21060): Implemented 1038 bidirectional pins
+    Info (21061): Implemented 12819 logic cells
     Info (21064): Implemented 32 RAM segments
     Info (21062): Implemented 8 DSP elements
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 2547 warnings
-    Info: Peak virtual memory: 454 megabytes
-    Info: Processing ended: Sat Mar 18 18:37:33 2017
-    Info: Elapsed time: 00:00:39
-    Info: Total CPU time (on all processors): 00:00:39
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 2611 warnings
+    Info: Peak virtual memory: 442 megabytes
+    Info: Processing ended: Sat Mar 18 22:51:26 2017
+    Info: Elapsed time: 00:00:56
+    Info: Total CPU time (on all processors): 00:00:55
 
 

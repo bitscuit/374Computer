@@ -1,5 +1,5 @@
 Flow report for reg32
-Sat Mar 18 18:37:33 2017
+Sat Mar 18 22:51:25 2017
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Sat Mar 18 18:37:33 2017           ;
+; Flow Status                        ; Successful - Sat Mar 18 22:51:25 2017           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; reg32                                           ;
 ; Top-level Entity Name              ; phase1                                          ;
 ; Family                             ; Cyclone III                                     ;
 ; Device                             ; EP3C16F484C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 12,717                                          ;
-;     Total combinational functions  ; 12,717                                          ;
+; Total logic elements               ; 12,819                                          ;
+;     Total combinational functions  ; 12,819                                          ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 1,106                                           ;
+; Total pins                         ; 1,138                                           ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 16,384                                          ;
 ; Embedded Multiplier 9-bit elements ; 8                                               ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/18/2017 18:36:54 ;
+; Start date & time ; 03/18/2017 22:50:31 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; reg32               ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 260535863750641.148987661428544       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 260535863750641.148989183122924       ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; phase1_vhd_tst                        ; --            ; --          ; phase1_vhd_tst ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; phase1_vhd_tst                        ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                  ; --            ; --          ; eda_simulation ;
@@ -111,8 +111,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:37     ; 1.0                     ; 450 MB              ; 00:00:37                           ;
-; Total                ; 00:00:37     ; --                      ; --                  ; 00:00:37                           ;
+; Analysis & Synthesis ; 00:00:52     ; 1.0                     ; 442 MB              ; 00:00:52                           ;
+; Total                ; 00:00:52     ; --                      ; --                  ; 00:00:52                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

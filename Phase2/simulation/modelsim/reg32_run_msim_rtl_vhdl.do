@@ -5,7 +5,6 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vcom -93 -work work {C:/Users/Michael/Documents/GitHub/374Computer/Phase2/phase1.vhd}
 vcom -93 -work work {C:/Users/Michael/Documents/GitHub/374Computer/Phase2/alu.vhd}
 vcom -93 -work work {C:/Users/Michael/Documents/GitHub/374Computer/Phase2/reg32.vhd}
 vcom -93 -work work {C:/Users/Michael/Documents/GitHub/374Computer/Phase2/bus_mux32.vhd}
@@ -17,6 +16,7 @@ vcom -93 -work work {C:/Users/Michael/Documents/GitHub/374Computer/Phase2/selEnc
 vcom -93 -work work {C:/Users/Michael/Documents/GitHub/374Computer/Phase2/and32.vhd}
 vcom -93 -work work {C:/Users/Michael/Documents/GitHub/374Computer/Phase2/confflogic.vhd}
 vcom -93 -work work {C:/Users/Michael/Documents/GitHub/374Computer/Phase2/ram.vhd}
+vcom -93 -work work {C:/Users/Michael/Documents/GitHub/374Computer/Phase2/phase1.vhd}
 
 vcom -93 -work work {C:/Users/Michael/Documents/GitHub/374Computer/Phase2/simulation/modelsim/phase1.vht}
 
