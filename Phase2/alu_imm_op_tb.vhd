@@ -29,7 +29,7 @@ USE ieee.std_logic_1164.all;
 
 ENTITY alu_imm_op_tb IS
 END alu_imm_op_tb;
-ARCHITECTURE phase1_arch OF alu_imm_op_tb IS
+ARCHITECTURE alu_imm_op_tb_arch OF alu_imm_op_tb IS
 -- constants                                                 
 -- signals                                                   
 SIGNAL address : STD_LOGIC_VECTOR(8 DOWNTO 0);
@@ -771,4 +771,4 @@ begin
 	end case;
 end process;    
                             
-END phase1_arch;
+END alu_imm_op_tb_arch;

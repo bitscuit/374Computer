@@ -98,20 +98,20 @@
 # -- Compiling entity phase1
 # -- Compiling architecture bdf_type of phase1
 # 
-# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase2/alu_imm_op_tb.vhd}
+# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase2/jump_op_tb.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity alu_imm_op_tb
-# -- Compiling architecture phase1_arch of alu_imm_op_tb
+# -- Compiling entity jump_op_tb
+# -- Compiling architecture jump_op_tb_arch of jump_op_tb
 # 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  alu_imm_op_tb
-# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps alu_imm_op_tb 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  jump_op_tb
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps jump_op_tb 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.alu_imm_op_tb(phase1_arch)
+# Loading work.jump_op_tb(jump_op_tb_arch)
 # Loading work.phase1(bdf_type)
 # Loading ieee.numeric_std(body)
 # Loading lpm.lpm_components
@@ -133,7 +133,7 @@
 # Loading altera_mf.altera_device_families(body)
 # Loading altera_mf.altsyncram(translated)
 # Loading work.selencodelogic(behavioral)
-# ** Warning: (vsim-8683) Uninitialized out port /alu_imm_op_tb/i1/b2v_confflogic/conff_out has no driver.
+# ** Warning: (vsim-8683) Uninitialized out port /jump_op_tb/i1/b2v_confflogic/conff_out has no driver.
 # 
 # This port will contribute value (U) to the signal network.
 # 
@@ -145,317 +145,12 @@
 # .main_pane.objects.interior.cs.body.tree
 # run 2000 ns
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /alu_imm_op_tb/i1/b2v_ALU/multiplier/lpm_mult_component
+#    Time: 0 ps  Iteration: 0  Instance: /jump_op_tb/i1/b2v_ALU/multiplier/lpm_mult_component
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /alu_imm_op_tb/i1/b2v_ALU/multiplier/lpm_mult_component
+#    Time: 0 ps  Iteration: 0  Instance: /jump_op_tb/i1/b2v_ALU/multiplier/lpm_mult_component
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /alu_imm_op_tb/i1/b2v_ALU/multiplier/lpm_mult_component
+#    Time: 0 ps  Iteration: 0  Instance: /jump_op_tb/i1/b2v_ALU/multiplier/lpm_mult_component
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 2  Instance: /alu_imm_op_tb/i1/b2v_ALU/multiplier/lpm_mult_component
+#    Time: 0 ps  Iteration: 2  Instance: /jump_op_tb/i1/b2v_ALU/multiplier/lpm_mult_component
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 2  Instance: /alu_imm_op_tb/i1/b2v_ALU/multiplier/lpm_mult_component
-do reg32_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase2/alu.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package LPM_COMPONENTS
-# -- Compiling entity alu
-# -- Compiling architecture behavioral of alu
-# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase2/reg32.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity reg32
-# -- Compiling architecture behavioral of reg32
-# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase2/bus_mux32.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity bus_mux32
-# -- Compiling architecture behavioral of bus_mux32
-# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase2/muxMDR.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity muxMDR
-# -- Compiling architecture behavioral of muxMDR
-# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase2/encoder32.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity encoder32
-# -- Compiling architecture behavioral of encoder32
-# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase2/mult32.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity mult32
-# -- Compiling architecture SYN of mult32
-# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase2/regMAR.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity regMAR
-# -- Compiling architecture behavioral of regMAR
-# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase2/selEncodeLogic.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity selEncodeLogic
-# -- Compiling architecture behavioral of selEncodeLogic
-# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase2/and32.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity and32
-# -- Compiling architecture behavioral of and32
-# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase2/confflogic.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity confflogic
-# -- Compiling architecture behavioral of confflogic
-# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase2/ram.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity ram
-# -- Compiling architecture SYN of ram
-# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase2/phase1.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity phase1
-# -- Compiling architecture bdf_type of phase1
-# 
-# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase2/alu_imm_op_tb.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity alu_imm_op_tb
-# -- Compiling architecture phase1_arch of alu_imm_op_tb
-# 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  alu_imm_op_tb
-# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps alu_imm_op_tb 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.alu_imm_op_tb(phase1_arch)
-# Loading work.phase1(bdf_type)
-# Loading ieee.numeric_std(body)
-# Loading lpm.lpm_components
-# Loading work.alu(behavioral)
-# Loading work.mult32(syn)
-# Loading ieee.std_logic_arith(body)
-# Loading lpm.lpm_hint_evaluation(body)
-# Loading lpm.lpm_mult(lpm_syn)
-# Loading work.and32(behavioral)
-# Loading work.bus_mux32(behavioral)
-# Loading work.confflogic(behavioral)
-# Loading work.encoder32(behavioral)
-# Loading work.reg32(behavioral)
-# Loading work.regmar(behavioral)
-# Loading work.muxmdr(behavioral)
-# Loading work.ram(syn)
-# Loading ieee.std_logic_unsigned(body)
-# Loading altera_mf.altera_common_conversion(body)
-# Loading altera_mf.altera_device_families(body)
-# Loading altera_mf.altsyncram(translated)
-# Loading work.selencodelogic(behavioral)
-# ** Warning: (vsim-8683) Uninitialized out port /alu_imm_op_tb/i1/b2v_confflogic/conff_out has no driver.
-# 
-# This port will contribute value (U) to the signal network.
-# 
-# WARNING: No extended dataflow license exists
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run 2000 ns
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /alu_imm_op_tb/i1/b2v_ALU/multiplier/lpm_mult_component
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /alu_imm_op_tb/i1/b2v_ALU/multiplier/lpm_mult_component
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /alu_imm_op_tb/i1/b2v_ALU/multiplier/lpm_mult_component
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 2  Instance: /alu_imm_op_tb/i1/b2v_ALU/multiplier/lpm_mult_component
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 2  Instance: /alu_imm_op_tb/i1/b2v_ALU/multiplier/lpm_mult_component
-# Can't move the Now cursor.
-do reg32_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase2/alu.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package LPM_COMPONENTS
-# -- Compiling entity alu
-# -- Compiling architecture behavioral of alu
-# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase2/reg32.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity reg32
-# -- Compiling architecture behavioral of reg32
-# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase2/bus_mux32.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity bus_mux32
-# -- Compiling architecture behavioral of bus_mux32
-# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase2/muxMDR.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity muxMDR
-# -- Compiling architecture behavioral of muxMDR
-# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase2/encoder32.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity encoder32
-# -- Compiling architecture behavioral of encoder32
-# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase2/mult32.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity mult32
-# -- Compiling architecture SYN of mult32
-# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase2/regMAR.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity regMAR
-# -- Compiling architecture behavioral of regMAR
-# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase2/selEncodeLogic.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity selEncodeLogic
-# -- Compiling architecture behavioral of selEncodeLogic
-# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase2/and32.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity and32
-# -- Compiling architecture behavioral of and32
-# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase2/confflogic.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity confflogic
-# -- Compiling architecture behavioral of confflogic
-# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase2/ram.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity ram
-# -- Compiling architecture SYN of ram
-# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase2/phase1.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity phase1
-# -- Compiling architecture bdf_type of phase1
-# 
-# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase2/alu_imm_op_tb.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity alu_imm_op_tb
-# -- Compiling architecture phase1_arch of alu_imm_op_tb
-# 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  alu_imm_op_tb
-# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps alu_imm_op_tb 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.alu_imm_op_tb(phase1_arch)
-# Loading work.phase1(bdf_type)
-# Loading ieee.numeric_std(body)
-# Loading lpm.lpm_components
-# Loading work.alu(behavioral)
-# Loading work.mult32(syn)
-# Loading ieee.std_logic_arith(body)
-# Loading lpm.lpm_hint_evaluation(body)
-# Loading lpm.lpm_mult(lpm_syn)
-# Loading work.and32(behavioral)
-# Loading work.bus_mux32(behavioral)
-# Loading work.confflogic(behavioral)
-# Loading work.encoder32(behavioral)
-# Loading work.reg32(behavioral)
-# Loading work.regmar(behavioral)
-# Loading work.muxmdr(behavioral)
-# Loading work.ram(syn)
-# Loading ieee.std_logic_unsigned(body)
-# Loading altera_mf.altera_common_conversion(body)
-# Loading altera_mf.altera_device_families(body)
-# Loading altera_mf.altsyncram(translated)
-# Loading work.selencodelogic(behavioral)
-# ** Warning: (vsim-8683) Uninitialized out port /alu_imm_op_tb/i1/b2v_confflogic/conff_out has no driver.
-# 
-# This port will contribute value (U) to the signal network.
-# 
-# WARNING: No extended dataflow license exists
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run 2000 ns
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /alu_imm_op_tb/i1/b2v_ALU/multiplier/lpm_mult_component
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /alu_imm_op_tb/i1/b2v_ALU/multiplier/lpm_mult_component
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /alu_imm_op_tb/i1/b2v_ALU/multiplier/lpm_mult_component
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 2  Instance: /alu_imm_op_tb/i1/b2v_ALU/multiplier/lpm_mult_component
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 2  Instance: /alu_imm_op_tb/i1/b2v_ALU/multiplier/lpm_mult_component
+#    Time: 0 ps  Iteration: 2  Instance: /jump_op_tb/i1/b2v_ALU/multiplier/lpm_mult_component
