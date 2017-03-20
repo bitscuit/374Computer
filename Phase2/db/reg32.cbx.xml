@@ -4,6 +4,6 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|phase1|alu:b2v_ALU|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_01p.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|phase1|alu:b2v_ALU|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_3po.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|phase1|alu:b2v_ALU|mult32:multiplier|lpm_mult:lpm_mult_component" CBX_FILE_NAME="mult_gen.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|phase1|ram:b2v_RAM|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_hli1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|phase1|ram:b2v_RAM|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_8ei1.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

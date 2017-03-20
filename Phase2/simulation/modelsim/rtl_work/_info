@@ -2,24 +2,24 @@ m255
 K3
 13
 cModel Technology
-Z0 dC:\Users\Henry\Desktop\374Computer\Phase2\simulation\modelsim
+Z0 dC:\Users\Michael\Documents\GitHub\374Computer\Phase2\simulation\modelsim
 Ealu
-Z1 w1489902533
+Z1 w1489887191
 Z2 DPx3 lpm 14 lpm_components 0 22 aHRA3clF>2DcWDhgFTAbM3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
 Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z5 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
-Z6 dC:\Users\Henry\Desktop\374Computer\Phase2\simulation\modelsim
-Z7 8C:/Users/Henry/Desktop/374Computer/Phase2/alu.vhd
-Z8 FC:/Users/Henry/Desktop/374Computer/Phase2/alu.vhd
+Z6 dC:\Users\Michael\Documents\GitHub\374Computer\Phase2\simulation\modelsim
+Z7 8C:/Users/Michael/Documents/GitHub/374Computer/Phase2/alu.vhd
+Z8 FC:/Users/Michael/Documents/GitHub/374Computer/Phase2/alu.vhd
 l0
 L10
 VDd[3=@l4NOjhiU^[5QKDG0
 Z9 OV;C;10.1d;51
 31
-Z10 !s108 1489967051.194000
-Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/Henry/Desktop/374Computer/Phase2/alu.vhd|
-Z12 !s107 C:/Users/Henry/Desktop/374Computer/Phase2/alu.vhd|
+Z10 !s108 1490023425.342000
+Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/Michael/Documents/GitHub/374Computer/Phase2/alu.vhd|
+Z12 !s107 C:/Users/Michael/Documents/GitHub/374Computer/Phase2/alu.vhd|
 Z13 o-93 -work work -O0
 Z14 tExplicit 1
 !s100 Z>4;1AZ[2O<JMMTQYiG5T2
@@ -43,20 +43,20 @@ R14
 !s100 2Y<_mR2z6Yl_ic[AlOM?D3
 !i10b 1
 Eand32
-Z15 w1489414379
+Z15 w1489357473
 R4
 R3
 R6
-Z16 8C:/Users/Henry/Desktop/374Computer/Phase2/and32.vhd
-Z17 FC:/Users/Henry/Desktop/374Computer/Phase2/and32.vhd
+Z16 8C:/Users/Michael/Documents/GitHub/374Computer/Phase2/and32.vhd
+Z17 FC:/Users/Michael/Documents/GitHub/374Computer/Phase2/and32.vhd
 l0
 L4
 VFhKZif=Md[O[@82E:lR_[0
 R9
 31
-Z18 !s108 1489967052.375000
-Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/Henry/Desktop/374Computer/Phase2/and32.vhd|
-Z20 !s107 C:/Users/Henry/Desktop/374Computer/Phase2/and32.vhd|
+Z18 !s108 1490023428.357000
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/Michael/Documents/GitHub/374Computer/Phase2/and32.vhd|
+Z20 !s107 C:/Users/Michael/Documents/GitHub/374Computer/Phase2/and32.vhd|
 R13
 R14
 !s100 <V@MDlYIKhYk_>Gm3h^CE0
@@ -78,20 +78,20 @@ R14
 !s100 9a2B3Zl>@]=PE3Nb=3H1O1
 !i10b 1
 Ebus_mux32
-Z21 w1489032490
+Z21 w1489032553
 R4
 R3
 R6
-Z22 8C:/Users/Henry/Desktop/374Computer/Phase2/bus_mux32.vhd
-Z23 FC:/Users/Henry/Desktop/374Computer/Phase2/bus_mux32.vhd
+Z22 8C:/Users/Michael/Documents/GitHub/374Computer/Phase2/bus_mux32.vhd
+Z23 FC:/Users/Michael/Documents/GitHub/374Computer/Phase2/bus_mux32.vhd
 l0
 L7
 V2W50mUlc[ajPP<=7OZL?V3
 R9
 31
-Z24 !s108 1489967051.504000
-Z25 !s90 -reportprogress|300|-93|-work|work|C:/Users/Henry/Desktop/374Computer/Phase2/bus_mux32.vhd|
-Z26 !s107 C:/Users/Henry/Desktop/374Computer/Phase2/bus_mux32.vhd|
+Z24 !s108 1490023426.514000
+Z25 !s90 -reportprogress|300|-93|-work|work|C:/Users/Michael/Documents/GitHub/374Computer/Phase2/bus_mux32.vhd|
+Z26 !s107 C:/Users/Michael/Documents/GitHub/374Computer/Phase2/bus_mux32.vhd|
 R13
 R14
 !s100 _O[Vm5L]fC_e4nY42VbV20
@@ -113,20 +113,20 @@ R14
 !s100 eUjI8Y4^3L>>EFW4eo4Po2
 !i10b 1
 Econfflogic
-R15
+Z27 w1490016318
 R4
 R3
 R6
-Z27 8C:/Users/Henry/Desktop/374Computer/Phase2/confflogic.vhd
-Z28 FC:/Users/Henry/Desktop/374Computer/Phase2/confflogic.vhd
+Z28 8C:/Users/Michael/Documents/GitHub/374Computer/Phase2/confflogic.vhd
+Z29 FC:/Users/Michael/Documents/GitHub/374Computer/Phase2/confflogic.vhd
 l0
 L4
 VdOTYbV9ob<RS7OlB22jg@0
 R9
 31
-Z29 !s108 1489967052.519000
-Z30 !s90 -reportprogress|300|-93|-work|work|C:/Users/Henry/Desktop/374Computer/Phase2/confflogic.vhd|
-Z31 !s107 C:/Users/Henry/Desktop/374Computer/Phase2/confflogic.vhd|
+Z30 !s108 1490023428.779000
+Z31 !s90 -reportprogress|300|-93|-work|work|C:/Users/Michael/Documents/GitHub/374Computer/Phase2/confflogic.vhd|
+Z32 !s107 C:/Users/Michael/Documents/GitHub/374Computer/Phase2/confflogic.vhd|
 R13
 R14
 !s100 5o8ZjKH:@lbd?c:?=:fW81
@@ -135,33 +135,33 @@ Abehavioral
 R4
 R3
 DEx4 work 10 confflogic 0 22 dOTYbV9ob<RS7OlB22jg@0
-l18
+l14
 L13
-VdmFn=W_9SGTzzC=bON0nY2
+V7NIo?7go<LQimg21YeINh3
 R9
 31
-R29
 R30
 R31
+R32
 R13
 R14
-!s100 aa;OL@;BM@Hn?lS>2LY<E3
+!s100 gH9Ah3C?3E`IEMBdB3A5l0
 !i10b 1
 Eencoder32
-R21
+Z33 w1489032558
 R4
 R3
 R6
-Z32 8C:/Users/Henry/Desktop/374Computer/Phase2/encoder32.vhd
-Z33 FC:/Users/Henry/Desktop/374Computer/Phase2/encoder32.vhd
+Z34 8C:/Users/Michael/Documents/GitHub/374Computer/Phase2/encoder32.vhd
+Z35 FC:/Users/Michael/Documents/GitHub/374Computer/Phase2/encoder32.vhd
 l0
 L7
 VlHf8J^8K]O]j^XeiG2X6i1
 R9
 31
-Z34 !s108 1489967051.826000
-Z35 !s90 -reportprogress|300|-93|-work|work|C:/Users/Henry/Desktop/374Computer/Phase2/encoder32.vhd|
-Z36 !s107 C:/Users/Henry/Desktop/374Computer/Phase2/encoder32.vhd|
+Z36 !s108 1490023427.185000
+Z37 !s90 -reportprogress|300|-93|-work|work|C:/Users/Michael/Documents/GitHub/374Computer/Phase2/encoder32.vhd|
+Z38 !s107 C:/Users/Michael/Documents/GitHub/374Computer/Phase2/encoder32.vhd|
 R13
 R14
 !s100 5Qd5_]9c0M_c@WP]oaeTL1
@@ -175,63 +175,63 @@ L50
 VI6B2d_3InHcOl[:ORfJZj3
 R9
 31
-R34
-R35
 R36
+R37
+R38
 R13
 R14
 !s100 ?a3OmPYXiA76FV14k:_OW0
 !i10b 1
-Ejump_op_tb
-Z37 w1489966957
+Emf_op_tb
+Z39 w1490023261
 R4
 R3
 R6
-Z38 8C:/Users/Henry/Desktop/374Computer/Phase2/jump_op_tb.vhd
-Z39 FC:/Users/Henry/Desktop/374Computer/Phase2/jump_op_tb.vhd
+Z40 8C:/Users/Michael/Documents/GitHub/374Computer/Phase2/mf_op_tb.vhd
+Z41 FC:/Users/Michael/Documents/GitHub/374Computer/Phase2/mf_op_tb.vhd
 l0
 L30
-VPbjN4:=nSDR0b@NoS0m[d2
-!s100 IDa<Wa6ObAScDQIl8<KoU2
+V5HV@F7e>WDK6Ze@Oz0cPK1
+!s100 fo@?YcjJl3U[_J_R7baRN2
 R9
 31
 !i10b 1
-Z40 !s108 1489967053.119000
-Z41 !s90 -reportprogress|300|-93|-work|work|C:/Users/Henry/Desktop/374Computer/Phase2/jump_op_tb.vhd|
-Z42 !s107 C:/Users/Henry/Desktop/374Computer/Phase2/jump_op_tb.vhd|
+Z42 !s108 1490023429.795000
+Z43 !s90 -reportprogress|300|-93|-work|work|C:/Users/Michael/Documents/GitHub/374Computer/Phase2/mf_op_tb.vhd|
+Z44 !s107 C:/Users/Michael/Documents/GitHub/374Computer/Phase2/mf_op_tb.vhd|
 R13
 R14
-Ajump_op_tb_arch
+Amf_op_tb_arch
 R4
 R3
-DEx4 work 10 jump_op_tb 0 22 PbjN4:=nSDR0b@NoS0m[d2
+DEx4 work 8 mf_op_tb 0 22 5HV@F7e>WDK6Ze@Oz0cPK1
 l253
 L32
-VR7fAL1`8oojgQ:=^lTEDM1
-!s100 6[2dzfLDFg]^T2WGk<nLg3
+V87SiZ>RDKI16FmHYY@=FU1
+!s100 n;2S7A>nmb4@bi5glS@Ne3
 R9
 31
 !i10b 1
-R40
-R41
 R42
+R43
+R44
 R13
 R14
 Emult32
-R21
+Z45 w1489032559
 R4
 R3
 R6
-Z43 8C:/Users/Henry/Desktop/374Computer/Phase2/mult32.vhd
-Z44 FC:/Users/Henry/Desktop/374Computer/Phase2/mult32.vhd
+Z46 8C:/Users/Michael/Documents/GitHub/374Computer/Phase2/mult32.vhd
+Z47 FC:/Users/Michael/Documents/GitHub/374Computer/Phase2/mult32.vhd
 l0
 L42
 V6_]47`D0;JH?6Ih^82@5l2
 R9
 31
-Z45 !s108 1489967051.974000
-Z46 !s90 -reportprogress|300|-93|-work|work|C:/Users/Henry/Desktop/374Computer/Phase2/mult32.vhd|
-Z47 !s107 C:/Users/Henry/Desktop/374Computer/Phase2/mult32.vhd|
+Z48 !s108 1490023427.435000
+Z49 !s90 -reportprogress|300|-93|-work|work|C:/Users/Michael/Documents/GitHub/374Computer/Phase2/mult32.vhd|
+Z50 !s107 C:/Users/Michael/Documents/GitHub/374Computer/Phase2/mult32.vhd|
 R13
 R14
 !s100 Ua[Tf`;GS3@WD<HLdk?341
@@ -245,28 +245,28 @@ L52
 VP44JJU^Om`Abicc9h_85R0
 R9
 31
-R45
-R46
-R47
+R48
+R49
+R50
 R13
 R14
 !s100 k8[Bo7iEjFVFOzQh;9m>M0
 !i10b 1
 Emuxmdr
-R21
+R45
 R4
 R3
 R6
-Z48 8C:/Users/Henry/Desktop/374Computer/Phase2/muxMDR.vhd
-Z49 FC:/Users/Henry/Desktop/374Computer/Phase2/muxMDR.vhd
+Z51 8C:/Users/Michael/Documents/GitHub/374Computer/Phase2/muxMDR.vhd
+Z52 FC:/Users/Michael/Documents/GitHub/374Computer/Phase2/muxMDR.vhd
 l0
 L7
 VCDHaNBB_4<kY4o4In9neI1
 R9
 31
-Z50 !s108 1489967051.681000
-Z51 !s90 -reportprogress|300|-93|-work|work|C:/Users/Henry/Desktop/374Computer/Phase2/muxMDR.vhd|
-Z52 !s107 C:/Users/Henry/Desktop/374Computer/Phase2/muxMDR.vhd|
+Z53 !s108 1490023426.826000
+Z54 !s90 -reportprogress|300|-93|-work|work|C:/Users/Michael/Documents/GitHub/374Computer/Phase2/muxMDR.vhd|
+Z55 !s107 C:/Users/Michael/Documents/GitHub/374Computer/Phase2/muxMDR.vhd|
 R13
 R14
 !s100 ?HfDPjm:MK_C=<K2_ZLeG0
@@ -280,28 +280,28 @@ L18
 V2]>H?O>nYbKLG^Imd6`5@1
 R9
 31
-R50
-R51
-R52
+R53
+R54
+R55
 R13
 R14
 !s100 Kofc3@BZm7H^W<PeD[k?83
 !i10b 1
 Ephase1
-R1
+Z56 w1489891644
 R4
 R3
 R6
-Z53 8C:/Users/Henry/Desktop/374Computer/Phase2/phase1.vhd
-Z54 FC:/Users/Henry/Desktop/374Computer/Phase2/phase1.vhd
+Z57 8C:/Users/Michael/Documents/GitHub/374Computer/Phase2/phase1.vhd
+Z58 FC:/Users/Michael/Documents/GitHub/374Computer/Phase2/phase1.vhd
 l0
 L24
 V0D`c2mzi51HW`ih5fIaSg2
 R9
 31
-Z55 !s108 1489967052.952000
-Z56 !s90 -reportprogress|300|-93|-work|work|C:/Users/Henry/Desktop/374Computer/Phase2/phase1.vhd|
-Z57 !s107 C:/Users/Henry/Desktop/374Computer/Phase2/phase1.vhd|
+Z59 !s108 1490023429.467000
+Z60 !s90 -reportprogress|300|-93|-work|work|C:/Users/Michael/Documents/GitHub/374Computer/Phase2/phase1.vhd|
+Z61 !s107 C:/Users/Michael/Documents/GitHub/374Computer/Phase2/phase1.vhd|
 R13
 R14
 !s100 bNJBRDz2_W:h[mN1BiW3S3
@@ -315,28 +315,28 @@ L130
 VP1nDPU1KlUO3TMX84QVg30
 R9
 31
-R55
-R56
-R57
+R59
+R60
+R61
 R13
 R14
 !s100 :@>B7fZPzkO_jhfllK;:b3
 !i10b 1
 Eram
-Z58 w1489962044
+Z62 w1490023339
 R4
 R3
 R6
-Z59 8C:/Users/Henry/Desktop/374Computer/Phase2/ram.vhd
-Z60 FC:/Users/Henry/Desktop/374Computer/Phase2/ram.vhd
+Z63 8C:/Users/Michael/Documents/GitHub/374Computer/Phase2/ram.vhd
+Z64 FC:/Users/Michael/Documents/GitHub/374Computer/Phase2/ram.vhd
 l0
 L42
 V?LnGh@[I_PZZMAX[M1UKf0
 R9
 31
-Z61 !s108 1489967052.737000
-Z62 !s90 -reportprogress|300|-93|-work|work|C:/Users/Henry/Desktop/374Computer/Phase2/ram.vhd|
-Z63 !s107 C:/Users/Henry/Desktop/374Computer/Phase2/ram.vhd|
+Z65 !s108 1490023429.139000
+Z66 !s90 -reportprogress|300|-93|-work|work|C:/Users/Michael/Documents/GitHub/374Computer/Phase2/ram.vhd|
+Z67 !s107 C:/Users/Michael/Documents/GitHub/374Computer/Phase2/ram.vhd|
 R13
 R14
 !s100 V:Jf`5B9iaeOO5FQi9IRU2
@@ -347,31 +347,31 @@ R3
 DEx4 work 3 ram 0 22 ?LnGh@[I_PZZMAX[M1UKf0
 l89
 L55
-V]:YL<oEL;KD7d[agR:W]U2
+V::hz`V2aX1h=ZmiL21X@k0
 R9
 31
-R61
-R62
-R63
+R65
+R66
+R67
 R13
 R14
-!s100 1eJ3?D4O9>T0PHkQmf13i2
+!s100 ^?@X;RN28Q>FZ8]lYDda=0
 !i10b 1
 Ereg32
-R21
+Z68 w1489032560
 R4
 R3
 R6
-Z64 8C:/Users/Henry/Desktop/374Computer/Phase2/reg32.vhd
-Z65 FC:/Users/Henry/Desktop/374Computer/Phase2/reg32.vhd
+Z69 8C:/Users/Michael/Documents/GitHub/374Computer/Phase2/reg32.vhd
+Z70 FC:/Users/Michael/Documents/GitHub/374Computer/Phase2/reg32.vhd
 l0
 L6
 V2MO:5f2lKMQ[ZZ:hAf>m82
 R9
 31
-Z66 !s108 1489967051.347000
-Z67 !s90 -reportprogress|300|-93|-work|work|C:/Users/Henry/Desktop/374Computer/Phase2/reg32.vhd|
-Z68 !s107 C:/Users/Henry/Desktop/374Computer/Phase2/reg32.vhd|
+Z71 !s108 1490023425.920000
+Z72 !s90 -reportprogress|300|-93|-work|work|C:/Users/Michael/Documents/GitHub/374Computer/Phase2/reg32.vhd|
+Z73 !s107 C:/Users/Michael/Documents/GitHub/374Computer/Phase2/reg32.vhd|
 R13
 R14
 !s100 Gn<:NU0jI]QP^ke5B9_001
@@ -385,28 +385,28 @@ L17
 V[_Ia6Vfe;2[LMAWHR1b:M0
 R9
 31
-R66
-R67
-R68
+R71
+R72
+R73
 R13
 R14
 !s100 R0@gB1HO><J`W7Z:OznGg2
 !i10b 1
 Eregmar
-R15
+Z74 w1489036076
 R4
 R3
 R6
-Z69 8C:/Users/Henry/Desktop/374Computer/Phase2/regMAR.vhd
-Z70 FC:/Users/Henry/Desktop/374Computer/Phase2/regMAR.vhd
+Z75 8C:/Users/Michael/Documents/GitHub/374Computer/Phase2/regMAR.vhd
+Z76 FC:/Users/Michael/Documents/GitHub/374Computer/Phase2/regMAR.vhd
 l0
 L6
 V>F1EO]4?6[^B5j^nFlMY@2
 R9
 31
-Z71 !s108 1489967052.113000
-Z72 !s90 -reportprogress|300|-93|-work|work|C:/Users/Henry/Desktop/374Computer/Phase2/regMAR.vhd|
-Z73 !s107 C:/Users/Henry/Desktop/374Computer/Phase2/regMAR.vhd|
+Z77 !s108 1490023427.779000
+Z78 !s90 -reportprogress|300|-93|-work|work|C:/Users/Michael/Documents/GitHub/374Computer/Phase2/regMAR.vhd|
+Z79 !s107 C:/Users/Michael/Documents/GitHub/374Computer/Phase2/regMAR.vhd|
 R13
 R14
 !s100 RXa>1>EEE62g68h`5=SEh1
@@ -420,28 +420,28 @@ L17
 Vbaf]4bFC@XliE1WLFDWjJ3
 R9
 31
-R71
-R72
-R73
+R77
+R78
+R79
 R13
 R14
 !s100 Wcm8FU`<3Y75aA^i_MRk30
 !i10b 1
 Eselencodelogic
-Z74 w1489955363
+Z80 w1490014010
 R4
 R3
 R6
-Z75 8C:/Users/Henry/Desktop/374Computer/Phase2/selEncodeLogic.vhd
-Z76 FC:/Users/Henry/Desktop/374Computer/Phase2/selEncodeLogic.vhd
+Z81 8C:/Users/Michael/Documents/GitHub/374Computer/Phase2/selEncodeLogic.vhd
+Z82 FC:/Users/Michael/Documents/GitHub/374Computer/Phase2/selEncodeLogic.vhd
 l0
 L6
 VlKzIVF18F7gl4A`8EDI]01
 R9
 31
-Z77 !s108 1489967052.243000
-Z78 !s90 -reportprogress|300|-93|-work|work|C:/Users/Henry/Desktop/374Computer/Phase2/selEncodeLogic.vhd|
-Z79 !s107 C:/Users/Henry/Desktop/374Computer/Phase2/selEncodeLogic.vhd|
+Z83 !s108 1490023428.123000
+Z84 !s90 -reportprogress|300|-93|-work|work|C:/Users/Michael/Documents/GitHub/374Computer/Phase2/selEncodeLogic.vhd|
+Z85 !s107 C:/Users/Michael/Documents/GitHub/374Computer/Phase2/selEncodeLogic.vhd|
 R13
 R14
 !s100 :8dgk=`c<@Q_oS>0=g3b@0
@@ -455,9 +455,9 @@ L18
 VPd]cg3O6NgMbJJCol_VdJ2
 R9
 31
-R77
-R78
-R79
+R83
+R84
+R85
 R13
 R14
 !s100 ODMR43@5QUbFi1hkKKMR21
