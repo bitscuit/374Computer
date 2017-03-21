@@ -18,9 +18,9 @@ vcom -93 -work work {C:/Users/Michael/Documents/GitHub/374Computer/Phase2/conffl
 vcom -93 -work work {C:/Users/Michael/Documents/GitHub/374Computer/Phase2/ram.vhd}
 vcom -93 -work work {C:/Users/Michael/Documents/GitHub/374Computer/Phase2/phase1.vhd}
 
-vcom -93 -work work {C:/Users/Michael/Documents/GitHub/374Computer/Phase2/mf_op_tb.vhd}
+vcom -93 -work work {C:/Users/Michael/Documents/GitHub/374Computer/Phase2/io_op_tb.vhd}
 
-vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  mf_op_tb
+vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  io_op_tb
 
 add wave *
 view structure

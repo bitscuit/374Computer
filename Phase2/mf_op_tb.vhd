@@ -654,8 +654,7 @@ begin
 			zlo_in 	<= '1', '0' after 10 ns;
 		when T7 =>
 			zlo_out_sel <= '1', '0' after 10 ns;
-			gra 			<= '1', '0' after 10 ns;
-			Rin			<= '1', '0' after 10 ns;
+			hi_in			<= '1', '0' after 10 ns;
 		
 		-- mfhi R4
 		when T8 =>
@@ -684,7 +683,7 @@ begin
 			gra 		<= '1', '0' after 10 ns;
 			Rin 		<= '1', '0' after 10 ns;
 			
-		-- ldi R2, $15
+		-- ldi R2, $20
 		when T14 =>
 			pc_out 	<= '1', '0' after 10 ns;
 			marin 	<= '1', '0' after 10 ns;
@@ -720,7 +719,7 @@ begin
 			zlo_out_sel <= '1', '0' after 10 ns;
 			lo_in 		<= '1', '0' after 10 ns;
 		
-		-- mflo R2
+		-- mflo R6
 		when T22 =>
 			pc_out 	<= '1', '0' after 10 ns;
 			marin 	<= '1', '0' after 10 ns;
