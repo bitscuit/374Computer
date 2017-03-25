@@ -1,4 +1,4 @@
-libary ieee;
+library ieee;
 use ieee.std_logic_1164.all;
 
 -- Arithmetic Logic Unit for the computer
@@ -8,12 +8,13 @@ port(
 	clk, reset, stop, conff_out : in std_logic;
 	IR : in std_logic_vector(31 downto 0);
 	
-	run, clr : out std_logic_vector;
-	inport_out, mem_read, mem_write : out std_logic;
-	hi_in, lo_in, con_in, pc_in, ir_in, y_in, z_in, mar_in,
-		mdr_in, outport_in, c_out, ba_out : out std_logic;
+	run : out std_logic;
+	clr : out std_logic;
+	inport_out, inport_in, mem_read, mem_write : out std_logic;
+	hi_in, lo_in, con_in, pc_in, ir_in, y_in, zlo_in, zhi_in, mar_in,
+		mdr_in, outport_in, c_out, ba_out, alu_in : out std_logic;
 	pc_out, mdr_out, zhi_out_sel, zlo_out_sel, hi_out, lo_out, r_in, r_out, gra, grb, grc : out std_logic;
-	sel_alu : in std_logic_vector(3 downto 0);
+	sel_alu : out std_logic_vector(3 downto 0)
 	);
 end entity control_unit;
 
@@ -22,7 +23,7 @@ architecture behavioral of control_unit is
 		ld_state0, ld_state1, ld_state2, ld_state3, ld_state4, ld_state5, ld_state6, 
 		ldi_state0, ldi_state1, ldi_state2,  
 		st_state0, st_state1, st_state2, st_state3, st_state4, st_state5,
-		ldr_state0, ldr_state1, ldr_state2, ldr_state3, ldr_state4, ldr_state5 ldr_state6,
+		ldr_state0, ldr_state1, ldr_state2, ldr_state3, ldr_state4, ldr_state5, ldr_state6,
 		str_state0, str_state1, str_state2, str_state3, str_state4, str_state5,
 		add_state0, add_state1, add_state2, 
 		sub_state0, sub_state1, sub_state2,
@@ -52,7 +53,7 @@ fsm : process(clk, reset)
 begin
 	if (reset = '1') then
 		present_state <= reset_state;
-	elsif (clk'EVENT and clk = '1' and run = '1') then
+	elsif (clk'EVENT and clk = '1' and stop = '0') then
 		case present_state is
 			when reset_state =>
 				present_state <= fetch0;
@@ -353,8 +354,7 @@ begin
 			
 			-- halt cycle
 			when halt_state =>
-				present_state <= fetch0;
-			
+				present_state <= halt_state;
 			when others =>
 		end case;
 	end if;
@@ -363,44 +363,43 @@ end process fsm;
 fsm_logic : process(present_state)
 	variable prev_conff : std_logic := '0';
 begin
-	-- initialize signals
+	-- register control signals
+	gra			<= '0';
+	grb			<= '0';
+	grc			<= '0';
+	r_in			<= '0';
+	hi_in 		<= '0';
+	lo_in 		<= '0';
+	zhi_in 		<= '0';
+	zlo_in 		<= '0';
+	pc_in 		<= '0';
+	outport_in 	<= '0';
+	inport_in 	<= '0';
+	y_in 		<= '0';
+	ir_in 		<= '0';
+	-- bus control signals
+	r_out		<= '0';
+	hi_out 		<= '0';			
+	lo_out 		<= '0';			
+	zhi_out_sel <= '0';	
+	zlo_out_sel <= '0';	
+	pc_out 		<= '0';			
+	mdr_out 	<= '0';		
+	inport_out 	<= '0';	
+	c_out 		<= '0';
+	-- memory control signals
+	mdr_in 		<= '0';
+	mar_in		<= '0';
+	mem_read	<= '0';
+	mem_write	<= '0';
+	-- other
+	alu_in 		<= '0';
+	ba_out		<= '0';
+	con_in		<= '0';
 	case present_state is
-		-- register control signals
-			gra			<= '0';
-			grb			<= '0';
-			grc			<= '0';
-			r_in			<= '0';
-			hi_in 		<= '0';
-			lo_in 		<= '0';
-			zhi_in 		<= '0';
-			zlo_in 		<= '0';
-			pc_in 		<= '0';
-			outport_in 	<= '0';
-			inport_in 	<= '0';
-			y_in 		<= '0';
-			ir_in 		<= '0';
-			-- bus control signals
-			r_out		<= '0';
-			hi_out 		<= '0';			
-			lo_out 		<= '0';			
-			zhi_out_sel <= '0';	
-			zlo_out_sel <= '0';	
-			pc_out 		<= '0';			
-			mdr_out 	<= '0';		
-			inport_out 	<= '0';	
-			c_out 		<= '0';
-			-- memory control signals
-			mdr_in 		<= '0';
-			mar_in		<= '0';
-			mem_read	<= '0';
-			mem_write	<= '0';
-			-- other
-			alu_in 		<= '0';
-			ba_out		<= '0';
-			con_in		<= '0';
-			
 		when reset_state =>
-			clr 		<= '1', '0' after 5 ns;
+			clr <= '1', '0' after 5 ns;
+			run <= '1';
 			
 		-- fetch instruction logic
 		when fetch0 =>
@@ -796,12 +795,12 @@ begin
 			gra 		<= '1';
 			r_out		<= '1';
 			con_in		<= '1';
-			prev_conff 	<= conff_out; 	-- a little hack since conff logic uses and gate for output
+			prev_conff 	:= conff_out; 	-- a little hack since conff logic uses and gate for output
 		when br_state1 =>
 			grb 		<= '1';
 			r_out 		<= '1';
 			pc_in 		<= prev_conff and '1';
-			prev_conff 	<= '0';
+			prev_conff 	:= '0';
 		
 		-- jump logic
 		when jr_state =>
@@ -816,14 +815,14 @@ begin
 			r_in 		<= '1';
 		when jal_state1 =>
 			gra 		<= '1';
-			r_out 		<= '1';
-			pc_in 		<= '1;
+			r_out 	<= '1';
+			pc_in 	<= '1';
 		
 		-- input logic
 		when in_state =>
 			inport_out 	<= '1';
 			gra 		<= '1';
-			r_in 		<= '1;
+			r_in 		<= '1';
 		
 		-- output logic
 		when out_state =>
@@ -849,8 +848,7 @@ begin
 		
 		-- halt logic
 		when halt_state =>
-			run 		<= '0';
-		
+			run <= '0';
 		when others =>
 	end case;
 end process fsm_logic;
