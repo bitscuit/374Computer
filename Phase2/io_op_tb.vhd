@@ -685,7 +685,7 @@ begin
 			rout 			<= '1', '0' after 10 ns;
 			outport_in	<= '1', '0' after 10 ns;
 
-		-- in R6
+		-- in R3
 		when T14 =>
 			pc_out 	<= '1', '0' after 10 ns;
 			marin 	<= '1', '0' after 10 ns;

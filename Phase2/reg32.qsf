@@ -60,6 +60,27 @@ set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME phase1_vhd_tst -section_i
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name EDA_TEST_BENCH_NAME alu_imm_op_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME alu_imm_op_tb -section_id alu_imm_op_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "2000 ns" -section_id alu_imm_op_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME alu_imm_op_tb -section_id alu_imm_op_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME jump_op_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME jump_op_tb -section_id jump_op_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "2000 ns" -section_id jump_op_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME jump_op_tb -section_id jump_op_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME branch_op_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME branch_op_tb -section_id branch_op_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "2000 ns" -section_id branch_op_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME branch_op_tb -section_id branch_op_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME mf_op_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME mf_op_tb -section_id mf_op_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "2000 ns" -section_id mf_op_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME mf_op_tb -section_id mf_op_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME io_op_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME io_op_tb -section_id io_op_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "2000 ns" -section_id io_op_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME io_op_tb -section_id io_op_tb
+set_global_assignment -name MIF_FILE simulation/modelsim/branch_op_mem.mif
 set_global_assignment -name VHDL_FILE alu.vhd
 set_global_assignment -name VHDL_FILE reg32.vhd
 set_global_assignment -name VHDL_FILE bus_mux32.vhd
@@ -76,28 +97,11 @@ set_global_assignment -name QIP_FILE ram.qip
 set_global_assignment -name VHDL_FILE phase1.vhd
 set_global_assignment -name MIF_FILE alu_imm_op_mem.mif
 set_global_assignment -name VHDL_FILE alu_imm_op_tb.vhd
-set_global_assignment -name EDA_TEST_BENCH_NAME alu_imm_op_tb -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME alu_imm_op_tb -section_id alu_imm_op_tb
-set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "2000 ns" -section_id alu_imm_op_tb
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME alu_imm_op_tb -section_id alu_imm_op_tb
 set_global_assignment -name VHDL_FILE branch_op_tb.vhd
 set_global_assignment -name VHDL_FILE jump_op_tb.vhd
 set_global_assignment -name MIF_FILE jump_op_mem.mif
-set_global_assignment -name EDA_TEST_BENCH_NAME jump_op_tb -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME jump_op_tb -section_id jump_op_tb
-set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "2000 ns" -section_id jump_op_tb
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME jump_op_tb -section_id jump_op_tb
-set_global_assignment -name MIF_FILE simulation/modelsim/branch_op_mem.mif
-set_global_assignment -name EDA_TEST_BENCH_NAME branch_op_tb -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME branch_op_tb -section_id branch_op_tb
-set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "2000 ns" -section_id branch_op_tb
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME branch_op_tb -section_id branch_op_tb
 set_global_assignment -name VHDL_FILE mf_op_tb.vhd
 set_global_assignment -name MIF_FILE mf_op_mem.mif
-set_global_assignment -name EDA_TEST_BENCH_NAME mf_op_tb -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME mf_op_tb -section_id mf_op_tb
-set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "2000 ns" -section_id mf_op_tb
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME mf_op_tb -section_id mf_op_tb
 set_global_assignment -name VHDL_FILE io_op_tb.vhd
 set_global_assignment -name MIF_FILE io_op_mem.mif
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/phase1.vht -section_id phase1_vhd_tst
@@ -105,9 +109,5 @@ set_global_assignment -name EDA_TEST_BENCH_FILE alu_imm_op_tb.vhd -section_id al
 set_global_assignment -name EDA_TEST_BENCH_FILE jump_op_tb.vhd -section_id jump_op_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE branch_op_tb.vhd -section_id branch_op_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE mf_op_tb.vhd -section_id mf_op_tb
-set_global_assignment -name EDA_TEST_BENCH_NAME io_op_tb -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME io_op_tb -section_id io_op_tb
-set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "2000 ns" -section_id io_op_tb
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME io_op_tb -section_id io_op_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE io_op_tb.vhd -section_id io_op_tb
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
