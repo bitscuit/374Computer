@@ -744,17 +744,13 @@ begin
 			mdr_out 	<= '1', '0' after 10 ns;
 			irenable <= '1', '0' after 10 ns;
 		when T27 =>
-			sel_alu 	<= "1110";
-			alu_in 	<= '1', '0' after 10 ns;
-			zhi_in 	<= '1', '0' after 10 ns;
-			zlo_in 	<= '1', '0' after 10 ns;
-		when T28 =>
-			zlo_out_sel <= '1', '0' after 10 ns;
+			pc_out 	<= '1', '0' after 10 ns;
+			grb		<= '1', '0' after 10 ns;
 			Rin 		<= '1', '0' after 10 ns;
-		when T29 =>
+		when T28 =>
 			gra 		<= '1', '0' after 10 ns;
-			Rout 		<= '1', '0' after 10 ns;
-			pc_in		<= '1', '0' after 10 ns;
+			Rout		<= '1', '0' after 10 ns;
+			pc_in 	<= '1', '0' after 10 ns;
 		when others =>
 	end case;
 end process;    
