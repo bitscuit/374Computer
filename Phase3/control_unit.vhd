@@ -149,7 +149,7 @@ begin
 				present_state <= ldi_state1;
 			when ldi_state1 =>
 				present_state <= ldi_state2;
-			when ld_state2 =>
+			when ldi_state2 =>
 				present_state <= fetch0;
 				
 			-- store cycles

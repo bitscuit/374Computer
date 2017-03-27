@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Sun Mar 26 23:06:57 2017
+Analysis & Synthesis Status : Successful - Mon Mar 27 00:18:36 2017
 Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : reg32
 Top-level Entity Name : phase1
 Family : Cyclone III
-Total logic elements : 12,819
-    Total combinational functions : 12,819
-    Dedicated logic registers : 0
-Total registers : 0
-Total pins : 1,138
+Total logic elements : 68
+    Total combinational functions : 56
+    Dedicated logic registers : 13
+Total registers : 13
+Total pins : 1,141
 Total virtual pins : 0
-Total memory bits : 16,384
-Embedded Multiplier 9-bit elements : 8
+Total memory bits : 64
+Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0

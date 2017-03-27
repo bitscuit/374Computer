@@ -14,7 +14,7 @@
 
 -- PROGRAM		"Quartus II 32-bit"
 -- VERSION		"Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
--- CREATED		"Sat Mar 18 22:47:24 2017"
+-- CREATED		"Mon Mar 27 00:17:32 2017"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
@@ -25,36 +25,8 @@ ENTITY phase1 IS
 	PORT
 	(
 		clock :  IN  STD_LOGIC;
-		hi_out :  IN  STD_LOGIC;
-		lo_out :  IN  STD_LOGIC;
-		pc_out :  IN  STD_LOGIC;
-		mdr_out :  IN  STD_LOGIC;
-		inport_out :  IN  STD_LOGIC;
-		c_out :  IN  STD_LOGIC;
-		hi_in :  IN  STD_LOGIC;
-		lo_in :  IN  STD_LOGIC;
-		pc_in :  IN  STD_LOGIC;
-		inport_in :  IN  STD_LOGIC;
-		Yin :  IN  STD_LOGIC;
-		alu_in :  IN  STD_LOGIC;
-		clear :  IN  STD_LOGIC;
-		zhi_in :  IN  STD_LOGIC;
-		zlo_in :  IN  STD_LOGIC;
-		zhi_out_sel :  IN  STD_LOGIC;
-		zlo_out_sel :  IN  STD_LOGIC;
-		MARin :  IN  STD_LOGIC;
-		wen :  IN  STD_LOGIC;
-		mdr_in :  IN  STD_LOGIC;
-		mem_read :  IN  STD_LOGIC;
-		BAout :  IN  STD_LOGIC;
-		Rout :  IN  STD_LOGIC;
-		Rin :  IN  STD_LOGIC;
-		Grc :  IN  STD_LOGIC;
-		Grb :  IN  STD_LOGIC;
-		Gra :  IN  STD_LOGIC;
-		IRenable :  IN  STD_LOGIC;
-		conin :  IN  STD_LOGIC;
-		outport_in :  IN  STD_LOGIC;
+		reset :  IN  STD_LOGIC;
+		stop :  IN  STD_LOGIC;
 		r1in :  INOUT  STD_LOGIC;
 		r0in :  INOUT  STD_LOGIC;
 		r3in :  INOUT  STD_LOGIC;
@@ -87,6 +59,37 @@ ENTITY phase1 IS
 		r14_out :  INOUT  STD_LOGIC;
 		r15_out :  INOUT  STD_LOGIC;
 		r2in :  INOUT  STD_LOGIC;
+		conff_out :  INOUT  STD_LOGIC;
+		clear :  INOUT  STD_LOGIC;
+		inport_out :  INOUT  STD_LOGIC;
+		inport_in :  INOUT  STD_LOGIC;
+		mem_read :  INOUT  STD_LOGIC;
+		hi_in :  INOUT  STD_LOGIC;
+		lo_in :  INOUT  STD_LOGIC;
+		pc_in :  INOUT  STD_LOGIC;
+		ir_in :  INOUT  STD_LOGIC;
+		y_in :  INOUT  STD_LOGIC;
+		zlo_in :  INOUT  STD_LOGIC;
+		zhi_in :  INOUT  STD_LOGIC;
+		mar_in :  INOUT  STD_LOGIC;
+		mdr_in :  INOUT  STD_LOGIC;
+		c_out :  INOUT  STD_LOGIC;
+		ba_out :  INOUT  STD_LOGIC;
+		alu_in :  INOUT  STD_LOGIC;
+		pc_out :  INOUT  STD_LOGIC;
+		mdr_out :  INOUT  STD_LOGIC;
+		zhi_out_sel :  INOUT  STD_LOGIC;
+		zlo_out_sel :  INOUT  STD_LOGIC;
+		hi_out :  INOUT  STD_LOGIC;
+		lo_out :  INOUT  STD_LOGIC;
+		r_in :  INOUT  STD_LOGIC;
+		r_out :  INOUT  STD_LOGIC;
+		gra :  INOUT  STD_LOGIC;
+		grb :  INOUT  STD_LOGIC;
+		grc :  INOUT  STD_LOGIC;
+		outport_in :  INOUT  STD_LOGIC;
+		con_in :  INOUT  STD_LOGIC;
+		mem_write :  INOUT  STD_LOGIC;
 		address :  INOUT  STD_LOGIC_VECTOR(8 DOWNTO 0);
 		busmuxout :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		c_sign_extended :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -115,14 +118,14 @@ ENTITY phase1 IS
 		r7_busmuxin :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		r8_busmuxin :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		r9_busmuxin :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
-		sel_alu :  IN  STD_LOGIC_VECTOR(3 DOWNTO 0);
+		sel_alu :  INOUT  STD_LOGIC_VECTOR(3 DOWNTO 0);
 		select_bus :  INOUT  STD_LOGIC_VECTOR(4 DOWNTO 0);
 		to_A_in :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		zhi_busmuxin :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		zhi_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		zlo_busmuxin :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		zlo_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
-		conff_out :  OUT  STD_LOGIC;
+		run :  OUT  STD_LOGIC;
 		to_output :  OUT  STD_LOGIC_VECTOR(31 DOWNTO 0)
 	);
 END phase1;
@@ -223,6 +226,47 @@ COMPONENT reg32
 	);
 END COMPONENT;
 
+COMPONENT control_unit
+	PORT(clk : IN STD_LOGIC;
+		 reset : IN STD_LOGIC;
+		 stop : IN STD_LOGIC;
+		 conff_out : IN STD_LOGIC;
+		 IR : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		 run : OUT STD_LOGIC;
+		 clr : OUT STD_LOGIC;
+		 inport_out : OUT STD_LOGIC;
+		 inport_in : OUT STD_LOGIC;
+		 mem_read : OUT STD_LOGIC;
+		 mem_write : OUT STD_LOGIC;
+		 hi_in : OUT STD_LOGIC;
+		 lo_in : OUT STD_LOGIC;
+		 con_in : OUT STD_LOGIC;
+		 pc_in : OUT STD_LOGIC;
+		 ir_in : OUT STD_LOGIC;
+		 y_in : OUT STD_LOGIC;
+		 zlo_in : OUT STD_LOGIC;
+		 zhi_in : OUT STD_LOGIC;
+		 mar_in : OUT STD_LOGIC;
+		 mdr_in : OUT STD_LOGIC;
+		 outport_in : OUT STD_LOGIC;
+		 c_out : OUT STD_LOGIC;
+		 ba_out : OUT STD_LOGIC;
+		 alu_in : OUT STD_LOGIC;
+		 pc_out : OUT STD_LOGIC;
+		 mdr_out : OUT STD_LOGIC;
+		 zhi_out_sel : OUT STD_LOGIC;
+		 zlo_out_sel : OUT STD_LOGIC;
+		 hi_out : OUT STD_LOGIC;
+		 lo_out : OUT STD_LOGIC;
+		 r_in : OUT STD_LOGIC;
+		 r_out : OUT STD_LOGIC;
+		 gra : OUT STD_LOGIC;
+		 grb : OUT STD_LOGIC;
+		 grc : OUT STD_LOGIC;
+		 sel_alu : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+	);
+END COMPONENT;
+
 COMPONENT regmar
 	PORT(clr : IN STD_LOGIC;
 		 clk : IN STD_LOGIC;
@@ -313,11 +357,11 @@ PORT MAP(clk => clock,
 		 zlo => zlo_out);
 
 
-conff_out <= or_out AND conin;
+conff_out <= or_out AND con_in;
 
 
 b2v_and32 : and32
-PORT MAP(BAout => BAout,
+PORT MAP(BAout => ba_out,
 		 r0val => r0val,
 		 to_bm_in => r0_busmuxin);
 
@@ -401,10 +445,50 @@ PORT MAP(clr => clear,
 		 to_bm_in => inport_busmuxin);
 
 
+b2v_inst : control_unit
+PORT MAP(clk => clock,
+		 reset => reset,
+		 stop => stop,
+		 conff_out => conff_out,
+		 IR => IRout,
+		 run => run,
+		 clr => clear,
+		 inport_out => inport_out,
+		 inport_in => inport_in,
+		 mem_read => mem_read,
+		 mem_write => mem_write,
+		 hi_in => hi_in,
+		 lo_in => lo_in,
+		 con_in => con_in,
+		 pc_in => pc_in,
+		 ir_in => ir_in,
+		 y_in => y_in,
+		 zlo_in => zlo_in,
+		 zhi_in => zhi_in,
+		 mar_in => mar_in,
+		 mdr_in => mdr_in,
+		 outport_in => outport_in,
+		 c_out => c_out,
+		 ba_out => ba_out,
+		 alu_in => alu_in,
+		 pc_out => pc_out,
+		 mdr_out => mdr_out,
+		 zhi_out_sel => zhi_out_sel,
+		 zlo_out_sel => zlo_out_sel,
+		 hi_out => hi_out,
+		 lo_out => lo_out,
+		 r_in => r_in,
+		 r_out => r_out,
+		 gra => gra,
+		 grb => grb,
+		 grc => grc,
+		 sel_alu => sel_alu);
+
+
 b2v_IR : reg32
 PORT MAP(clr => clear,
 		 clk => clock,
-		 enable => IRenable,
+		 enable => ir_in,
 		 from_bm_out => busmuxout,
 		 to_bm_in => IRout);
 
@@ -420,7 +504,7 @@ PORT MAP(clr => clear,
 b2v_MAR : regmar
 PORT MAP(clr => clear,
 		 clk => clock,
-		 enable => MARin,
+		 enable => mar_in,
 		 from_bm_out => busmuxout,
 		 address => address);
 
@@ -587,19 +671,19 @@ PORT MAP(clr => clear,
 b2v_RAM : ram
 PORT MAP(clock => clock,
 		 rden => mem_read,
-		 wren => wen,
+		 wren => mem_write,
 		 address => address,
 		 data => mdr_busmuxin,
 		 q => ram_out);
 
 
 b2v_selEncodeLogic : selencodelogic
-PORT MAP(Gra => Gra,
-		 Grb => Grb,
-		 Grc => Grc,
-		 Rin => Rin,
-		 Rout => Rout,
-		 BAout => BAout,
+PORT MAP(Gra => gra,
+		 Grb => grb,
+		 Grc => grc,
+		 Rin => r_in,
+		 Rout => r_out,
+		 BAout => ba_out,
 		 IRin => IRout,
 		 r0in => r0in,
 		 r1in => r1in,
@@ -639,7 +723,7 @@ PORT MAP(Gra => Gra,
 b2v_Y : reg32
 PORT MAP(clr => clear,
 		 clk => clock,
-		 enable => Yin,
+		 enable => y_in,
 		 from_bm_out => busmuxout,
 		 to_bm_in => to_A_in);
 
