@@ -91,7 +91,6 @@ set_global_assignment -name VHDL_FILE regMAR.vhd
 set_global_assignment -name VHDL_FILE selEncodeLogic.vhd
 set_global_assignment -name VHDL_FILE and32.vhd
 set_global_assignment -name VHDL_FILE confflogic.vhd
-set_global_assignment -name SOURCE_FILE db/reg32.cmp.rdb
 set_global_assignment -name MIF_FILE memcontents.mif
 set_global_assignment -name QIP_FILE ram.qip
 set_global_assignment -name VHDL_FILE phase1.vhd

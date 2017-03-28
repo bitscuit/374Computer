@@ -1,5 +1,5 @@
 Flow report for reg32
-Sat Mar 25 15:20:16 2017
+Mon Mar 27 22:31:38 2017
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Sat Mar 25 15:20:16 2017           ;
+; Flow Status                        ; Successful - Mon Mar 27 22:31:38 2017           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; reg32                                           ;
 ; Top-level Entity Name              ; phase1                                          ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/25/2017 15:19:27 ;
+; Start date & time ; 03/27/2017 22:30:55 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; reg32               ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 241955404508162.149046956715164       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 260535863750641.149066825507092       ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; phase1_vhd_tst                        ; --            ; --          ; phase1_vhd_tst ;
 ; EDA_DESIGN_INSTANCE_NAME             ; alu_imm_op_tb                         ; --            ; --          ; alu_imm_op_tb  ;
 ; EDA_DESIGN_INSTANCE_NAME             ; jump_op_tb                            ; --            ; --          ; jump_op_tb     ;
@@ -136,8 +136,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:46     ; 1.0                     ; 439 MB              ; 00:00:42                           ;
-; Total                ; 00:00:46     ; --                      ; --                  ; 00:00:42                           ;
+; Analysis & Synthesis ; 00:00:40     ; 1.0                     ; 450 MB              ; 00:00:37                           ;
+; Total                ; 00:00:40     ; --                      ; --                  ; 00:00:37                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -146,7 +146,7 @@ applicable agreement for further details.
 +----------------------+------------------+-----------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +----------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-4J41ASE  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis ; Newman           ; Windows 7 ; 6.2        ; x86_64         ;
 +----------------------+------------------+-----------+------------+----------------+
 
 

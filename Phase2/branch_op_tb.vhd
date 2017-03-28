@@ -142,8 +142,7 @@ TYPE State is (default, reg1, reg2, reg3, reg0, reg4, reg5, reg6, reg7,
 					T50, T51, T52, T53, T54, T55, T56, T57, 
 					T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, 
 					T69, T70, T71, T72, T73, T74, T75, T76, T77, T78,
-					T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91,
-					T92, T93, T94, T95, T96, T97, T98, T99, T100, T101);
+					T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91);
 SIGNAL Present_State: State := default;
 
 COMPONENT phase1
@@ -559,26 +558,6 @@ begin
 				present_state <= T90;
 			when T90 =>
 				present_state <= T91;
-			when T91 =>
-				present_state <= T92;
-			when T92 =>
-				present_state <= T93;
-			when T93 =>
-				present_state <= T94;
-			when T94 =>
-				present_state <= T95;
-			when T95 =>
-				present_state <= T96;
-			when T96 =>
-				present_state <= T97;
-			when T97 =>
-				present_state <= T98;
-			when T98 =>
-				present_state <= T99;
-			when T99 =>
-				present_state <= T100;
-			when T100 =>
-				present_state <= T101;
 			when OTHERS =>
 		end case;
 	end if;
