@@ -1,0 +1,16 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use work.reg32_component.all;
+
+-- memory data register
+
+entity mdr is
+	port(
+		-- input
+		from_the_bus, from_the_ram : in std_logic_vector(31 downto 0);
+		
+		-- output
+		from_mdr : out std_logic_vector(31 downto 0)
+	);
+end entity;
+

@@ -1,0 +1,15 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+package mux2_word_size_component is
+	component mux2_word_size
+		port(
+		-- input
+		input1, input2 : in std_logic_vector(31 downto 0);
+		sel : in std_logic;
+		
+		--output
+		mux2_word_output : out std_logic_vector(31 downto 0)
+		);
+	end component;
+end package;

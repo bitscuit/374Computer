@@ -1,0 +1,23 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use work.reg32_component;
+use work.mdr_component;
+
+-- memory subsystem: MDR, MAR, RAM
+
+entity mem_system is
+	port(
+		-- input
+		to_mdr, to_mar : in std_logic_vector(31 downto 0);
+		clear, clock, mdr_enable, mar_enable, mem_read, mem_write : in std_logic;
+		
+		--output
+		from_mdr : out std_logic_vector(31 downto 0);
+	);
+end entity mem_system;
+
+architecture structural of mem_system is
+
+begin
+
+end architecture structural;

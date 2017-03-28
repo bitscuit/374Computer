@@ -1,0 +1,73 @@
+library ieee;
+use ieee.std_logic_1164.all;
+library work;
+use work.mdr_component.all;
+
+-- test bench for mdr
+
+entity mdr_tb is 
+end entity mdr_tb;
+
+architecture testbench of mdr_tb is
+	signal from_the_bus, from_the_ram : std_logic_vector(31 downto 0);
+	signal clear, clock, enable, mem_read : std_logic;
+	signal from_the_mdr : std_logic_vector(31 downto 0); 
+	
+	type state is (default, t1, t2, t3, t4, t5);
+	signal present_state : state := default;
+	
+begin
+	cut : mdr
+	port map(
+		from_the_bus => from_the_bus,
+		from_the_ram => from_the_ram,
+		clear => clear,
+		clock => clock,
+		mdr_enable => enable,
+		mem_read => mem_read,
+		from_the_mdr => from_the_mdr
+	);
+
+	drive_clock : process 
+	begin
+		clock <= '0', '1' after 10 ns;
+		wait for 20 ns;
+	end process drive_clock;
+	
+	change_state : process(clock)
+	begin
+		case present_state is
+			when default =>
+				present_state <= t1;
+			when t1 =>
+				present_state <= t2;
+			when t2 =>
+				present_state <= t3;
+			when t3 =>
+				present_state <= t4;
+			when t4 =>
+				present_state <= t5;
+			when others =>
+		end case;
+	end process change_state;
+	
+	state_logic : process(present_state)
+	begin
+		case present_state is 
+			when default =>
+				clear <= '1', '0' after 5 ns;
+				from_the_bus <= x"00000000";
+				from_the_ram <= x"00000000";
+				enable <= '0';
+				mem_read <= '0';
+			when t1 =>
+				from_the_bus <= x"00000001";
+			when t2 =>
+			when t3 =>
+			when t4 =>
+			when t5 =>
+			when others =>
+		end case;
+	end process state_logic;
+end architecture testbench;
+
