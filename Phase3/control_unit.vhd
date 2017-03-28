@@ -375,22 +375,22 @@ begin
 	pc_in 		<= '0';
 	outport_in 	<= '0';
 	inport_in 	<= '0';
-	y_in 		<= '0';
+	y_in 			<= '0';
 	ir_in 		<= '0';
 	-- bus control signals
-	r_out		<= '0';
+	r_out			<= '0';
 	hi_out 		<= '0';			
 	lo_out 		<= '0';			
 	zhi_out_sel <= '0';	
 	zlo_out_sel <= '0';	
 	pc_out 		<= '0';			
-	mdr_out 	<= '0';		
+	mdr_out 		<= '0';		
 	inport_out 	<= '0';	
 	c_out 		<= '0';
 	-- memory control signals
 	mdr_in 		<= '0';
 	mar_in		<= '0';
-	mem_read	<= '0';
+	mem_read		<= '0';
 	mem_write	<= '0';
 	-- other
 	alu_in 		<= '0';
