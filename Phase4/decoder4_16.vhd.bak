@@ -1,0 +1,8 @@
+library iee;
+use ieee.std_logic_1164.all;
+
+-- 4-to-16 decoder
+
+entity decoder4_16 is
+
+end entity;

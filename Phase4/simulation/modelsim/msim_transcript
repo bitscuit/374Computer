@@ -11,99 +11,45 @@
 # ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vcom -93 -work work {C:/Users/Henry/Desktop/Phase4/ram_component.vhd}
+# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase4/decoder4_16_component.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling package ram_component
-# vcom -93 -work work {C:/Users/Henry/Desktop/Phase4/reg32_component.vhd}
+# -- Compiling package decoder4_16_component
+# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase4/decoder4_16.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling package reg32_component
-# vcom -93 -work work {C:/Users/Henry/Desktop/Phase4/mux2_word_size_component.vhd}
+# -- Compiling entity decoder4_16
+# -- Compiling architecture behavioral of decoder4_16
+# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase4/select_encode.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling package mux2_word_size_component
-# vcom -93 -work work {C:/Users/Henry/Desktop/Phase4/mdr_component.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling package mdr_component
-# vcom -93 -work work {C:/Users/Henry/Desktop/Phase4/mux2_word_size.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity mux2_word_size
-# -- Compiling architecture behavioral of mux2_word_size
-# vcom -93 -work work {C:/Users/Henry/Desktop/Phase4/reg32.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity reg32
-# -- Compiling architecture behavioral of reg32
-# vcom -93 -work work {C:/Users/Henry/Desktop/Phase4/ram.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity ram
-# -- Compiling architecture SYN of ram
-# vcom -93 -work work {C:/Users/Henry/Desktop/Phase4/mem_system.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package reg32_component
-# -- Loading package mdr_component
-# -- Loading package ram_component
-# -- Compiling entity mem_system
-# -- Compiling architecture structural of mem_system
-# vcom -93 -work work {C:/Users/Henry/Desktop/Phase4/mdr.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package reg32_component
-# -- Loading package mux2_word_size_component
-# -- Compiling entity mdr
-# -- Compiling architecture structural of mdr
+# -- Loading package decoder4_16_component
+# -- Compiling entity select_encode
+# -- Compiling architecture structural of select_encode
 # 
-# vcom -93 -work work {C:/Users/Henry/Desktop/Phase4/component_tests/mem_tb.vhd}
+# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase4/component_tests/select_encode_tb.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity mem_tb
-# -- Compiling architecture testbench of mem_tb
+# -- Compiling entity select_encode_tb
+# -- Compiling architecture testbench of select_encode_tb
 # 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  mem_tb
-# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps mem_tb 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  select_encode_tb
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps select_encode_tb 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.mem_tb(testbench)
-# Loading work.reg32_component
-# Loading work.mdr_component
-# Loading work.ram_component
-# Loading work.mem_system(structural)
-# Loading work.mux2_word_size_component
-# Loading work.mdr(structural)
-# Loading work.mux2_word_size(behavioral)
-# Loading work.reg32(behavioral)
-# Loading work.ram(syn)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading altera_mf.altera_common_conversion(body)
-# Loading altera_mf.altera_device_families(body)
-# Loading altera_mf.altsyncram(translated)
+# Loading work.select_encode_tb(testbench)
+# Loading work.decoder4_16_component
+# Loading work.select_encode(structural)
+# Loading work.decoder4_16(behavioral)
 # 
 # add wave *
 # view structure
@@ -111,27 +57,113 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 200 ns
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /mem_tb/cut/mem_ram/altsyncram_component
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 10 ns  Iteration: 1  Instance: /mem_tb/cut/mem_ram/altsyncram_component
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /mem_tb/cut/mem_ram/altsyncram_component
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 10 ns  Iteration: 1  Instance: /mem_tb/cut/mem_ram/altsyncram_component
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 10 ns  Iteration: 1  Instance: /mem_tb/cut/mem_ram/altsyncram_component
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 10 ns  Iteration: 1  Instance: /mem_tb/cut/mem_ram/altsyncram_component
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /mem_tb/cut/mem_ram/altsyncram_component
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 30 ns  Iteration: 1  Instance: /mem_tb/cut/mem_ram/altsyncram_component
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /mem_tb/cut/mem_ram/altsyncram_component
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 30 ns  Iteration: 1  Instance: /mem_tb/cut/mem_ram/altsyncram_component
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 30 ns  Iteration: 1  Instance: /mem_tb/cut/mem_ram/altsyncram_component
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 30 ns  Iteration: 1  Instance: /mem_tb/cut/mem_ram/altsyncram_component
+do mini_src_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase4/decoder4_16_component.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package decoder4_16_component
+# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase4/decoder4_16.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity decoder4_16
+# -- Compiling architecture behavioral of decoder4_16
+# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase4/select_encode.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package decoder4_16_component
+# -- Compiling entity select_encode
+# -- Compiling architecture structural of select_encode
+# 
+# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase4/component_tests/select_encode_tb.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity select_encode_tb
+# -- Compiling architecture testbench of select_encode_tb
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  select_encode_tb
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps select_encode_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.select_encode_tb(testbench)
+# Loading work.decoder4_16_component
+# Loading work.select_encode(structural)
+# Loading work.decoder4_16(behavioral)
+# WARNING: No extended dataflow license exists
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 200 ns
+do mini_src_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase4/decoder4_16_component.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package decoder4_16_component
+# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase4/decoder4_16.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity decoder4_16
+# -- Compiling architecture behavioral of decoder4_16
+# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase4/select_encode.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package decoder4_16_component
+# -- Compiling entity select_encode
+# -- Compiling architecture structural of select_encode
+# 
+# vcom -93 -work work {C:/Users/Henry/Desktop/374Computer/Phase4/component_tests/select_encode_tb.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity select_encode_tb
+# -- Compiling architecture testbench of select_encode_tb
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  select_encode_tb
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps select_encode_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.select_encode_tb(testbench)
+# Loading work.decoder4_16_component
+# Loading work.select_encode(structural)
+# Loading work.decoder4_16(behavioral)
+# WARNING: No extended dataflow license exists
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 200 ns

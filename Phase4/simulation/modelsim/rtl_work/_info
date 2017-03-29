@@ -2,300 +2,130 @@ m255
 K3
 13
 cModel Technology
-Z0 dC:\Users\Henry\Desktop\Phase4\simulation\modelsim
-Emdr
-Z1 w1490667325
-Z2 DPx4 work 24 mux2_word_size_component 0 22 B:0_aI[XQjRU9h5kcg`>40
-Z3 DPx4 work 15 reg32_component 0 22 6PhBI^1LETfNhBn2`0=@<3
-Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
-Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z6 dC:\Users\Henry\Desktop\Phase4\simulation\modelsim
-Z7 8C:/Users/Henry/Desktop/Phase4/mdr.vhd
-Z8 FC:/Users/Henry/Desktop/Phase4/mdr.vhd
+Z0 dC:\Users\Henry\Desktop\374Computer\Phase4\simulation\modelsim
+Edecoder4_16
+Z1 w1490734599
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\Henry\Desktop\374Computer\Phase4\simulation\modelsim
+Z5 8C:/Users/Henry/Desktop/374Computer/Phase4/decoder4_16.vhd
+Z6 FC:/Users/Henry/Desktop/374Computer/Phase4/decoder4_16.vhd
 l0
-L8
-V@SXD0YFM]Y6Ba2Q:VQR5L0
-Z9 OV;C;10.1d;51
+L6
+V4_c5BneBzdW49B3]l2>jN3
+Z7 OV;C;10.1d;51
 31
-Z10 !s108 1490680244.900000
-Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/Henry/Desktop/Phase4/mdr.vhd|
-Z12 !s107 C:/Users/Henry/Desktop/Phase4/mdr.vhd|
-Z13 o-93 -work work -O0
-Z14 tExplicit 1
-!s100 WzQ`dT1S^k`oMB4MBW>Pf0
+Z8 !s108 1490742406.066000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/Henry/Desktop/374Computer/Phase4/decoder4_16.vhd|
+Z10 !s107 C:/Users/Henry/Desktop/374Computer/Phase4/decoder4_16.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 @NlU29obkCE2ceAeziMW23
 !i10b 1
-Astructural
+Abehavioral
 R2
 R3
-R4
-R5
-DEx4 work 3 mdr 0 22 @SXD0YFM]Y6Ba2Q:VQR5L0
-l22
-L20
-VQ^O=D:lR[5;cU^dbL]gAg0
-R9
+DEx4 work 11 decoder4_16 0 22 4_c5BneBzdW49B3]l2>jN3
+l33
+L31
+V8D6f[5o>_PSGO48BUPUK03
+R7
 31
+R8
+R9
 R10
 R11
 R12
-R13
-R14
-!s100 ?TBd^<YLkD]zVFlS0aiJ=2
+!s100 H?kXGMJ19;U6BA]^l6A??3
 !i10b 1
-Pmdr_component
+Pdecoder4_16_component
+R2
+R3
+w1490738641
 R4
-R5
-w1490666768
-R6
-8C:/Users/Henry/Desktop/Phase4/mdr_component.vhd
-FC:/Users/Henry/Desktop/Phase4/mdr_component.vhd
+8C:/Users/Henry/Desktop/374Computer/Phase4/decoder4_16_component.vhd
+FC:/Users/Henry/Desktop/374Computer/Phase4/decoder4_16_component.vhd
 l0
 L6
-V7B2o2jbT23Tib[dX;zGCi0
-R9
+V=4YhOh;K0fcYE;`XW]J220
+R7
 31
-R13
-R14
-!s100 I7Z5`mTo0OdhGLc_=?TS@1
+R11
+R12
+!s100 1AhB5Chiof[nlizCLao<T2
 !i10b 1
-!s108 1490680244.134000
-!s90 -reportprogress|300|-93|-work|work|C:/Users/Henry/Desktop/Phase4/mdr_component.vhd|
-!s107 C:/Users/Henry/Desktop/Phase4/mdr_component.vhd|
-Emem_system
-Z15 w1490680027
-Z16 DPx4 work 13 ram_component 0 22 MP3aVAgGBQhTNdK@ddhTO2
-Z17 DPx4 work 13 mdr_component 0 22 7B2o2jbT23Tib[dX;zGCi0
+!s108 1490742405.925000
+!s90 -reportprogress|300|-93|-work|work|C:/Users/Henry/Desktop/374Computer/Phase4/decoder4_16_component.vhd|
+!s107 C:/Users/Henry/Desktop/374Computer/Phase4/decoder4_16_component.vhd|
+Eselect_encode
+Z13 w1490741714
+Z14 DPx4 work 21 decoder4_16_component 0 22 =4YhOh;K0fcYE;`XW]J220
+R2
 R3
 R4
-R5
-R6
-Z18 8C:/Users/Henry/Desktop/Phase4/mem_system.vhd
-Z19 FC:/Users/Henry/Desktop/Phase4/mem_system.vhd
+Z15 8C:/Users/Henry/Desktop/374Computer/Phase4/select_encode.vhd
+Z16 FC:/Users/Henry/Desktop/374Computer/Phase4/select_encode.vhd
 l0
-L9
-VG@kYJn=m[W2d1PMb`oQk13
-R9
+L5
+VHFbG;]lh92TR4L@gRU`Do0
+R7
 31
-Z20 !s108 1490680244.759000
-Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/Henry/Desktop/Phase4/mem_system.vhd|
-Z22 !s107 C:/Users/Henry/Desktop/Phase4/mem_system.vhd|
-R13
-R14
-!s100 OZQ2lRVMS<eKdGYVaBFQn0
+Z17 !s108 1490742406.316000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/Henry/Desktop/374Computer/Phase4/select_encode.vhd|
+Z19 !s107 C:/Users/Henry/Desktop/374Computer/Phase4/select_encode.vhd|
+R11
+R12
+!s100 OUOYXbXz^hO[lOoOS>;O@1
 !i10b 1
 Astructural
-R16
+R14
+R2
+R3
+DEx4 work 13 select_encode 0 22 HFbG;]lh92TR4L@gRU`Do0
+l52
+L33
+Vbno;1nCUX4?5LTEoN4o0B1
+R7
+31
 R17
+R18
+R19
+R11
+R12
+!s100 Mg`MPOCCKTlJ>]W7;OFzM3
+!i10b 1
+Eselect_encode_tb
+Z20 w1490742396
+R2
 R3
 R4
-R5
-DEx4 work 10 mem_system 0 22 G@kYJn=m[W2d1PMb`oQk13
-l24
-L20
-VL`c[1DEB;TKoVz4U3=b`P0
-R9
-31
-R20
-R21
-R22
-R13
-R14
-!s100 i5^1MWW0EQb[h^h=@ALka2
-!i10b 1
-Emem_tb
-Z23 w1490678696
-R4
-R5
-R6
-Z24 8C:/Users/Henry/Desktop/Phase4/component_tests/mem_tb.vhd
-Z25 FC:/Users/Henry/Desktop/Phase4/component_tests/mem_tb.vhd
+Z21 8C:/Users/Henry/Desktop/374Computer/Phase4/component_tests/select_encode_tb.vhd
+Z22 FC:/Users/Henry/Desktop/374Computer/Phase4/component_tests/select_encode_tb.vhd
 l0
 L6
-V67n1GLA[[gaHL3A4FT6Y:3
-!s100 Sj4bHaG:Z@2m?Yc3[m8zg0
-R9
+Vim2Wl@KJ7WWc9kTi7=ZeH1
+!s100 kR=9PHINHeiCoenMIC=Gg3
+R7
 31
 !i10b 1
-Z26 !s108 1490680245.056000
-Z27 !s90 -reportprogress|300|-93|-work|work|C:/Users/Henry/Desktop/Phase4/component_tests/mem_tb.vhd|
-Z28 !s107 C:/Users/Henry/Desktop/Phase4/component_tests/mem_tb.vhd|
-R13
-R14
+Z23 !s108 1490742406.519000
+Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/Henry/Desktop/374Computer/Phase4/component_tests/select_encode_tb.vhd|
+Z25 !s107 C:/Users/Henry/Desktop/374Computer/Phase4/component_tests/select_encode_tb.vhd|
+R11
+R12
 Atestbench
-R4
-R5
-DEx4 work 6 mem_tb 0 22 67n1GLA[[gaHL3A4FT6Y:3
-l28
+R2
+R3
+DEx4 work 16 select_encode_tb 0 22 im2Wl@KJ7WWc9kTi7=ZeH1
+l64
 L9
-VjNLf2_O4_B9g5dG3J?So=0
-!s100 zY7ggj6JE`dNXX=X_Kc]20
-R9
+V8_G_I0oBS1nM9Ga8Zo_c33
+!s100 1jeeiYNZh<Gjc4DDMbz=M0
+R7
 31
 !i10b 1
-R26
-R27
-R28
-R13
-R14
-Emux2_word_size
-Z29 w1490665291
-R4
-R5
-R6
-Z30 8C:/Users/Henry/Desktop/Phase4/mux2_word_size.vhd
-Z31 FC:/Users/Henry/Desktop/Phase4/mux2_word_size.vhd
-l0
-L6
-VbbOM1E1klO=]7bJ`?JO^b1
-R9
-31
-Z32 !s108 1490680244.275000
-Z33 !s90 -reportprogress|300|-93|-work|work|C:/Users/Henry/Desktop/Phase4/mux2_word_size.vhd|
-Z34 !s107 C:/Users/Henry/Desktop/Phase4/mux2_word_size.vhd|
-R13
-R14
-!s100 e`Z2K15iFT1iFo>V9TZ>Z2
-!i10b 1
-Abehavioral
-R4
-R5
-DEx4 work 14 mux2_word_size 0 22 bbOM1E1klO=]7bJ`?JO^b1
-l18
-L17
-V5Ec13Mc;d8miIFEm:J[DL1
-R9
-31
-R32
-R33
-R34
-R13
-R14
-!s100 W0GTQke59d;@R4OCREUEZ2
-!i10b 1
-Pmux2_word_size_component
-R4
-R5
-w1490665258
-R6
-8C:/Users/Henry/Desktop/Phase4/mux2_word_size_component.vhd
-FC:/Users/Henry/Desktop/Phase4/mux2_word_size_component.vhd
-l0
-L4
-VB:0_aI[XQjRU9h5kcg`>40
-R9
-31
-R13
-R14
-!s100 44XI]JG6TmCmelhTMCWeR1
-!i10b 1
-!s108 1490680243.946000
-!s90 -reportprogress|300|-93|-work|work|C:/Users/Henry/Desktop/Phase4/mux2_word_size_component.vhd|
-!s107 C:/Users/Henry/Desktop/Phase4/mux2_word_size_component.vhd|
-Eram
-Z35 w1490677860
-R4
-R5
-R6
-Z36 8C:/Users/Henry/Desktop/Phase4/ram.vhd
-Z37 FC:/Users/Henry/Desktop/Phase4/ram.vhd
-l0
-L42
-V?LnGh@[I_PZZMAX[M1UKf0
-R9
-31
-Z38 !s108 1490680244.618000
-Z39 !s90 -reportprogress|300|-93|-work|work|C:/Users/Henry/Desktop/Phase4/ram.vhd|
-Z40 !s107 C:/Users/Henry/Desktop/Phase4/ram.vhd|
-R13
-R14
-!s100 V:Jf`5B9iaeOO5FQi9IRU2
-!i10b 1
-Asyn
-R4
-R5
-DEx4 work 3 ram 0 22 ?LnGh@[I_PZZMAX[M1UKf0
-l89
-L55
-VQzEJAZO5m8[?8io6oD5Ki1
-R9
-31
-R38
-R39
-R40
-R13
-R14
-!s100 d@;YVfnoRbO=I@gOM_Z<92
-!i10b 1
-Pram_component
-R4
-R5
-w1490668672
-R6
-8C:/Users/Henry/Desktop/Phase4/ram_component.vhd
-FC:/Users/Henry/Desktop/Phase4/ram_component.vhd
-l0
-L6
-VMP3aVAgGBQhTNdK@ddhTO2
-R9
-31
-R13
-R14
-!s100 i8hZV`zBPoWCXaG_:e?2J1
-!i10b 1
-!s108 1490680243.681000
-!s90 -reportprogress|300|-93|-work|work|C:/Users/Henry/Desktop/Phase4/ram_component.vhd|
-!s107 C:/Users/Henry/Desktop/Phase4/ram_component.vhd|
-Ereg32
-Z41 w1490667312
-R4
-R5
-R6
-Z42 8C:/Users/Henry/Desktop/Phase4/reg32.vhd
-Z43 FC:/Users/Henry/Desktop/Phase4/reg32.vhd
-l0
-L6
-V?Gj4gHO<FBQMN>KoDoAVU0
-R9
-31
-Z44 !s108 1490680244.431000
-Z45 !s90 -reportprogress|300|-93|-work|work|C:/Users/Henry/Desktop/Phase4/reg32.vhd|
-Z46 !s107 C:/Users/Henry/Desktop/Phase4/reg32.vhd|
-R13
-R14
-!s100 B51b?@HWT:R;PQ7f^ZOBh0
-!i10b 1
-Abehavioral
-R4
-R5
-DEx4 work 5 reg32 0 22 ?Gj4gHO<FBQMN>KoDoAVU0
-l18
-L17
-VB:Ua`[E[8K:dKBLEXg7Fb2
-R9
-31
-R44
-R45
-R46
-R13
-R14
-!s100 I6:ZJL5oia997ZT4;OiLV3
-!i10b 1
-Preg32_component
-R4
-R5
-w1490667292
-R6
-8C:/Users/Henry/Desktop/Phase4/reg32_component.vhd
-FC:/Users/Henry/Desktop/Phase4/reg32_component.vhd
-l0
-L6
-V6PhBI^1LETfNhBn2`0=@<3
-R9
-31
-R13
-R14
-!s100 M4[@lg=CZAfLn?ZKXBEIE2
-!i10b 1
-!s108 1490680243.806000
-!s90 -reportprogress|300|-93|-work|work|C:/Users/Henry/Desktop/Phase4/reg32_component.vhd|
-!s107 C:/Users/Henry/Desktop/Phase4/reg32_component.vhd|
+R23
+R24
+R25
+R11
+R12

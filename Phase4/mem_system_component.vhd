@@ -1,6 +1,8 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
+-- package for memory subsystem
+
 package mem_system_component is
 	component mem_system
 		port(

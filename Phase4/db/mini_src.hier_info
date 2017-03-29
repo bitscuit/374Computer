@@ -1,0 +1,65 @@
+|conff
+branch_code[0] => decoder2_4:decoder.to_decoder2[0]
+branch_code[1] => decoder2_4:decoder.to_decoder2[1]
+to_conff[0] => WideOr0.IN0
+to_conff[1] => WideOr0.IN1
+to_conff[2] => WideOr0.IN2
+to_conff[3] => WideOr0.IN3
+to_conff[4] => WideOr0.IN4
+to_conff[5] => WideOr0.IN5
+to_conff[6] => WideOr0.IN6
+to_conff[7] => WideOr0.IN7
+to_conff[8] => WideOr0.IN8
+to_conff[9] => WideOr0.IN9
+to_conff[10] => WideOr0.IN10
+to_conff[11] => WideOr0.IN11
+to_conff[12] => WideOr0.IN12
+to_conff[13] => WideOr0.IN13
+to_conff[14] => WideOr0.IN14
+to_conff[15] => WideOr0.IN15
+to_conff[16] => WideOr0.IN16
+to_conff[17] => WideOr0.IN17
+to_conff[18] => WideOr0.IN18
+to_conff[19] => WideOr0.IN19
+to_conff[20] => WideOr0.IN20
+to_conff[21] => WideOr0.IN21
+to_conff[22] => WideOr0.IN22
+to_conff[23] => WideOr0.IN23
+to_conff[24] => WideOr0.IN24
+to_conff[25] => WideOr0.IN25
+to_conff[26] => WideOr0.IN26
+to_conff[27] => WideOr0.IN27
+to_conff[28] => WideOr0.IN28
+to_conff[29] => WideOr0.IN29
+to_conff[30] => WideOr0.IN30
+to_conff[31] => WideOr0.IN31
+to_conff[31] => from_and3.IN1
+to_conff[31] => from_and2.IN1
+con_in => d_ff:dff.clock
+from_conff <= d_ff:dff.q
+
+
+|conff|decoder2_4:decoder
+to_decoder2[0] => Equal0.IN1
+to_decoder2[0] => Equal1.IN1
+to_decoder2[0] => Equal2.IN0
+to_decoder2[0] => Equal3.IN1
+to_decoder2[1] => Equal0.IN0
+to_decoder2[1] => Equal1.IN0
+to_decoder2[1] => Equal2.IN1
+to_decoder2[1] => Equal3.IN0
+from_decoder2_0 <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+from_decoder2_1 <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
+from_decoder2_2 <= Equal2.DB_MAX_OUTPUT_PORT_TYPE
+from_decoder2_3 <= Equal3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|conff|d_ff:dff
+d => q~reg0.DATAIN
+d => q_bar~reg0.DATAIN
+clock => q_bar~reg0.CLK
+clock => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

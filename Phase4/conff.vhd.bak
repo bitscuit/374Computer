@@ -1,0 +1,10 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+-- conff_logic to determine whether branch condition is met
+
+entity conff is
+	port(
+		
+	);
+end entity conff;

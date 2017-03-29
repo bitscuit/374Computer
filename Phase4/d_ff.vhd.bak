@@ -1,0 +1,23 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+-- General purpose d-flip flop
+
+entity d_ff is
+	port(
+		-- input
+		d : in std_logic;
+		clock : in std_logic;
+		
+		-- output
+		q : out std_logic;
+		q_bar : out std_logic
+	);
+end entity d_ff;
+
+architecture behavioral of d_ff is
+	
+begin 
+	q <= '1' when d = '1' and clock = '1' else 
+			'0';
+end architecture behavioral;
